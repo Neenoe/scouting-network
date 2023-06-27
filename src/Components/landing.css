@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Satoshi', sans-serif;
+   
+    
+}
+
+body {
+    background: #FFF;
+}
+
+.header {
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+.header-logo h3 {
+    color: #223E88;
+font-size: 32px;
+font-weight: 700;
+}
+
+.header-list {
+    color: #9CA0A3;
+    font-size: 20px;
+
+}
+
+.header-list div {
+    margin-left: 3rem;
+}
+
+.header-btn {
+    width: 234px;
+height: 72px;
+}
+
+.header-btn button {
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+background: #223E88;
+color: #FFF;
+font-size: 24px;
+font-weight: 700;
+}
+
+.media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    padding: 2rem;
+}
+
+.media-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: center;
+    margin-right: 0 auto;
+   
+    
+
+   
+}
+
+.media-left h3 {
+    color: #4e0909;
+font-size: 42px;
+font-weight: 700;
+text-align: left;
+align-items: flex-start;
+
+}
+
+.media-left span {
+    color: #D7AE37;
+font-size: 48px;
+font-weight: 700;
+}
+
+.media-left p {
+    color: #180202;
+font-size: 20px;
+
+}
+
+.media-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 200px;
+    border: 0px solid #D7AE37;
+background: #D7AE37;
+    text-align: end;
+    width: 400px;
+    align-self: center;
+    align-items: center;
+    margin-bottom: -18rem;
+    width: 561px;
+height: 176px;
+z-index: 1;
+overflow: visible;
+}
+
+.media-right div p {
+    color: #FFF;
+font-size: 40px;
+font-weight: 700;
+}
+
+.media-right div span {
+    color: #FFF;
+font-size: 20px;
+text-align: left;
+align-items: left;
+justify-content: flex-start;
+align-self: flex-start;
+margin-right: 2rem;
+}
+
+.media-right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
