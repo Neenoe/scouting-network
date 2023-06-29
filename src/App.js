@@ -1,6 +1,6 @@
 
+import AppRoutes from './Routes';
 import './App.css';
-import Landing from './Components/Landing';
 // import Nav from './Components/Nav/Nav';
 // import StyledEngineProvider from "@mui/material/StyledEngineProvider";
 // import "./Components/Nav/nav.css"
@@ -8,7 +8,7 @@ import Landing from './Components/Landing';
 function App() {
   return (
     <div className="App">
-      <Landing/>
+      <AppRoutes/>
       {/* <StyledEngineProvider injectFirst>
       <Nav />
     </StyledEngineProvider> */}
