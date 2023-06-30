@@ -1,5 +1,6 @@
 import './landing.css'
 import React, { useEffect, useState, useCallback } from 'react';
+import Nav from './Nav/Nav';
 import image1 from './../assets/award01.png';
 import image2 from './../assets/award02.png';
 import image3 from './../assets/award03.png';
@@ -12,50 +13,39 @@ import logo6 from './../assets/findus.png'
 import logo7 from './../assets/knife.png'
 import { FaPhone } from "react-icons/fa6";
 import { FaM } from 'react-icons/fa6'
-import { FaF } from 'react-icons/fa6'
-import { FaInfo } from 'react-icons/fa6'
-import { FaT } from 'react-icons/fa6'
-import { FaY } from 'react-icons/fa6'
-
+import Footer from './Footer/Footer';
 
 
 
 
 
     function Landing () {
-        const [currentSlide, setCurrentSlide] = useState(0);
-        const images = [image1, image2, image3];
-
-
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-  };
-
-  const previousSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
-  };
+      const [currentSlide, setCurrentSlide] = useState(0);
+      const images = [image1, image2, image3]; // Replace with your image URLs
+      const slideInterval = 3000; // Change slide every 3 seconds
+    
+      const nextSlide = useCallback(() => {
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+      }, [images.length]);
+      const previousSlide = () => {
+        setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
+      };
+    
+      useEffect(() => {
+        const interval = setInterval(nextSlide, slideInterval);
+    
+        return () => {
+          clearInterval(interval);
+        };
+      }, [nextSlide, slideInterval]);
     
 
 
   return (
     <div className='landing-wrapper'>
         <div className="landing-container ">
-            <div className="header flexCenter paddings innerWidth">
-                <div className="header-logo">
-                <h3>SCOUTING REPORT</h3>
-                </div>
-                <div className="header-list flexStart">
-                    <div>HOME</div>
-                    <div>HOME</div>
-                    <div>HOME</div>
-                    <div>HOME</div>
-                </div>
-
-                <div className="header-btn">
-                    <button>REGISTER</button>
-                </div>
-            </div>
-
+         
+    <Nav/>
            
 
    <div >
@@ -294,38 +284,8 @@ import { FaY } from 'react-icons/fa6'
 
       </div>
       {/* FOOTER */}
-      <div className="footer innerWidth paddings">
-        <div className="footer-right">
-        <div className="footer-scout">
-          <h3>SCOUTRIGHT</h3>
-          <p>Footballers</p>
-          <p>Scouts</p>
-          <p>Support</p>
-          <p>FAQ</p>
-
-       </div>
-
-       <div className="footer-icons">
-        <h3>Socials</h3>
-        <div className="footer-icons-icon">
-          <FaF/>
-          <FaInfo/>
-          <FaY/>
-          <FaT/>
-        </div>
-
-       </div>
-        </div>
-
-        <div className="footer-right">
-          <p>Susbribe Newsletter</p>
-          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente temporibus quidem </span>
-        
-
-        </div>
-       
-      </div>
-     
+  
+     <Footer/>
     </div>
   
         </div>

@@ -1,7 +1,37 @@
-.Button {
-color: red;
+.header {
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
 }
 
-.Link {
-color: red;
+.header-logo h3 {
+    color: #223E88;
+font-size: 32px;
+font-weight: 700;
+}
+
+.header-list {
+    color: #9CA0A3;
+    font-size: 20px;
+
+}
+
+.header-list div {
+    margin-left: 3rem;
+}
+
+.header-btn {
+    width: 234px;
+height: 72px;
+}
+
+.header-btn button {
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+background: #223E88;
+color: #FFF;
+font-size: 24px;
+font-weight: 700;
 }
