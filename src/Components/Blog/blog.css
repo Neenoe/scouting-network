@@ -1,0 +1,304 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.media-left span {
+    color: blue;
+    font-size: 22px;
+}
+
+.media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    padding: 2rem;
+}
+
+.media-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: center;
+    margin-right: 0 auto;
+   
+    
+
+   
+}
+
+.media-left h3 {
+    color: #fff;
+font-size: 42px;
+font-weight: 700;
+text-align: left;
+align-items: flex-start;
+
+}
+
+.media-left span {
+    color: #D7AE37;
+font-size: 48px;
+font-weight: 700;
+}
+
+.media-left p {
+    color: #FFF;
+    font-size: 20px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+width: 274px;
+flex-direction: column;
+flex-shrink: 0;
+text-align: left;
+}
+.app__video-overlay_circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid var(--color-golden);
+}
+
+.app__video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 30);
+}
+
+.media-right {
+    background: none;
+}
+
+.icon {
+    background-color: #544F4F;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+}
+
+.media-right button {
+    width: 237px;
+    height: 66px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: #223E88;
+    color: #FFF;
+font-size: 20px;
+font-family: Satoshi;
+font-style: normal;
+position: absolute;
+right: 45%;
+font-weight: 700;
+line-height: normal;
+cursor: pointer;
+}
+
+.highlight-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.highlight-intro h2 {
+    color: #161037;
+font-size: 20px;
+font-family: Satoshi;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.highlight-intro button {
+    width: 123px;
+height: 42px;
+flex-shrink: 0;
+border-radius: 10px;
+border: 1px solid #FFF;
+background: #223E88;
+color: #FFF;
+font-size: 14px;
+font-family: Satoshi;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.highlight-details img{
+    width: 403px;
+    height: 309px;
+}
+.highlight-details p {
+    position: absolute;
+   
+    background: #424242;
+    width: 55px;
+height: 50px;
+padding: 1rem;
+margin-top: 1.5rem;
+margin-left: 1.5rem;
+color: #FFF;
+font-size: 18px;
+font-family: Satoshi;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.highlight-details,
+.signee-details,
+.help-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.highlight-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight-intro,
+.signee-intro,
+.help-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.signee-intro h2,
+.help-intro h4 {
+    color: #161037;
+font-size: 20px;
+font-family: Satoshi;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.signee-intro button,
+.help-intro button {
+    width: 123px;
+height: 42px;
+flex-shrink: 0;
+border-radius: 10px;
+border: 1px solid #FFF;
+background: #223E88;
+color: #FFF;
+font-size: 14px;
+font-family: Satoshi;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.signee-details img,
+.help-media img{
+    width: 403px;
+    height: 309px;
+}
+
+
+
+
+.interviews-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.interviews-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+}
+.interviews-intro h4 {
+    color: #161037;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.interviews-intro-btns button {
+    padding: 0.7rem;
+    margin-left: 1rem;
+    border-radius: 10px;
+background: #F4F4F4;
+color: #817F7F;
+font-size: 15px;
+font-family: Satoshi;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.interviews-intro-btns :nth-child(1) {
+    background: hsl(224, 60%, 33%);
+    color: white;
+    color: #FFF;
+font-size: 15px;
+font-family: Satoshi;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+width: 87px;
+height: 48px;
+}
+
+.interviews-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.interviews-media img {
+    width: 375px;
+height: 270px;
+}
+
+.interviews-media span {
+    position: absolute;
+   
+    background: #424242;
+    width: 55px;
+height: 50px;
+padding: 1rem;
+margin-top: 1.5rem;
+margin-left: 1.5rem;
+color: #FFF;
+font-size: 18px;
+font-family: Satoshi;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.interviews-media p {
+    width: 321px;
+flex-direction: column;
+flex-shrink: 0;
+color: #817F7F;
+font-size: 18px;
+font-family: Satoshi;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.help-media {
+    margin-top: 2rem;
+}
