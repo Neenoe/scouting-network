@@ -1,5 +1,5 @@
 import meal from './../assets/meal.mp4'
-import random from './../assets/Assets1 ..jpeg'
+import random from './../assets/Assets-1.jpeg'
 import second from './../assets/Assets-1.jpeg'
 import third from './../assets/Assets-3.jpeg'
 import fourth from './../assets/Assets-4.jpeg'
