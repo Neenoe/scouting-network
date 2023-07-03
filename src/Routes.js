@@ -6,6 +6,7 @@ const AppRoutes = () => {
 	const router = createBrowserRouter([
         { path: '/', element: <Landing /> }, 
         { path:'Blog', element: <Blog /> },
+        { path:'Home', element: <Landing /> }
     ]);
 	return <RouterProvider router={router} />;
 };

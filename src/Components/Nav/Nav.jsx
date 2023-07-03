@@ -10,7 +10,7 @@ function Nav() {
                 <h3>SCOUTING REPORT</h3>
                 </div>
                 <div className="header-list flexStart">
-                    <div>HOME</div>
+                   <Link to='/'> <div>HOME</div></Link> 
                    <div>DISCOVER</div>
                    <Link to="/blog">  <div>BLOG</div> </Link>
                     <div>LOGIN</div>

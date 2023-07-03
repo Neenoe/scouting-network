@@ -6,8 +6,9 @@ import { YouTube } from '@mui/icons-material';
 import youtube from './../../assets/youtube.png'
 import { BsTwitter } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
+import { AiFillFacebook} from "react-icons/ai"
 import './footer.css'
-
+import { SocialIcon } from 'react-social-icons';
 function Footer() {
   return (
     <div>
@@ -28,11 +29,15 @@ function Footer() {
          {/* <BsInstagram/>
          <BsTwitter/>
          <YouTube/> */}
-         <img src={facebook} alt="" />
-         <img src={twitter} alt="" />
-         <img src={youtube} alt="" />
-    
-         <img src={insta} alt="" />
+       {/* <AiFillFacebook className='hi-con'/>
+       <AiFillFacebook className='hi-con'/>
+       <AiFillFacebook className='hi-con'/>
+       <AiFillFacebook className='hi-con'/> */}
+       <SocialIcon network="twitter" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' />
+       <SocialIcon network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' />
+       <SocialIcon network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' />
+       <SocialIcon network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' />
+       
         </div>
 
        </div>

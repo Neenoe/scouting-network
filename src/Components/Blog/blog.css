@@ -10,6 +10,10 @@
     font-size: 22px;
 }
 
+.blog-wrapper {
+    margin-top: -1rem;
+}
+
 .media {
     display: flex;
     flex-direction: row;
@@ -205,6 +209,11 @@ font-family: Satoshi;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
+cursor: pointer;
+}
+
+.signee-intro button {
+    margin-bottom: 1rem;
 }
 
 .signee-details img,
@@ -244,6 +253,7 @@ font-family: Satoshi;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+cursor: pointer;
 }
 
 .interviews-intro-btns :nth-child(1) {

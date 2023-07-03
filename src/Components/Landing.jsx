@@ -1,19 +1,21 @@
 import './landing.css'
 import React, { useEffect, useState, useCallback } from 'react';
 import Nav from './Nav/Nav';
-import image1 from './../assets/award01.png';
-import image2 from './../assets/award02.png';
-import image3 from './../assets/award03.png';
-import logo1 from './../assets/gallery01.png'
-import logo2 from './../assets/gallery02.png'
-import logo3 from './../assets/gallery03.png'
+import {data} from './../Constants/data'
+import image1 from './../assets/Assets-9.jpeg';
+import image2 from './../assets/Assets-10.jpeg';
+import image3 from './../assets/Assets-11.jpeg';
 import logo4 from './../assets/gallery04.png'
 import logo5 from './../assets/chef.png'
 import logo6 from './../assets/findus.png'
 import logo7 from './../assets/knife.png'
+import { AiOutlineStar } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai"
 import { FaPhone } from "react-icons/fa6";
 import { FaM } from 'react-icons/fa6'
 import Footer from './Footer/Footer';
+
+
 
 
 
@@ -42,7 +44,7 @@ import Footer from './Footer/Footer';
 
 
   return (
-    <div className='landing-wrapper'>
+    <div className='landing-wrapper paddings'>
         <div className="landing-container ">
          
     <Nav/>
@@ -94,13 +96,17 @@ import Footer from './Footer/Footer';
             backgroundImage: `url(${images[currentSlide]})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            transition: 'opacity 1s',
+            transition: 'opacity 3s',
           }}
         />
       </div>
-      <div>
-        <button onClick={previousSlide}>Previous Slide</button>
-        <button onClick={nextSlide}>Next Slide</button>
+      <div className='navigation'>
+        {/* <button onClick={previousSlide}>Previous Slide</button>
+        <button onClick={nextSlide}>Next Slide</button> */}
+        <div onClick={previousSlide}/>
+        <div />
+        <div onClick={nextSlide}/>
+
       </div>
 
      
@@ -109,20 +115,20 @@ import Footer from './Footer/Footer';
 
     <div className="categories-wrapper paddings innerWidth">
       <div className="categories1">
-        <img src={logo1} alt="" />
+        <img src={data[3].imag} alt="" />
         <h4>Female Footballers</h4>
         <span>Lorem ipsum dolor sit, amet <br /> consectetur adipisicing elit or what you <br /> Boko del Harum voluptates architecto debitis </span>
         <p>Read More</p>
       </div>
       <div className="categories2">
-        <img src={logo2} alt="" />
-        <h4>Female Footballers</h4>
+        <img src={data[11].imag}  alt="" />
+        <h4>Male Footballers</h4>
         <span>Lorem ipsum dolor sit, amet <br /> consectetur adipisicing elit or what you <br /> Boko del Harum voluptates architecto debitis </span>
         <p>Read More</p>
       </div>
       <div className="categories3">
-        <img src={logo3} alt="" />
-        <h4>Female Footballers</h4>
+        <img src={data[5].imag}  alt="" />
+        <h4>Talent Scout</h4>
         <span>Lorem ipsum dolor sit, amet <br /> consectetur adipisicing elit or what you <br /> Boko del Harum voluptates architecto debitis !</span>
         <p>Read More</p>
       </div>
@@ -135,7 +141,7 @@ import Footer from './Footer/Footer';
       <h2>ABOUT US</h2>
      <div className="about-us">
       <div className="about-us1">
-        <img src={logo1} alt="" />
+        <img src={data[2].imag} alt="" />
 
       </div>
       <div className="about-us2">
@@ -145,7 +151,7 @@ import Footer from './Footer/Footer';
 
         </div>
         <div className="about-us3">
-          <img src={logo3} alt="" />
+          <img src={data[12].imag} alt="" />
 
         </div>
         </div>
@@ -155,7 +161,7 @@ import Footer from './Footer/Footer';
     {/* our mission */}
     <div className="mission innerWidth paddings">
       <div className="mission-left">
-        <img src={logo3} alt="" />
+        <img src={data[8].imag} alt="" />
       </div>
 
       <div className="mission-right flexColCenter">
@@ -188,7 +194,65 @@ import Footer from './Footer/Footer';
       </div>
 
       {/* OUR SCOUT */}
-      <div>
+      <div className='scout innerWidth paddings'>
+
+        <h3>OUR TOP SCOUTS</h3>
+        <div className="scout-top">
+          <div className='scout-top-details'>
+            <div>
+            <img  src={data[13].imag} alt="" />
+            </div>
+           
+            <div className="scout-top-text">
+              <p>Tony Young</p>
+              <span>HR Arvado</span>
+            </div>
+          </div>
+          <div className='scout-top-details'>
+            <div>
+            <img  src={data[14].imag} alt="" />
+            </div>
+           
+            <div className="scout-top-text">
+              <p>Antony Bills</p>
+              <span>HR Arvado</span>
+            </div>
+          </div>
+        </div>
+        <div className="scout-middle">
+        <div className='scout-middle-details'>
+            <div>
+            <img  src={data[15].imag} alt="" />
+            </div>
+           
+            <div className="scout-middle-text">
+              <p>Paul Graham</p>
+              <span>HR Arvado</span>
+            </div>
+          </div>
+        </div>
+        <div className="scout-down">
+        <div className='scout-down-details'>
+            <div>
+            <img  src={data[16].imag} alt="" />
+            </div>
+           
+            <div className="scout-down-text">
+              <p>Bill Cosby</p>
+              <span>HR Arvado</span>
+            </div>
+          </div>
+          <div className='scout-down-details'>
+            <div>
+            <img  src={data[17].imag} alt="" />
+            </div>
+           
+            <div className="scout-down-text">
+              <p>Sam Walters</p>
+              <span>HR Arvado</span>
+            </div>
+          </div>
+        </div>
 
       </div>
 
@@ -199,7 +263,7 @@ import Footer from './Footer/Footer';
         <div className="testimonial-details">
           <div className="testimonial-card1">
             <div className="testimonial-card-details">
-              <img src={logo5} alt="" />
+              <img src={data[7].imag} alt="" />
               <div className="testimonial-card-details-info">
                 <p>San Barbz</p>
                 <span>HR Arravo</span>
@@ -207,17 +271,23 @@ import Footer from './Footer/Footer';
             </div>
 
             <div className="testimonial-card1-texts">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nam alias vel.
+              <p>Lorem ipsum dolor sit amet consec adipisicing elit. Vero nam alias vel.</p>
             </div>
 
             <div className="testimonial-card1-ratings">
-
+             
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              
             </div>
 
           </div>
           <div className="testimonial-card2">
           <div className="testimonial-card-details">
-              <img src={logo5} alt="" />
+              <img src={data[18].imag}alt="" />
               <div className="testimonial-card-details-info">
                 <p>San Barbz</p>
                 <span>HR Arravo</span>
@@ -225,17 +295,23 @@ import Footer from './Footer/Footer';
             </div>
 
             <div className="testimonial-card1-texts">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nam alias vel.
+              <p>Lorem ipsum dolor sit amet consec adipisicing elit. Vero nam alias vel.</p>
             </div>
 
             <div className="testimonial-card1-ratings">
+             
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
               
             </div>
             
             </div>
             <div className="testimonial-card3">
             <div className="testimonial-card-details">
-              <img src={logo5} alt="" />
+              <img src={data[19].imag} alt="" />
               <div className="testimonial-card-details-info">
                 <p>San Barbz</p>
                 <span>HR Arravo</span>
@@ -243,10 +319,16 @@ import Footer from './Footer/Footer';
             </div>
 
             <div className="testimonial-card1-texts">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nam alias vel.
+              <p>Lorem ipsum dolor sit amet consec adipisicing elit. Vero nam alias vel.</p>
             </div>
 
             <div className="testimonial-card1-ratings">
+             
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
               
             </div>
 
