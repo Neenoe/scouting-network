@@ -33,10 +33,10 @@ function Nav() {
                 <h3>SCOUTING REPORT</h3>
                 </div>
                 <div className="header-list flexStart">
-                    <div>HOME</div>
-                   <div>DISCOVER</div>
+                   <Link to="/"> <div>HOME</div> </Link> 
+                 <Link to="/discover">  <div>DISCOVER</div> </Link> 
                    <Link to="/blog">  <div>BLOG</div> </Link>
-                    <div>LOGIN</div>
+                  <Link to="/login"> <div>LOGIN</div> </Link>  
                 </div>
 
         <div className="header-btn">

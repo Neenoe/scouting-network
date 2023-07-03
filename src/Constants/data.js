@@ -1,4 +1,4 @@
-import { meal, random, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, eleventh, twelveth, thirteenth, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty } from './index';
+import { random, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, eleventh, twelveth, thirteenth, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty } from './index';
 
 const data = [
   {

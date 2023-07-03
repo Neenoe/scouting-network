@@ -41,7 +41,10 @@ const [buttonIndex, setButtonIndex] = useState(0)
   return (
     <ThemeProvider theme={theme}>
       <div>
+        <div className="paddings innerWidth discover">
         <Nav />
+        </div>
+        
         <main>
           <div
             maxWidth="xl"
