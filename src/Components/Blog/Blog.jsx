@@ -95,15 +95,15 @@ function Blog() {
         <div className="highlight-details">
           <div>
           <p>{data[0].duration}</p>
-          <img src={data[0].imag} alt="" />
+          <img src={data[20].imag} alt="" />
           </div>
           <div>
           <p>{data[1].duration}</p>
-          <img src={data[1].imag} alt="" />
+          <img src={data[21].imag} alt="" />
           </div>
           <div>
           <p>{data[2].duration}</p>
-          <img src={data[2].imag} alt="" />
+          <img src={data[22].imag} alt="" />
           </div>
           
         </div>
@@ -122,15 +122,15 @@ function Blog() {
         <div className="signee-details">
           <div>
          
-          <img src={data[0].imag} alt="" />
+          <img src={data[23].imag} alt="" />
           </div>
           <div>
          
-          <img src={data[1].imag} alt="" />
+          <img src={data[24].imag} alt="" />
           </div>
           <div>
         
-          <img src={data[2].imag} alt="" />
+          <img src={data[26].imag} alt="" />
           </div>
           
         </div>
@@ -155,17 +155,17 @@ function Blog() {
         <div className="interviews-media">
           <div>
             <span>45s</span>
-            <img src={data[2].imag} alt="" />
+            <img src={data[27].imag} alt="" />
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, tempore!</p>
           </div>
           <div>
             <span>45s</span>
-            <img src={data[2].imag} alt="" />
+            <img src={data[28].imag} alt="" />
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, tempore!</p>
           </div>
           <div>
             <span>45s</span>
-            <img src={data[2].imag} alt="" />
+            <img src={data[25].imag} alt="" />
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, tempore!</p>
           </div>
 

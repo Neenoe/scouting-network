@@ -19,5 +19,13 @@ import seventeen from './../assets/Assets-17.jpeg'
 import eighteen from './../assets/Assets-18.jpeg'
 import nineteen from './../assets/Assets-19.jpeg'
 import twenty from './../assets/Assets-20.jpeg'
-
-export { meal, random, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, eleventh, twelveth, thirteenth, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty }
+import twentytwo from './../assets/Assets-22.jpeg'
+import twentythree from './../assets/Assets-23.jpeg'
+import twentyfour from './../assets/Assets-24.jpeg'
+import twentyfive from './../assets/Assets-25.jpeg'
+import twentysix from './../assets/Assets-26.jpeg'
+import twentyseven from './../assets/Assets-27.jpeg'
+import twentyeight from './../assets/Assets-28.jpeg'
+import twentynine from './../assets/Assets-29.jpeg'
+import thirty from './../assets/Assets-30.jpeg'
+export { meal, random, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, eleventh, twelveth, thirteenth, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeight, twentynine, thirty}
