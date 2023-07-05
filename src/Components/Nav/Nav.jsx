@@ -28,23 +28,16 @@ function Nav() {
 
   return (
     <div>
-      <div className="header flexCenter paddings innerWidth">
-        <div className="header-logo">
-          <h3>SCOUTING REPORT</h3>
-        </div>
-        <div className="header-list flexStart">
-          <div>HOME</div>
-          <Link to="/discover">
-            <div>DISCOVER</div>
-          </Link>
-          <Link to="/blog">
-            {" "}
-            <div>BLOG</div>{" "}
-          </Link>
-          <div id ='login' onClick={(e)=>handleOpen(e)} style={{ cursor: "pointer" }}>
-            LOGIN
-          </div>
-        </div>
+         <div className="header flexCenter paddings innerWidth">
+                <div className="header-logo">
+                <h3>SCOUTING REPORT</h3>
+                </div>
+                <div className="header-list flexStart">
+                   <Link to="/"> <div>HOME</div> </Link> 
+                 <Link to="/discover">  <div>DISCOVER</div> </Link> 
+                   <Link to="/blog">  <div>BLOG</div> </Link>
+                  <Link to="/login"> <div>LOGIN</div> </Link>  
+                </div>
 
         <div className="header-btn">
           <button id ='signup' onClick={(e)=>handleOpen(e)}>REGISTER</button>
