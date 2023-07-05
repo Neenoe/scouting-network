@@ -78,9 +78,7 @@ text-align: left;
     background: rgba(0, 0, 0, 30);
 }
 
-.media-right {
-    background: none;
-}
+
 
 .icon {
     background-color: #544F4F;
@@ -112,14 +110,16 @@ cursor: pointer;
     flex-direction: column;
 }
 
-.highlight-intro {
+.highlight-intro,
+.mostviewed-intro {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
 }
 
-.highlight-intro h2 {
+.highlight-intro h2,
+.mostviewed-intro h6 {
     color: #161037;
 font-size: 20px;
 font-family: Satoshi;
@@ -128,7 +128,8 @@ font-weight: 700;
 line-height: normal;
 }
 
-.highlight-intro button {
+.highlight-intro button,
+.mostviewed-intro button {
     width: 123px;
 height: 42px;
 flex-shrink: 0;
@@ -312,4 +313,64 @@ line-height: normal;
 
 .help-media {
     margin-top: 2rem;
+}
+
+.mostviewed-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #223E88;
+    margin-top: 2rem;
+}
+
+.mostviewed-details img {
+    width: 150px;
+    height: 150px;
+}
+
+.mostviwed-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    margin-right: 8rem;
+}
+
+.play {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.9rem;
+    background-color: #817F7F;
+    color: #FFF;
+    margin-right: 2rem
+}
+
+.mostviwed-texts h6 {
+    color: #FFF;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.mostviwed-texts p {
+    color: #FFF;
+font-size: 20px;
+font-family: Inter;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.mostviwed-texts span {
+    color: #817F7F;
+font-size: 20px;
+font-family: Inter;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }

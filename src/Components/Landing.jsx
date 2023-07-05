@@ -69,7 +69,7 @@ import Footer from './Footer/Footer';
 
                 </div>
 
-                <div className="media-right">
+                {/* <div className="media-right">
                     <div className='media-right-content'>
                     <p>4000 + </p>
                     <span>Footballers</span>
@@ -83,9 +83,10 @@ import Footer from './Footer/Footer';
                     <span>Scouts</span>
                     </div>
                    
-                </div>
+                </div> */}
 
             </section>
+         
         <div
           style={{
             position: 'absolute',
@@ -97,6 +98,7 @@ import Footer from './Footer/Footer';
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transition: 'opacity 3s',
+           
           }}
         />
       </div>
@@ -111,6 +113,22 @@ import Footer from './Footer/Footer';
 
      
     </div>
+    <div className="media-right innerWidth paddings">
+      
+                    <div className='media-right-content'>
+                    <p>4000 + </p>
+                    <span>Footballers</span>
+                    </div>
+                    <div className='media-right-content'>
+                    <p>60% </p>
+                    <span>Signees</span>
+                    </div>
+                    <div className='media-right-content'>
+                    <p>2500+ </p>
+                    <span>Scouts</span>
+                    </div>
+                   
+                </div> <br /> <br />
     {/* categories */}
 
     <div className="categories-wrapper paddings innerWidth">
@@ -166,7 +184,7 @@ import Footer from './Footer/Footer';
 
       <div className="mission-right flexColCenter">
         <h4>OUR MISSION</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cupiditate veritatis atque corrupti eum dolor maiores consectetur laborum vero adipisci autem, <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus hic sapiente libero quaerat repellat. Commodi eos iure amet pariatur hic.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est, tempus euismod lectus efficitur ac. Morbi finibus mollis nibh, in blandit tellus pharetra eu<br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est, tempus euismod lectus efficitur ac. Morbi finibus mollis nibh, in blandit tellus pharetra eu</p>
       </div>
     </div>
     {/* OUR PARTNERS */}
@@ -199,7 +217,7 @@ import Footer from './Footer/Footer';
         <h3>OUR TOP SCOUTS</h3>
         <div className="scout-top">
           <div className='scout-top-details'>
-            <div>
+            <div className='stout'>
             <img  src={data[13].imag} alt="" />
             </div>
            
@@ -343,9 +361,11 @@ import Footer from './Footer/Footer';
         <div className="partnership-info-left">
           <div className="partnership-info-left-icon1">
             <FaPhone className='sks'/>
+            <p>Phone</p>
           </div>
           <div className="partnership-info-left-icon2">
             <FaM className='sks'/>
+            <p>Mail</p>
           </div>
         </div>
 
