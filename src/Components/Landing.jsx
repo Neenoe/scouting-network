@@ -227,13 +227,13 @@ import Footer from './Footer/Footer';
             </div>
           </div>
           <div className='scout-top-details'>
-            <div>
+            <div className='stout'>
             <img  src={data[14].imag} alt="" />
             </div>
            
             <div className="scout-top-text">
-              <p>Antony Bills</p>
-              <span>HR Arvado</span>
+              <p>Fantana Wills</p>
+              <span>Arvado</span>
             </div>
           </div>
         </div>
@@ -244,7 +244,7 @@ import Footer from './Footer/Footer';
             </div>
            
             <div className="scout-middle-text">
-              <p>Paul Graham</p>
+              <p>Scot Ryan</p>
               <span>HR Arvado</span>
             </div>
           </div>
@@ -256,7 +256,7 @@ import Footer from './Footer/Footer';
             </div>
            
             <div className="scout-down-text">
-              <p>Bill Cosby</p>
+              <p>Tracy Blair</p>
               <span>HR Arvado</span>
             </div>
           </div>
@@ -266,7 +266,7 @@ import Footer from './Footer/Footer';
             </div>
            
             <div className="scout-down-text">
-              <p>Sam Walters</p>
+              <p>Samuel Felix</p>
               <span>HR Arvado</span>
             </div>
           </div>

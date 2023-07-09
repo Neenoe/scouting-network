@@ -18,7 +18,7 @@ body {
 .media {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 400px;
     width: 100%;
@@ -59,6 +59,7 @@ font-weight: 700;
 .media-left p {
     color: #ffffff;
 font-size: 20px;
+text-align: left;
 
 }
 
@@ -114,7 +115,7 @@ right: 0;
 
 
 .media-right div p {
-    color: #FFF;
+    color: #ffffff;
 font-size: 40px;
 font-weight: 700;
 
@@ -391,17 +392,15 @@ background: #d4daeb;
     
     margin-top: 1.5rem;
     border-radius: 50%;
-}
-
-/* .scout-top-details :nth-child(1) img {
-    width: 200px;
+  
 }
 
 .stout img{
-    width: 100px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-} */
+    clip-path: inset(5px 20px 25px 20px round 50%);
+}
 .scout-top-text,
 .scout-middle-text,
 .scout-down-text {
@@ -643,6 +642,120 @@ cursor: pointer;
 
   
     
+}
+
+@media screen and (max-width: 808px) {
+    .media h3 {
+        color: #fdf7f7;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: left;
+    align-items: flex-start;
+    
+    }
+    .media-left p {
+        color: #FFF;
+font-family: Inter;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    }
+    .media-right {
+        width: 349px;
+height: 81px;
+flex-shrink: 0;
+background: #D7AE37;
+}
+.media-right div p {
+    color: #ffffff;
+font-size: 20px;
+font-weight: 700;
+
+}
+.media-right div span {
+    color: #FFF;
+font-family: Satoshi;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.categories-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    
+}
+.categories-wrapper div {
+    margin-top:2rem ;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+.about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us img {
+    width: 400px;
+    margin-top: 2rem;
+}
+.about-us3 img {
+    margin-right: 1.5rem;
+}
+
+.mission {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.mission-left img {
+    width: 450px;
+    padding: 1rem;
+
+}
+
+.scout {
+    display: flex;
+    flex-direction: column;
+}
+
+.scout-top-details,
+.scout-down-details {
+    display: flex;
+    flex-direction: column;
+}
+.scout-middle-text {
+    margin-left: 1rem;
+}
+
+.testimonial-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-card1,
+.testimonial-card2,
+.testimonial-card3 {
+    margin-top: 1.5rem;
+}
+.partnership {
+    display: flex;
+    flex-direction: column;
+}
+.partnership-info {
+    display: flex;
+    flex-direction: column;
+}
 }
 
 

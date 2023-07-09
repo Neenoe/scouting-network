@@ -2,7 +2,7 @@ import React , { useState, useRef, useEffect } from 'react'
 import Nav from './../Nav/Nav'
 import {meal} from './../../Constants/index'
 import './blog.css'
-import { BsFillPlayFill, BsPauseFill} from 'react-icons/bs'
+import { BsFillPauseFill, BsFillPlayFill, BsPauseFill} from 'react-icons/bs'
 import {data} from './../../Constants/data'
 import Footer from './../Footer/Footer';
 function Blog() {
@@ -60,14 +60,14 @@ function Blog() {
           background: 'rgba(48, 45, 45, 0.37)', 
         }}
       >
-            <div className='media innerWidth paddings'>
+            <div className='blog-media innerWidth paddings'>
 
-<div className="media-left">
+<div className="blog-media-left">
   <h3>Stay <span>Updated</span> <br /> With <span>Latest</span> News</h3>
   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. et accusamus veniam quasi molestiae fuhjkhghgiat hic molestias.</p>
 
 </div>
-<div className="media-right">
+<div className="blog-media-right">
 <div className='app__video-overlay_circle ' onClick={handleVideo}> 
 
 {isPlaying ? (
@@ -207,6 +207,44 @@ function Blog() {
           </div>
           <BsFillPlayFill className='play'/>
         </div>
+    </div>
+
+    {/* weekly podcast */}
+    <div className="podcast innerWidth paddings">
+    <div className="mostviewed-intro">
+        <h4>  Trending highlight</h4>
+        <button>Watch More</button>
+        </div>
+
+        <div className="podcast-details">
+        <div className="podcast1">
+        <img src={data[17].imag} alt="" />
+        <div className="podcast-icon">
+          <BsFillPauseFill/>
+          <img src={data[29].imag} alt="" />
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore facilis dolor animi sequi?</p>
+      </div>
+      <div className="podcast1">
+        <img src={data[17].imag} alt="" />
+        <div className="podcast-icon">
+          <BsFillPauseFill/>
+          <img src={data[29].imag} alt="" />
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore facilis dolor animi sequi?</p>
+      </div>
+      <div className="podcast1">
+        <img src={data[17].imag} alt="" />
+        <div className="podcast-icon">
+          <BsFillPauseFill/>
+          <img src={data[29].imag} alt="" />
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore facilis dolor animi sequi?</p>
+      </div>
+
+        </div>
+     
+
     </div>
     {/* help */}
     <div className="help-wrapper innerWidth paddings">

@@ -28,4 +28,5 @@ import twentyseven from './../assets/Assets-27.jpeg'
 import twentyeight from './../assets/Assets-28.jpeg'
 import twentynine from './../assets/Assets-29.jpeg'
 import thirty from './../assets/Assets-30.jpeg'
-export { meal, random, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, eleventh, twelveth, thirteenth, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeight, twentynine, thirty}
+import thirtyone from './../assets/Assets-40.png'
+export { meal, random, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, eleventh, twelveth, thirteenth, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeight, twentynine, thirty, thirtyone}
