@@ -112,7 +112,8 @@ margin-top: 3rem;
 }
 
 .highlight-intro,
-.mostviewed-intro {
+.mostviewed-intro,
+.toprated-intro {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -130,7 +131,8 @@ line-height: normal;
 }
 
 .highlight-intro button,
-.mostviewed-intro button {
+.mostviewed-intro button,
+.toprated-intro button{
     width: 123px;
 height: 42px;
 flex-shrink: 0;
@@ -147,8 +149,9 @@ margin-bottom: 1rem;
 }
 
 .highlight-details img{
-    width: 403px;
+    width: 363px;
     height: 309px;
+    border-radius: 20px;
 }
 .highlight-details p {
     position: absolute;
@@ -279,8 +282,9 @@ height: 48px;
 }
 
 .interviews-media img {
-    width: 375px;
+    width: 365px;
 height: 270px;
+border-radius: 15px;
 }
 
 .interviews-media span {
@@ -315,7 +319,11 @@ line-height: normal;
 .help-media {
     margin-top: 2rem;
 }
-
+.help-media img {
+    width: 365px;
+    height: 290px;
+    border-radius: 15px;
+}
 .mostviewed-details {
     display: flex;
     flex-direction: row;
@@ -375,28 +383,211 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
-.podcast {
+.podcast,
+.toprated {
     display: flex;
     flex-direction: column;
+
 }
-.podcast-details {
+.mostviewed-intro h4,
+.toprated-intro h4{
+    color: #161037;
+font-family: Satoshi;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: capitalize;
+}
+.podcast-details,
+.toprated-details {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    background: #F4F7FF;
+    height: 674px;
+  
 }
-.podcast1 {
+.podcast1,
+.toprated1 {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: 557px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: #D7AE37;
+   
 }
 
-.podcast1 img {
-    width: 200px;
-    height: 200px;
+.podcast1 img,
+.toprated img {
+    width: 365px;
+    height: 325px;
+    border-radius: 10px;
 }
-.podcast-icon {
+.podcast-icon,
+.toprated-icon {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-right: 2rem;
 }
-@media screen and (max-width: 768px) {
+
+.podcast-icon img,
+.toprated-icon img {
+    width: 202.025px;
+    height: 45.143px;
+    margin-left: 4rem;
+}
+
+.pause {
+    background-color: #544F4F;
+    width: 64.625px;
+    height: 64.625px;
+    color: #FFF;
+    border-radius: 50%;
+}
+
+.podcast1 p,
+.toprated1 p{
+display: flex;
+align-items: center;
+width: 300px;
+color: #817F7F;
+font-family: Satoshi;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 29px;
+}
+
+/*  */
+.r-gallery-images {
+  
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    position: relative;
+}
+
+.r-gallery-images_container {
+    display: flex;
+    flex-direction: row;
+    /* width: max-content; */
+
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.r-gallery-images_container::-webkit-scrollbar {
+    display: none;
+}
+
+.r-gallery-images_card {
+    /* position: relative;
+    min-width: 301px; */
+    height: 447px;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.r-gallery__image-icon {
+    position: absolute;
+    color: #fff;
+    font-size: 2rem;
+    opacity: 0.5;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.r-gallery-images_card img {
+    width: 393px;
+    height: 309px;
+    margin-left: 1.5rem;
+   
+    
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+.r-gallery-images_card:hover img {
+    opacity: 0.35;
+    
+}
+
+.r-gallery-images_card:hover .r-gallery-image-icon {
+    opacity: 1
+}
+
+.r-gallery-images_arrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    position: absolute;
+    bottom: 5%;
+}
+
+.r-gallery__arrow-icon {
+    color: var(--color-golden);
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: var(--color-black);
+    border-radius: 5px;
+    margin-right: 3rem;
+    margin-left: 1rem;
+
+}
+
+.r-gallery__arrow-icon:hover {
+    color: var(--color-white);
+}
+
+/*  */
+
+@media screen and (max-width: 767px) {
+.highlight-details {
+    display: flex;
+    flex-direction: column;
+}
+.highlight-details img {
+    width: 173px;
+height: 119px;
+border-radius: 15px;
+}
+.highlight-details p {
+    position:absolute;
+   left:35%;
+    background: #424242;
+    width: 38px;
+height: 30px;
+margin-bottom: -1rem;
+text-align: center;
+color: #FFF;
+font-size: 12px;
+font-family: Satoshi;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.r-gallery-images_card img {
+    width: 193px;
+    height: 159px;
+    margin-left: 1.5rem;
+   
+    
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+}
+@media screen and (max-width: 808px) {
     .blog-media h3 {
         color: #fdf7f7;
     font-size: 22px;
@@ -406,7 +597,7 @@ line-height: normal;
     
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 808px) {
     .blog-media span {
         color: #D7AE37;
     font-size: 22px;
@@ -415,6 +606,101 @@ line-height: normal;
     align-items: flex-start;
     
     }
+
+    .blog-media-left h3 {
+        color: #FFF;
+font-family: Satoshi;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    }
+
+    .blog-media-left span {
+        color:#D7AE37;
+        font-family: Satoshi;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .blog-media-left p {
+        color: #FFF;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    }
+
+    .blog-media-right button {
+        width: 104px;
+height: 30px;
+flex-shrink: 0;
+border-radius: 10px;
+border: 1px solid #FFF;
+background: #223E88;
+font-size: 16px;
+margin-bottom: -3rem;
+    }
+
+    .icon {
+        width: 47px;
+        height: 47px;
+        margin-top: 3rem;
+    }
+ .highlight-intro h4,
+ .signee-intro h4,
+ .mostviewed-intro h4,
+ .toprated-intro h4,
+ .help-intro h4,
+ .interviews-intro h4 {
+    color: #424242;
+font-family: Satoshi;
+font-size: 10px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+ }
+
+ .interviews-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+ }
+
+ .interviews-intro-btns {
+    display: flex;
+    flex-direction: row;
+    
+ }
+
+ .interviews-intro-btn button {
+
+display: flex;
+flex-direction: row;
+padding: 0;
+font-size: 10px;
+ }
+
+ .highlight-intro button {
+    width: 76px;
+height: 22px;
+font-size: 10px;
+ }
+
+ .signee-intro button {
+    width: 63px;
+height: 22px;
+font-size: 10px;
+ }
+.toprated-intro button {
+    width: 90px;
+height: 32px;
+font-size: 10px;
+}
  
 }
 

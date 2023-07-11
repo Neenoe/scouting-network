@@ -155,7 +155,7 @@ import Footer from './Footer/Footer';
 
     {/* ABOUT US */}
 
-    <div className="about paddings innerWidth">
+    {/* <div className="about paddings innerWidth">
       <h2>ABOUT US</h2>
      <div className="about-us">
       <div className="about-us1">
@@ -174,10 +174,10 @@ import Footer from './Footer/Footer';
         </div>
         </div>
 
-    </div>
+    </div> */}
 
     {/* our mission */}
-    <div className="mission innerWidth paddings">
+    {/* <div className="mission innerWidth paddings">
       <div className="mission-left">
         <img src={data[8].imag} alt="" />
       </div>
@@ -186,10 +186,10 @@ import Footer from './Footer/Footer';
         <h4>OUR MISSION</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est, tempus euismod lectus efficitur ac. Morbi finibus mollis nibh, in blandit tellus pharetra eu<br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est, tempus euismod lectus efficitur ac. Morbi finibus mollis nibh, in blandit tellus pharetra eu</p>
       </div>
-    </div>
+    </div> */}
     {/* OUR PARTNERS */}
 
-    <div className="partner paddings innerWidth">
+    {/* <div className="partner paddings innerWidth">
       <div className="partner-text">
        <h2>OUR PARTNERS</h2>
       </div>
@@ -209,7 +209,7 @@ import Footer from './Footer/Footer';
       </div>
     </div>
 
-      </div>
+      </div> */}
 
       {/* OUR SCOUT */}
       <div className='scout innerWidth paddings'>
@@ -355,7 +355,7 @@ import Footer from './Footer/Footer';
         </div>
       </div>
       {/* PARTNERSHIP */}
-      <div className="partnersip innerWidth paddings">
+      {/* <div className="partnersip innerWidth paddings">
       <h3>BECOME A  PARTNER</h3>
       <div className="partnership-info">
         <div className="partnership-info-left">
@@ -384,7 +384,7 @@ import Footer from './Footer/Footer';
       </div>
       
 
-      </div>
+      </div> */}
       {/* FOOTER */}
   
      <Footer/>

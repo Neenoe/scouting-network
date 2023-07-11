@@ -1,4 +1,4 @@
-import { random, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, eleventh, twelveth, thirteenth, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentytwo, twentyfour, twentythree, twentyseven, twentyfive, twentysix, twentyeight, twentynine, thirty, thirtyone } from './index';
+import { random, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, eleventh, twelveth, thirteenth, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentytwo, twentyfour, twentythree, twentyseven, twentyfive, twentysix, twentyeight, twentynine, thirty, thirtyone, thirtysix, thirtyfive, thirtyfour, thirtythree, thirtytwo } from './index';
 
 const data = [
   {
@@ -95,6 +95,21 @@ const data = [
  },
  {
   imag: thirtyone
+ },
+ {
+  imag: thirtytwo
+ },
+ {
+  imag: thirtythree
+ },
+ {
+  imag: thirtyfour
+ },
+ {
+  imag: thirtyfive
+ },
+ {
+  imag: thirtysix
  }
 ];
 
