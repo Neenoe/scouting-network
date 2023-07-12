@@ -155,7 +155,7 @@ import Footer from './Footer/Footer';
 
     {/* ABOUT US */}
 
-    <div className="about paddings innerWidth">
+    {/* <div className="about paddings innerWidth">
       <h2>ABOUT US</h2>
      <div className="about-us">
       <div className="about-us1">
@@ -174,10 +174,10 @@ import Footer from './Footer/Footer';
         </div>
         </div>
 
-    </div>
+    </div> */}
 
     {/* our mission */}
-    <div className="mission innerWidth paddings">
+    {/* <div className="mission innerWidth paddings">
       <div className="mission-left">
         <img src={data[8].imag} alt="" />
       </div>
@@ -186,10 +186,10 @@ import Footer from './Footer/Footer';
         <h4>OUR MISSION</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est, tempus euismod lectus efficitur ac. Morbi finibus mollis nibh, in blandit tellus pharetra eu<br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est, tempus euismod lectus efficitur ac. Morbi finibus mollis nibh, in blandit tellus pharetra eu</p>
       </div>
-    </div>
+    </div> */}
     {/* OUR PARTNERS */}
 
-    <div className="partner paddings innerWidth">
+    {/* <div className="partner paddings innerWidth">
       <div className="partner-text">
        <h2>OUR PARTNERS</h2>
       </div>
@@ -209,7 +209,7 @@ import Footer from './Footer/Footer';
       </div>
     </div>
 
-      </div>
+      </div> */}
 
       {/* OUR SCOUT */}
       <div className='scout innerWidth paddings'>
@@ -227,13 +227,13 @@ import Footer from './Footer/Footer';
             </div>
           </div>
           <div className='scout-top-details'>
-            <div>
+            <div className='stout'>
             <img  src={data[14].imag} alt="" />
             </div>
            
             <div className="scout-top-text">
-              <p>Antony Bills</p>
-              <span>HR Arvado</span>
+              <p>Fantana Wills</p>
+              <span>Arvado</span>
             </div>
           </div>
         </div>
@@ -244,7 +244,7 @@ import Footer from './Footer/Footer';
             </div>
            
             <div className="scout-middle-text">
-              <p>Paul Graham</p>
+              <p>Scot Ryan</p>
               <span>HR Arvado</span>
             </div>
           </div>
@@ -256,7 +256,7 @@ import Footer from './Footer/Footer';
             </div>
            
             <div className="scout-down-text">
-              <p>Bill Cosby</p>
+              <p>Tracy Blair</p>
               <span>HR Arvado</span>
             </div>
           </div>
@@ -266,7 +266,7 @@ import Footer from './Footer/Footer';
             </div>
            
             <div className="scout-down-text">
-              <p>Sam Walters</p>
+              <p>Samuel Felix</p>
               <span>HR Arvado</span>
             </div>
           </div>
@@ -355,7 +355,7 @@ import Footer from './Footer/Footer';
         </div>
       </div>
       {/* PARTNERSHIP */}
-      <div className="partnersip innerWidth paddings">
+      {/* <div className="partnersip innerWidth paddings">
       <h3>BECOME A  PARTNER</h3>
       <div className="partnership-info">
         <div className="partnership-info-left">
@@ -384,7 +384,7 @@ import Footer from './Footer/Footer';
       </div>
       
 
-      </div>
+      </div> */}
       {/* FOOTER */}
   
      <Footer/>

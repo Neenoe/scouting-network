@@ -28,4 +28,15 @@ import twentyseven from './../assets/Assets-27.jpeg'
 import twentyeight from './../assets/Assets-28.jpeg'
 import twentynine from './../assets/Assets-29.jpeg'
 import thirty from './../assets/Assets-30.jpeg'
+<<<<<<< HEAD
 export { meal, random, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, eleventh, twelveth, thirteenth, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeight, twentynine, thirty}
+=======
+import thirtyone from './../assets/Assets-40.png'
+import thirtytwo from './../assets/Assets-32.jpeg'
+import thirtythree from './../assets/Assets-33.jpeg'
+import thirtyfour from './../assets/Assets-34.jpeg'
+import thirtyfive from './../assets/Assets-35.jpeg'
+import thirtysix from './../assets/Assets-36.jpeg'
+import images from './images'
+export { meal, images, random, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, eleventh, twelveth, thirteenth, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentytwo, twentythree, twentyfour, twentyfive, twentysix, twentyseven, twentyeight, twentynine, thirty, thirtyone, thirtytwo, thirtythree, thirtyfour, thirtyfive, thirtysix}
+>>>>>>> 4a291060d3c5a49af73d7513a86d59b2ef6f8911
