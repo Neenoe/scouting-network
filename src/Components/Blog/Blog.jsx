@@ -362,7 +362,7 @@ function Blog() {
  
 
     {/* Footer */}
-     {/* <Footer/> */}
+     <Footer/>
     
 
 
