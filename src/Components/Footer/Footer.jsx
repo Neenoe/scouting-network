@@ -33,10 +33,21 @@ function Footer() {
        <AiFillFacebook className='hi-con'/>
        <AiFillFacebook className='hi-con'/>
        <AiFillFacebook className='hi-con'/> */}
-       <SocialIcon network="twitter" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' />
+       <div className="social-icon1">
+       <SocialIcon network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2'   />
        <SocialIcon network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' />
        <SocialIcon network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' />
        <SocialIcon network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' />
+
+       </div>
+
+       <div className="social-icon">
+       <SocialIcon network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2' style={{width: 20}} />
+       <SocialIcon network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' style={{width: 20}} />
+       <SocialIcon network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 20}} />
+       <SocialIcon network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 20}} />
+
+       </div>
        
         </div>
 

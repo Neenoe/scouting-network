@@ -832,6 +832,29 @@ position: absolute;
     width: 300px;
  }
 
+ .mostviewed-details img {
+    height: 80px;
+    width: 80px;
+ }
+ .mostviwed-texts {
+    margin-left: 2rem;
+ }
+ .mostviwed-texts h6 {
+    font-size: 12px;
+ }
+ .mostviwed-texts p {
+    font-size: 10px;
+ }
+ .mostviwed-texts span {
+    font-size: 10px;
+ }
+
+ .play {
+    width: 50px;
+    height: 30px;
+    margin-bottom: 2rem;
+ }
+
 }
 
 .interviews-intro h4{
