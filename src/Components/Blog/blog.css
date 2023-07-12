@@ -707,13 +707,15 @@ border-radius: 10px;
 border: 1px solid #FFF;
 background: #223E88;
 font-size: 16px;
-margin-bottom: -3rem;
+margin-right: -2rem;
+margin-top: 4rem;
     }
 
     .icon {
         width: 47px;
         height: 47px;
-        margin-top: 3rem;
+        margin-top: 4rem;
+        margin-right: -1.8rem;
     }
  .highlight-intro h4,
  .signee-intro h4,
@@ -853,6 +855,7 @@ position: absolute;
     width: 50px;
     height: 30px;
     margin-bottom: 2rem;
+    margin-left: -8rem;
  }
 
 }

@@ -42,10 +42,10 @@ function Footer() {
        </div>
 
        <div className="social-icon">
-       <SocialIcon network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2' style={{width: 20}} />
-       <SocialIcon network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' style={{width: 20}} />
-       <SocialIcon network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 20}} />
-       <SocialIcon network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 20}} />
+       <SocialIcon network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2' style={{width: 12}} />
+       <SocialIcon network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' style={{width: 12}} />
+       <SocialIcon network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 12}} />
+       <SocialIcon network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 12}} />
 
        </div>
        
