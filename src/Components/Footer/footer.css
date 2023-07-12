@@ -175,11 +175,16 @@ cursor: pointer;
     .social-icon {
         display: flex;
         flex-direction: row;
-        margin-left: 0.4rem;
+        margin-left: 0.0001rem;
+
+    }
+
+    .hi-con {
+        margin-right: 0.5rem;
     }
 
     .footer-icons-icon {
-        margin-right: 0.4rem;
+        margin-right: 0.1rem;
     }
 
     .footer-icons h3 {
