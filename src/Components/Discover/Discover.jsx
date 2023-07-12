@@ -15,7 +15,7 @@ import { Search } from "@mui/icons-material";
 import { theme } from "./theme";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
-import playerData from "../../data/playerData.json";
+import {playerData} from "../../data/playerData";
 
 import {ReactComponent as Profile} from '../../assets/Svg/profile.svg';
 import {ReactComponent as Pitch} from '../../assets/Svg/pitch.svg';
@@ -98,12 +98,13 @@ const [buttonIndex, setButtonIndex] = useState(0)
                 ))}
               </Stack>
               <Stack
+              justifyContent='space-between'
                 direction="row"
                 sx={{
                   mt: "81px",
                   width: "100%",
                   flexWrap: "wrap",
-                  gap: "35px 44px",
+                  gap: "35px",
                 }}
               >
                 {playerData.map((player) => (
@@ -120,7 +121,7 @@ const [buttonIndex, setButtonIndex] = useState(0)
                     >
                       <Avatar
                         alt="player"
-                        src="https://s.hdnux.com/photos/01/14/12/43/19966188/6/rawImage.jpg"
+                        src={player.imageURL}
                         sx={{ width: "148px", height: "148px" }}
                       />
                       <Typography>{player?.name}</Typography>
