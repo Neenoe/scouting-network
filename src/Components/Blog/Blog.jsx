@@ -6,7 +6,17 @@ import { BsFillPauseFill, BsFillPlayFill, BsPauseFill} from 'react-icons/bs'
 import {data} from './../../Constants/data'
 import Footer from './../Footer/Footer';
 import {images } from './../../Constants';
-import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
+// import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+
+// import required modules
+import { Navigation } from 'swiper/modules';
 function Blog() {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
@@ -34,7 +44,7 @@ function Blog() {
     }
   };
   const galleryImages = [images.r1, images.r2, images.r3, images.r4, images.r5];
-  const yoImages = [data[0].imag, data[1].imag, data[2].imag]
+ 
   return (
     <div className='blog-container paddings innerWidth'>
         <div className="blog-wrapper">
@@ -108,7 +118,7 @@ function Blog() {
         <button>Watch More</button>
         </div>
 
-        <div className="highlight-details">
+        <div className="highlight-details" ref={scrollRef}>
           <div>
           <p>{data[0].duration}</p>
           <img src={data[20].imag} alt="" />
@@ -168,10 +178,7 @@ function Blog() {
             ))}
           </div>
 
-          <div className='r-gallery-images_arrows'>
-            <BsArrowLeftShort className='r-gallery__arrow-icon' onClick={() => scroll('left')} />
-            <BsArrowRightShort className='r-gallery__arrow-icon' onClick={() => scroll('right')} />
-          </div>
+         
         </div>
     
 
@@ -344,24 +351,18 @@ function Blog() {
         </div>
 
     </div>
-    <div className='r-gallery-images paddings innerWidth'>
-          <div className='r-gallery-images_container' ref={scrollRef}>
-            {galleryImages.map((image, index) => (
-              <div className='r-gallery-images_card flex__center' key={`gallery_image-${index + 1}`}>
-                <img src={image} alt="img" />
-              
-              </div>
-            ))}
-          </div>
+  
 
-          <div className='r-gallery-images_arrows'>
-            <BsArrowLeftShort className='r-gallery__arrow-icon' onClick={() => scroll('left')} />
-            <BsArrowRightShort className='r-gallery__arrow-icon' onClick={() => scroll('right')} />
-          </div>
-        </div>
+        {/*  */}
+
+       
+
+        {/*  */}
+
+ 
 
     {/* Footer */}
-     <Footer/>
+     {/* <Footer/> */}
     
 
 
