@@ -60,7 +60,7 @@ function Footer() {
           <div className="footer-right-info innerWidth">
             <div className="footer-right-info1">
             <label for="username" placeholder='Your Name'></label>
-        <input type="text" id="username" name="username"  placeholder='Your Name' className='info-input'></input>
+        <input type="text" id="username" name="username"  placeholder='Your Name' className='info'></input>
             </div>
             <div className="footer-right-info2">
             <button>SEND</button>

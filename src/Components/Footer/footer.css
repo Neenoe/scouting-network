@@ -108,7 +108,7 @@ line-height: normal;
 
 }
 
-.info-input {
+.info {
     height: 40px;
     width: 300px;
     padding: 1.5rem;
@@ -203,8 +203,8 @@ cursor: pointer;
     
     }
     
-    .info-input {
-        height: 40px;
+    .info{
+        height: 80px;
         width: 100px;
         padding: 1.5rem;
     }

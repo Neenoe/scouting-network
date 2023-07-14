@@ -54,6 +54,10 @@ function Nav() {
             {" "}
             <div>DISCOVER</div>{" "}
           </Link>
+           {/* <Link to="/ScoutProfile">
+            {" "}
+            <div>DISCOVER</div>{" "}
+          </Link> */}
           <Link to="/blog">
             {" "}
             <div>BLOG</div>{" "}

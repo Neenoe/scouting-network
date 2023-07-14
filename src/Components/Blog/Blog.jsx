@@ -218,40 +218,7 @@ function Blog() {
 
     </div>
 
-    {/* most viwed */}
-    <div className="mostviewed paddings innerWidth">
-    <div className="mostviewed-intro">
-        <h4>  Trending highlight</h4>
-        <button>Watch More</button>
-        </div>
-        <div className="mostviewed-details">
-          <img src={data[17].imag} alt="" />
-          <div className="mostviwed-texts">
-            <h6>INDEPT INTERVIEWS WITH THE SCOUTS</h6>
-            <p>Resume: 45m left <span>.series 12 episode 10</span></p>
-
-          </div>
-          <BsFillPlayFill className='play'/>
-        </div>
-        <div className="mostviewed-details">
-          <img src={data[17].imag} alt="" />
-          <div className="mostviwed-texts">
-            <h6>INDEPT INTERVIEWS WITH THE SCOUTS</h6>
-            <p>Resume: 45m left <span>.series 12 episode 10</span></p>
-
-          </div>
-          <BsFillPlayFill className='play'/>
-        </div>
-        <div className="mostviewed-details">
-          <img src={data[17].imag} alt="" />
-          <div className="mostviwed-texts">
-            <h6>INDEPT INTERVIEWS WITH THE SCOUTS</h6>
-            <p>Resume: 45m left <span>.series 12 episode 10</span></p>
-
-          </div>
-          <BsFillPlayFill className='play'/>
-        </div>
-    </div>
+  
 
     {/* weekly podcast */}
     <div className="podcast innerWidth paddings">
@@ -329,28 +296,7 @@ function Blog() {
 
     </div>
     {/* help */}
-    <div className="help-wrapper innerWidth paddings">
-    <div className="help-intro">
-        <h4>  NEED HELP ?</h4>
-        <button>View All</button>
-        </div>
-        <div className="help-media">
-        <div>
-         
-         <img src={data[0].imag} alt="" />
-         </div>
-         <div>
-        
-         <img src={data[1].imag} alt="" />
-         </div>
-         <div>
-       
-         <img src={data[2].imag} alt="" />
-         </div>
-
-        </div>
-
-    </div>
+   
   
 
         {/*  */}

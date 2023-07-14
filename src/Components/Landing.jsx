@@ -98,6 +98,7 @@ import Footer from './Footer/Footer';
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transition: 'opacity 3s',
+            filter: 'brightness(60%)',
            
           }}
         />
