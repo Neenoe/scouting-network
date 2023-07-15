@@ -6,6 +6,7 @@ import Login from "../Login";
 import Signup from "../Signup";
 import { BiMenuAltRight } from "react-icons/bi";
 import { FaLinesLeaning } from "react-icons/fa6";
+import { useIdleTimer } from 'react-idle-timer';
 
 const style = {
   maxHeight: "800px",
@@ -25,6 +26,7 @@ const style = {
 function Nav() {
   const [open, setOpen] = useState(false);
   const [authType, setAuthType] = useState();
+  const  [localValue, setLocalValue] = useState('');
 
   const handleOpen = (e) => {
     setOpen(true);
@@ -38,6 +40,18 @@ function Nav() {
       return { right: !menuOpened ? "0" : "-100%" };
     }
   };
+
+  const onIdle = () => {
+    console.log('fires after 2 minutes');
+    localStorage.clear();
+    window.location.reload();
+  }
+
+   useIdleTimer({
+    onIdle,
+    timeout: 2 * 60 * 1000, //10 minute idle timeout
+  })
+  
 
   return (
     <div>
@@ -84,7 +98,12 @@ function Nav() {
       </div>
 
       <Modal open={open} onClose={handleClose}>
-        <Box sx={style}>{authType === "login" ? <Login /> : <Signup />}</Box>
+        <Box sx={style}>{authType === "login" ? 
+        <Login setLocalValue={setLocalValue} localValue={localValue}/>
+         : 
+         <Signup setLocalValue={setLocalValue} localValue={localValue} />
+         }
+         </Box>
       </Modal>
     </div>
   );

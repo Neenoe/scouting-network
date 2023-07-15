@@ -8,15 +8,15 @@ import {
   ThemeProvider,
   Typography,
 } from "@mui/material";
-import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { ReactComponent as GoogleIcon } from "../assets/Svg/googleLogo.svg";
 import { theme } from "./Discover/theme";
-import { auth } from "../firebase";
+import { auth, provider } from "../firebase";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router";
 
-const Login = () => {
+const Login = ({setLocalValue, localValue}) => {
   const [checkStatus, setCheckStatus] = useState("remember");
 
   const [email, setEmail] = useState("");
@@ -42,7 +42,7 @@ const Login = () => {
   useEffect(()=> {
     const listen = onAuthStateChanged(auth, (user)=> {
       if (user) {
-        navigate('/Discover')
+        navigate('/')
       }else {
         return user
       }
@@ -51,6 +51,19 @@ const Login = () => {
       listen();
     }
   }, [navigate])
+
+
+const handleGoogleAuth = ()=> {
+  signInWithPopup(auth, provider).then((data)=>{
+    setLocalValue(data.user.email)
+    localStorage.setItem("email", data.user.email)
+  })
+}
+
+useEffect(()=>{
+  setLocalValue(localStorage.getItem('email'))
+  navigate('/Discover')
+},[navigate, setLocalValue])
 
   const handleCheckButton = (e) => {
     if (checkStatus === e.target.id) {
@@ -77,6 +90,7 @@ const Login = () => {
       <Stack direction="column" sx={{ justifyContent: "center" }}>
         <form onSubmit={handleSignin}>
           <Button
+          onClick={handleGoogleAuth}
             variant="outlined"
             startIcon={<GoogleIcon />}
             sx={{
@@ -86,6 +100,7 @@ const Login = () => {
               borderColor: "#223E88",
               textTransform: "none",
               borderRadius: "10px",
+              cursor:'pointer'
             }}
           >
             Sign in with Google
