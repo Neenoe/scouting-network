@@ -8,18 +8,30 @@ import {
   ThemeProvider,
   Typography,
 } from "@mui/material";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import React, { useState } from 'react';
+import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import React, { useEffect, useState } from 'react';
+import { toast, Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router";
 import {ReactComponent as GoogleIcon} from '../assets/Svg/googleLogo.svg';
 import { theme } from "../Components/Discover/theme";
-import { auth } from "../firebase";
+import { auth, provider } from "../firebase";
 
-const Signup = () => {
+
+const Signup = ({setLocalValue, localValue}) => {
 const [signupAs, setSignupAs] = useState('scout');
 
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 const [name, setName] = useState('');
+const navigate = useNavigate();
+
+const profileFunc= ()=>{
+  if(signupAs ==='scout'){
+    navigate('/ScoutProfile')
+  }else if (signupAs ==='footballer'){
+    navigate('/PlayerProfile')
+  }
+}
 
 const handleInputChange = (setState)=> (event)=>{
   setState(event.target.value)
@@ -30,12 +42,28 @@ const handleSignUp = (event) =>{
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       console.log(userCredential)
+      setLocalValue(email)
+      localStorage.setItem('email', email)
+      profileFunc();
     })
     .catch((error) => {
+      toast.error(`${error.code}. Please check details`);
       console.log(error)
     })
   ;
 }
+
+const handleGoogleAuth = ()=> {
+  signInWithPopup(auth, provider).then((data)=>{
+    setLocalValue(data.user.email)
+    localStorage.setItem("email", data.user.email)
+    profileFunc();
+  })
+}
+
+useEffect(()=>{
+  setLocalValue(localStorage.getItem('email'))
+},[setLocalValue])
 
 const handleCheckButton = (e)=>{
   if (signupAs=== e.target.id){
@@ -48,10 +76,12 @@ const handleCheckButton = (e)=>{
 
   return (
     <ThemeProvider theme={theme}>
+      <Toaster/>
     <Stack direction="column" sx={{ justifyContent: "center" }}>
       <form onSubmit={handleSignUp}>
         
       <Button
+      onClick={handleGoogleAuth}
         variant="outlined"
         startIcon={<GoogleIcon />}
         sx={{
@@ -61,6 +91,7 @@ const handleCheckButton = (e)=>{
           borderColor: "#223E88",
           textTransform: "none",
           borderRadius: "10px",
+          cursor:'pointer'
         }}
       >
         Sign up with Google
