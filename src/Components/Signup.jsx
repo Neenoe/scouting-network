@@ -25,6 +25,14 @@ const [password, setPassword] = useState('');
 const [name, setName] = useState('');
 const navigate = useNavigate();
 
+const profileFunc= ()=>{
+  if(signupAs ==='scout'){
+    navigate('/ScoutProfile')
+  }else if (signupAs ==='footballer'){
+    navigate('/PlayerProfile')
+  }
+}
+
 const handleInputChange = (setState)=> (event)=>{
   setState(event.target.value)
 };
@@ -36,6 +44,7 @@ const handleSignUp = (event) =>{
       console.log(userCredential)
       setLocalValue(email)
       localStorage.setItem('email', email)
+      profileFunc();
     })
     .catch((error) => {
       toast.error(`${error.code}. Please check details`);
@@ -48,13 +57,13 @@ const handleGoogleAuth = ()=> {
   signInWithPopup(auth, provider).then((data)=>{
     setLocalValue(data.user.email)
     localStorage.setItem("email", data.user.email)
+    profileFunc();
   })
 }
 
 useEffect(()=>{
   setLocalValue(localStorage.getItem('email'))
-  navigate('/')
-},[navigate, setLocalValue])
+},[setLocalValue])
 
 const handleCheckButton = (e)=>{
   if (signupAs=== e.target.id){
