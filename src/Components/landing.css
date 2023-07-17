@@ -224,6 +224,17 @@ padding: 1rem;
 .categories2 h4,
 .categories3  h4 {
     margin-top: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #161037;
+font-family: Satoshi;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
 }
 
 .categories1 span,
@@ -646,6 +657,9 @@ cursor: pointer;
 }
 
 @media screen and (max-width: 808px) {
+    #root > div > div > div > div:nth-child(2) > div:nth-child(1) > div {
+        border-radius: 10px;
+    }
     .media h3 {
         color: #fdf7f7;
     font-size: 22px;
@@ -667,6 +681,15 @@ line-height: normal;
 height: 81px;
 flex-shrink: 0;
 background: #D7AE37;
+align-self: flex-end;
+margin-right: -0rem;
+margin-right: 1.5rem;
+
+}
+
+.media-right-container {
+   position: absolute;
+   right: 0;
 }
 .media-right div p {
     color: #ffffff;
@@ -685,13 +708,29 @@ line-height: normal;
 .categories-wrapper {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
+   align-items: center;
     
+}
+
+.categories3 {
+    margin-left: -1rem;
 }
 .categories-wrapper div {
     margin-top:2rem ;
+}
+
+.categories1,
+.categories2,
+.categories3 {
+    border-radius: 10px;
+background: #F4F7FF;
+border: none;
+}
+
+.categories1 img,
+.categories2 img,
+.categories3 img {
+    border-radius: 10px;
 }
 
 .about {
@@ -740,6 +779,20 @@ line-height: normal;
 .scout-top,
 .scout-down {
     padding-right: 2rem;
+}
+
+.stout img {
+    width: 150px;
+    height: 150px;
+}
+.scout-down-details img {
+    width: 150px;
+    height: 150px;
+}
+
+.scout-middle-details img {
+    width: 150px;
+    height: 150px;
 }
 
 .testimonial-details {

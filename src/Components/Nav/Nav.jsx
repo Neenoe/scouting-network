@@ -38,15 +38,11 @@ function Nav() {
   };
   const handleClose = () => setOpen(false);
 
-  const getMenuStyles = (menuOpened) => {
-    if (document.documentElement.clientWidth <= 800) {
-      return { right: !menuOpened ? "0" : "-100%" };
-    }
-  };
+
 
   return (
     <div>
-      <div className="header flexCenter paddings innerWidth">
+      <div className="header flexCenter innerWidth">
         <div className="header-logo">
           <h3>SCOUTING REPORT</h3>
         </div>
@@ -55,26 +51,23 @@ function Nav() {
         >
           <Link to="/">
             {" "}
-            <div>HOME</div>{" "}
+            <div>Home</div>{" "}
           </Link>
           <Link to="/discover">
             {" "}
-            <div>DISCOVER</div>{" "}
+            <div>Discover</div>{" "}
           </Link>
-           {/* <Link to="/ScoutProfile">
-            {" "}
-            <div>DISCOVER</div>{" "}
-          </Link> */}
+        
           <Link to="/blog">
             {" "}
-            <div>BLOG</div>{" "}
+            <div>Blog</div>{" "}
           </Link>
           <div
             id="login"
             onClick={(e) => handleOpen(e)}
             style={{ cursor: "pointer" }}
           >
-            LOGIN
+            Login
           </div>
           <div className="header-btn">
             <button id="signup" onClick={(e) => handleOpen(e)}>

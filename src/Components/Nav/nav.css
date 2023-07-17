@@ -1,5 +1,5 @@
 .header {
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-top: 1rem;
     padding-bottom: 1rem;
     gap: 2rem;
@@ -134,7 +134,19 @@ margin: o auto;
 
    
    
-  
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 4rem;
+   
+  }
+
+  .header-logo h3 {
+    font-size: 16px;
+  }
 
     .app__navbar-links {
         display: none;

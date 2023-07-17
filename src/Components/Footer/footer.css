@@ -4,8 +4,22 @@
     justify-content: space-between;
     padding: 2rem;
     background: #223E88;
+   
+}
+.footer-container {
+ width: 1433px;
+height: 370px;
+flex-shrink: 0;
+background: #223E88;
+margin-right: 2rem;
+width: 100%; /* Take the whole screen width */
+  padding-left: 0;
+   
 }
 
+.footer-mobile {
+    display: none;
+}
 .footer-scout {
     display: flex;
     flex-direction: column;
@@ -228,4 +242,119 @@ cursor: pointer;
     }
 
   
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 808px) {
+
+    .footer {
+        display: none;
+    }
+    .footer-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        padding: 1rem;
+       
+    }
+    
+    .footer-1,
+    .footer-2,
+    .footer-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .footer-3 {
+        margin-top: 1rem;
+    }
+    
+    .footer-1 h3 {
+        width: 199px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: start;
+    }
+    
+    .footer-1 button {
+        width: 86px;
+    height: 26px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #D7AE37;
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    margin-top: 1rem;
+    }
+    
+    .footer-2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    
+    .footer-2 span {
+        color: #FFF;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: start;
+    margin-top: 1rem;
+    }
+    
+    .footer-3 p {
+        color: #FFF;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 1rem;
+    }
+    
+    .footer-2 h3,
+    .footer-3 h3{
+        color: #CECECE;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: start;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    align-self: start;
+    }
+    
+    .footer-4 {
+       
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    .hi-con {
+        margin-left: 0.4rem;
+    }
 }

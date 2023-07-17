@@ -11,8 +11,8 @@ import './footer.css'
 import { SocialIcon } from 'react-social-icons';
 function Footer() {
   return (
-    <div>
-            <div className="footer innerWidth paddings">
+    <div className='footer-container'>
+            <div className="footer">
         <div className="footer-left">
         <div className="footer-scout">
           <h3>SCOUTRIGHT</h3>
@@ -26,13 +26,7 @@ function Footer() {
        <div className="footer-icons">
         <h3>Socials</h3>
         <div className="footer-icons-icon">
-         {/* <BsInstagram/>
-         <BsTwitter/>
-         <YouTube/> */}
-       {/* <AiFillFacebook className='hi-con'/>
-       <AiFillFacebook className='hi-con'/>
-       <AiFillFacebook className='hi-con'/>
-       <AiFillFacebook className='hi-con'/> */}
+       
        <div className="social-icon1">
        <SocialIcon network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2'   />
        <SocialIcon network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' />
@@ -60,21 +54,55 @@ function Footer() {
           <div className="footer-right-info innerWidth">
             <div className="footer-right-info1">
             <label for="username" placeholder='Your Name'></label>
-        <input type="text" id="username" name="username"  placeholder='Your Name' className='info'></input>
+        <input type="text" id="username" name="username"  placeholder='Enter Your Email' className='info'></input>
             </div>
             <div className="footer-right-info2">
             <button>SEND</button>
 
             </div>
+            </div>
          
        
 
           </div>
+
         
 
         </div>
+
+        
+        <div className='footer-mobile'>
+          <div className='footer-1'>
+            <h3>football is played with the head your foot is the tool</h3>
+            <button>SIGN UP</button>
+
+          </div>
+          <div className='footer-2'>
+            <h3>NEED HELP</h3>
+            <span>Email</span>
+
+          </div>
+          <div className='footer-3'>
+            <h3>PAGES</h3>
+            <p>Home</p>
+            <p>Top Scouts</p>
+            <p>Testimonials</p>
+            <p>Blog</p>
+            <p>Discover</p>
+
+          </div>
+          <div className='footer-4'>
+          <SocialIcon network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2'  style={{width: 30, height: 30}} />
+       <SocialIcon network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' style={{width: 30, height: 30}} />
+       <SocialIcon network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 30, height: 30}} />
+       <SocialIcon network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 30, height: 30}} />
+
+          </div>
+
+        </div>
+        
        
-      </div>
+      
     </div>
   )
 }
