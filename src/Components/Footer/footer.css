@@ -302,6 +302,7 @@ cursor: pointer;
     line-height: normal;
     border: none;
     margin-top: 1rem;
+    cursor: pointer;
     }
     
     .footer-2 {
@@ -352,9 +353,12 @@ cursor: pointer;
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
     }
     
     .hi-con {
         margin-left: 0.4rem;
+
     }
 }
