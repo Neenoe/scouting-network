@@ -12,15 +12,15 @@ import OutsideClickHandler from 'react-outside-click-handler'
 import { useIdleTimer } from 'react-idle-timer';
 
 const style = {
-  maxHeight: "800px",
+  maxHeight: {xs:"70%", md:"800px"},
   position: "absolute",
   overflowY: "scroll",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "649px",
+  width: {xs:"80%", md:"40.56rem"},
   bgcolor: "background.paper",
-  p: "96px 64px",
+  p: {xs:'40px 32px', md:"96px 64px"},
   "&:focus": {
     outline: "none",
   },

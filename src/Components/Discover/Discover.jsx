@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import {
   ThemeProvider,
   TextField,
@@ -15,14 +15,14 @@ import { Search } from "@mui/icons-material";
 import { theme } from "./theme";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
-import {playerData} from "../../data/playerData";
+import { playerData } from "../../data/playerData";
 
-import {ReactComponent as Profile} from '../../assets/Svg/profile.svg';
-import {ReactComponent as Pitch} from '../../assets/Svg/pitch.svg';
-import {ReactComponent as Boot} from '../../assets/Svg/boot.svg';
-import {ReactComponent as Location} from '../../assets/Svg/location.svg';
-import {ReactComponent as Star} from '../../assets/Svg/star.svg';
-
+import { ReactComponent as Profile } from "../../assets/Svg/profile.svg";
+import { ReactComponent as Pitch } from "../../assets/Svg/pitch.svg";
+import { ReactComponent as Boot } from "../../assets/Svg/boot.svg";
+import { ReactComponent as Location } from "../../assets/Svg/location.svg";
+import { ReactComponent as Star } from "../../assets/Svg/star.svg";
+import { Link } from "react-router-dom";
 
 const Discover = () => {
   const filterButtons = [
@@ -36,32 +36,36 @@ const Discover = () => {
     "SKILLS",
   ];
 
-const [buttonIndex, setButtonIndex] = useState(0)
+  const [buttonIndex, setButtonIndex] = useState(0);
 
   return (
     <ThemeProvider theme={theme}>
       <div>
         <div className="paddings innerWidth discover">
-        <Nav />
+          <Nav />
         </div>
-        
+
         <main>
-          <div
+          <Box
             maxWidth="xl"
-            style={{
-              padding: "31px 100px",
+            sx={{
+              p: {xs:'15px 30px', md:"31px 100px"},
               textAlign: "start",
             }}
           >
             <TextField
               variant="filled"
+             
               InputProps={{
                 sx: {
-                  height: "75px",
+                  height: {xs:'48px', md:"75px"},
                   padding: "0px 0px 0px 1rem",
                   backgroundColor: "white",
-                  width: "820px",
-                  boxShadow: "3",
+                  width: {xs:'276px', md:"820px"},
+                  boxShadow: "1",
+                  borderRadius:'10px',
+                  overflow:'hidden',
+                 
                 },
                 disableUnderline: true,
                 endAdornment: (
@@ -70,7 +74,7 @@ const [buttonIndex, setButtonIndex] = useState(0)
                       color="secondary"
                       text-primary
                       variant="contained"
-                      style={{ height: "75px", width: "125px" }}
+                      sx={{ height: {xs:'48px', md:"75px"}, width: {xs:'67px',md:"125px"} }}
                     >
                       <IconButton edge="end" color="primary">
                         <Search fontSize="large" />
@@ -84,83 +88,162 @@ const [buttonIndex, setButtonIndex] = useState(0)
               <Typography sx={{ marginY: "31px" }}>Filter</Typography>
               <Stack
                 direction="row"
-                sx={{ width: "50%", flexWrap: "wrap", gap: "35px 44px" }}
+                sx={{ width: {xs:'100%', md:"50%"}, flexWrap: "wrap", gap: {xs:'14px', md:"35px 44px"} }}
               >
                 {filterButtons.map((item, index) => (
                   <Button
-                  backgroundColor='primary'
-                  onClick={()=> setButtonIndex(index)}
-                    variant={`${index ===buttonIndex? 'contained': 'outlined'}`}
-                    sx={{ height: "44px", width: "107px", borderColor: "gray",  }}
+                    backgroundColor="primary"
+                    onClick={() => setButtonIndex(index)}
+                    variant={`${
+                      index === buttonIndex ? "contained" : "outlined"
+                    }`}
+                    sx={{ height: {xs:'32px', md:"44px"}, width: {xs:'90px', md:"107px"}, borderColor: "gray" }}
                   >
                     {item}
                   </Button>
                 ))}
               </Stack>
               <Stack
-              justifyContent='space-between'
+                justifyContent="space-between"
                 direction="row"
                 sx={{
-                  mt: "81px",
+                  mt: {xs:'40px', md:"81px"},
                   width: "100%",
                   flexWrap: "wrap",
-                  gap: "35px",
+                  gap: {xs:'28px 0px', md:"35px 0px"},
                 }}
               >
                 {playerData.map((player) => (
-                  <Box sx={{ width: "596px", height: "531px" }} id={player.id}>
-                    <Stack
-                      sx={{
-                        height: "215px",
-                        width: "100%",
-                        backgroundColor: "primary.light",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: 2,
-                      }}
-                    >
-                      <Avatar
-                        alt="player"
-                        src={player.imageURL}
-                        sx={{ width: "148px", height: "148px" }}
-                      />
-                      <Typography>{player?.name}</Typography>
-                    </Stack>
+                  <Link to='/PlayerBio'>
                     <Box
-                      sx={{
-                        height: "316px",
-                        backgroundColor: "sgray.main",
-                        display:'flex',
-                        justifyContent:'center',
-                        alignItems:'center'
-                      }}
+                      sx={{ width: {xs:'170px', md:"596px"}, height: {xs:'216px', md:"531px"} }}
+                      id={player.id}
                     >
-                      <Grid container sx={{width:'367px', height:'163.12px', justifyContent:'center'}}>
-                        <Grid item md={4}>
-                          <Stack direction='row' sx={{alignItems:'center', gap:'5px'}} ><Profile/><Typography fontSize={12}>{player?.age} yrs</Typography></Stack>
+                      <Stack
+                        sx={{
+                          height: {xs:'108px', md:"215px"},
+                          width: "100%",
+                          backgroundColor: "primary.light",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          gap: 2,
+                        }}
+                      >
+                        <Avatar
+                          alt="player"
+                          src={player.imageURL}
+                          sx={{ width: {xs:'67px', md:"148px"}, height: {xs:'67px', md:"148px"} }}
+                        />
+                        <Typography>{player?.name}</Typography>
+                      </Stack>
+                      <Box
+                        sx={{
+                          height: {xs:'100%', md:"316px"},
+                          backgroundColor: "sgray.main",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          flex:1
+                        }}
+                      >
+                        <Grid
+                          container
+                          sx={{
+                            width: {xs:'123px',md:"367px"},
+                            height: {xs:'69px', md:"163.12px"},
+                            justifyContent: "center",
+                          }}
+                        >
+                          <Grid item md={4}>
+                            <Stack
+                              direction="row"
+                              sx={{ alignItems: "center", gap: "5px" }}
+                            >
+                              <Profile />
+                              <Typography fontSize={12}>
+                                {player?.age} yrs
+                              </Typography>
+                            </Stack>
+                          </Grid>
+                          <Grid item md={4}>
+                            <Stack
+                              direction="row"
+                              sx={{
+                                alignItems: "center",
+                                paddingLeft: "30px",
+                                gap: "5px",
+                              }}
+                            >
+                              <Pitch />
+                              <Typography fontSize={12}>
+                                {player?.position}
+                              </Typography>
+                            </Stack>
+                          </Grid>
+                          <Grid item md={4}>
+                            <Stack
+                              direction="row"
+                              sx={{
+                                alignItems: "center",
+                                paddingLeft: "30px",
+                                gap: "5px",
+                              }}
+                            >
+                              <Boot />
+                              <Typography fontSize={12}>
+                                {player?.foot}
+                              </Typography>
+                            </Stack>
+                          </Grid>
+                          <Grid item md={4}>
+                            <Stack
+                              direction="row"
+                              sx={{ alignItems: "center", gap: "5px" }}
+                            >
+                              <Location />
+                              <Typography fontSize={12}>
+                                {player?.location}
+                              </Typography>
+                            </Stack>
+                          </Grid>
+                          <Grid item md={4}>
+                            <Stack
+                              direction="row"
+                              sx={{
+                                alignItems: "center",
+                                paddingLeft: "30px",
+                                gap: "5px",
+                              }}
+                            >
+                              <Profile />
+                              <Typography fontSize={12}>
+                                {player?.gender}
+                              </Typography>
+                            </Stack>
+                          </Grid>
+                          <Grid item md={4}>
+                            <Stack
+                              direction="row"
+                              sx={{
+                                alignItems: "center",
+                                paddingLeft: "30px",
+                                gap: "5px",
+                              }}
+                            >
+                              <Star />
+                              <Typography fontSize={12}>
+                                {player?.rating}/5
+                              </Typography>
+                            </Stack>
+                          </Grid>
                         </Grid>
-                        <Grid item md={4}>
-                        <Stack direction='row' sx={{alignItems:'center', paddingLeft:'30px', gap:'5px'}}><Pitch/><Typography fontSize={12}>{player?.position}</Typography></Stack>
-                        </Grid>
-                        <Grid item md={4}>
-                        <Stack direction='row' sx={{alignItems:'center', paddingLeft:'30px', gap:'5px'}}><Boot/><Typography fontSize={12} >{player?.foot}</Typography></Stack>
-                        </Grid>
-                        <Grid item md={4}>
-                        <Stack direction='row' sx={{alignItems:'center', gap:'5px'}}><Location/><Typography fontSize={12}>{player?.location}</Typography></Stack>
-                        </Grid>
-                        <Grid item md={4}>
-                        <Stack direction='row' sx={{alignItems:'center', paddingLeft:'30px', gap:'5px'}}><Profile/><Typography fontSize={12} >{player?.gender}</Typography></Stack>
-                        </Grid>
-                        <Grid item md={4}>
-                        <Stack direction='row' sx={{alignItems:'center', paddingLeft:'30px', gap:'5px'}}><Star/><Typography fontSize={12}>{player?.rating}/5</Typography></Stack>
-                        </Grid>
-                      </Grid>
+                      </Box>
                     </Box>
-                  </Box>
+                  </Link>
                 ))}
               </Stack>
             </Box>
-          </div>
+          </Box>
         </main>
         <Footer />
       </div>

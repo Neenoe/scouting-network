@@ -7,6 +7,7 @@ import {
   TextField,
   ThemeProvider,
   Typography,
+  useMediaQuery
 } from "@mui/material";
 import { onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import React, { useEffect, useState } from "react";
@@ -17,6 +18,9 @@ import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router";
 
 const Login = ({setLocalValue, localValue}) => {
+    const mdQuery = useMediaQuery('(min-width:900px)');
+    const xsQuery = useMediaQuery('(min-width:0px)');
+
   const [checkStatus, setCheckStatus] = useState("remember");
 
   const [email, setEmail] = useState("");
@@ -95,7 +99,7 @@ useEffect(()=>{
             startIcon={<GoogleIcon />}
             sx={{
               width: "100%",
-              height: "80px",
+              height: {xs:'60px', md:"80px"},
               color: "gray",
               borderColor: "#223E88",
               textTransform: "none",
@@ -105,11 +109,11 @@ useEffect(()=>{
           >
             Sign in with Google
           </Button>
-          <Typography fontWeight="500" textAlign="center" sx={{ mt: "29px" }}>
+          <Typography fontWeight="500" textAlign="center" sx={{ mt: {xs:'16px', md:"29px"} }}>
             OR
           </Typography>
           <div>
-            <Typography color="#817F7F" sx={{ mt: "16px" }}>
+            <Typography color="#817F7F" sx={{ mt: {xs:'8px', md:"16px"} }}>
               User Name
             </Typography>
             <TextField
@@ -121,7 +125,7 @@ useEffect(()=>{
               sx={{
                 fieldset: {
                   borderColor: "#223E88",
-                  height: "80px",
+                  height: {xs:'60px', md:"80px"},
                   borderRadius: "10px",
                 },
               }}
@@ -140,7 +144,7 @@ useEffect(()=>{
               sx={{
                 fieldset: {
                   borderColor: "#223E88",
-                  height: "80px",
+                  height: {xs:'60px', md:"80px"},
                   borderRadius: "10px",
                 },
               }}
@@ -150,7 +154,7 @@ useEffect(()=>{
             sx={{
               display: "flex",
               flexDirection: "row",
-              gap: "5px",
+              gap: {xs:'0px', md:"5px"},
               mt: "40px",
             }}
           >
@@ -160,7 +164,7 @@ useEffect(()=>{
                   checked={checkStatus === "remember"}
                   id="remember"
                   onClick={(e) => handleCheckButton(e)}
-                  size="large"
+                  size={mdQuery? 'large':'small'}
                   sx={{
                     color: theme.palette.primary,
                     "&.Mui-checked": {
@@ -177,7 +181,7 @@ useEffect(()=>{
                   checked={checkStatus === "forgotPass"}
                   id="forgotPass"
                   onClick={(e) => handleCheckButton(e)}
-                  size="large"
+                  size= {mdQuery? 'large':'small'}
                   sx={{
                     color: theme.palette.primary,
                     "&.Mui-checked": {
@@ -193,7 +197,7 @@ useEffect(()=>{
             variant="contained"
             sx={{
               width: "100%",
-              height: "80px",
+              height: {xs:'60px', md:"80px"},
               textTransform: "none",
               borderRadius: "10px",
               mt: "50px",

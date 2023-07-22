@@ -4,6 +4,7 @@ import Blog from './Components/Blog/Blog';
 import Discover from './Components/Discover/Discover';
 import PlayerProfile from './Components/Player-profile/PlayerProfile';
 import ScoutProfile from './Components/Scout-profile/ScoutProfile';
+import PlayerBio from './Components/playerBio/PlayerBio';
 
 const AppRoutes = () => {
 	const router = createBrowserRouter([
@@ -12,6 +13,7 @@ const AppRoutes = () => {
         { path:'Discover', element: <Discover /> },
         { path:'ScoutProfile', element: <ScoutProfile /> },
         { path:'PlayerProfile', element: <PlayerProfile /> },
+        { path:'PlayerBio', element: <PlayerBio /> },
         
     ]);
 	return <RouterProvider router={router} />;
