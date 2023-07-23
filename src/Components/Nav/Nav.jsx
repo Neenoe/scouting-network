@@ -9,18 +9,18 @@ import { FaLinesLeaning } from "react-icons/fa6";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md'
 import OutsideClickHandler from 'react-outside-click-handler'
-import { useIdleTimer } from 'react-idle-timer';
+
 
 const style = {
-  maxHeight: "800px",
+  maxHeight: {xs:"70%", md:"800px"},
   position: "absolute",
   overflowY: "scroll",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "649px",
+  width: {xs:"80%", md:"40.56rem"},
   bgcolor: "background.paper",
-  p: "96px 64px",
+  p: {xs:'40px 32px', md:"96px 64px"},
   "&:focus": {
     outline: "none",
   },
@@ -132,9 +132,9 @@ function Nav() {
 
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>{authType === "login" ? 
-        <Login setLocalValue={setLocalValue} localValue={localValue}/>
+        <Login setOpen={setOpen} setLocalValue={setLocalValue} localValue={localValue}/>
          : 
-         <Signup setLocalValue={setLocalValue} localValue={localValue} />
+         <Signup setOpen={setOpen}  setLocalValue={setLocalValue} localValue={localValue} />
          }
          </Box>
       </Modal>
