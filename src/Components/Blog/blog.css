@@ -121,14 +121,22 @@ margin-top: 3rem;
 }
 
 
-.highlight-intro h2,
+.highlight-intro h4,
 .mostviewed-intro h6 {
     color: #161037;
 font-size: 20px;
-font-family: Satoshi;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
+}
+
+.highlight-intro h2 {
+    color: #161037;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-top: 1rem;
 }
 
 .highlight-intro button,
@@ -150,7 +158,7 @@ margin-bottom: 1rem;
 }
 
 .highlight-details img{
-    width: 363px;
+    width: 383px;
     height: 309px;
     border-radius: 20px;
 }
@@ -207,11 +215,9 @@ line-height: normal;
 
 }
 
-.signee-intro h2,
-.help-intro h4 {
+.signee-intro h2 {
     color: #161037;
 font-size: 20px;
-font-family: Satoshi;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -238,9 +244,8 @@ cursor: pointer;
     margin-bottom: 1rem;
 }
 
-.signee-details img,
-.help-media img{
-    width: 403px;
+.signee-details img{
+    width: 375px;
     height: 309px;
 }
 
@@ -260,7 +265,7 @@ cursor: pointer;
     justify-content: space-between;
   
 }
-.interviews-intro h4 {
+.interviews-intro h2 {
     color: #161037;
     font-size: 24px;
     font-style: normal;
@@ -335,28 +340,12 @@ flex-direction: column;
 flex-shrink: 0;
 color: #817F7F;
 font-size: 18px;
-font-family: Satoshi;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
 }
 
-.help-media {
-    margin-top: 2rem;
-    overflow-x: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
 
-.help-media::-webkit-scrollbar {
-    display: none;
-}
-.help-media img {
-    width: 365px;
-    height: 290px;
-    border-radius: 15px;
-    margin-left: 1.5rem;
-}
 .mostviewed-details {
     display: flex;
     flex-direction: row;
@@ -422,10 +411,9 @@ line-height: normal;
     flex-direction: column;
 
 }
-.mostviewed-intro h4,
-.toprated-intro h4{
+.mostviewed-intro h2,
+.toprated-intro h2{
     color: #161037;
-font-family: Satoshi;
 font-size: 24px;
 font-style: normal;
 font-weight: 700;
@@ -541,11 +529,11 @@ display: none;
 .r-gallery-images_card {
     /* position: relative;
     min-width: 301px; */
-    height: 447px;
+ 
     margin-right: 2rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .r-gallery__image-icon {
@@ -565,6 +553,7 @@ display: none;
     
     opacity: 1;
     transition: 0.5s ease;
+    border-radius: 10px;
 }
 
 .r-gallery-images_card:hover img {

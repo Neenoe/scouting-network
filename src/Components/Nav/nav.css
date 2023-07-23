@@ -1,10 +1,23 @@
 .header {
-    justify-content: space-evenly;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    gap: 2rem;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  
+  padding: 2rem;
+  
 
+    
+
+}
+
+
+.head {
+  
+  
+    margin-left: -2rem;
+   
 }
 
 .header-logo h3 {
@@ -16,31 +29,48 @@ font-weight: 700;
 .header-list {
     color: #9CA0A3;
     font-size: 20px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+  
 
 }
 
 .header-list div {
-    margin-left: 3rem;
+    margin-left: 6rem;
+}
+
+
+#root > div > div > div > div.head > div > div.header-list.flexStart > a:nth-child(1) > div {
+    color: #161037;
 }
 
 .header-btn {
     width: 234px;
 height: 72px;
-margin-right: -5rem;
+
 padding: 0.5rem;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+
 }
 
 .header-btn button {
-    height: 60px;
-    width: 150px;
+    width: 97px;
+    height: 28px;
     border-radius: 10px;
 background: #223E88;
 color: #FFF;
-font-size: 24px;
+font-family: Satoshi;
+font-size: 11px;
+font-style: normal;
 font-weight: 700;
+line-height: normal;
 cursor: pointer;
-margin: o auto;
 }
 
 .menu-icon {
@@ -163,7 +193,7 @@ margin: o auto;
         display: none;
     }
     .header-btn button{
-        margin-left: -3rem;
+       margin-left: -9rem;
     }
 
 }

@@ -41,8 +41,8 @@ function Nav() {
 
 
   return (
-    <div>
-      <div className="header flexCenter innerWidth">
+    <div className="head">
+      <div className="header">
         <div className="header-logo">
           <h3>SCOUTING REPORT</h3>
         </div>

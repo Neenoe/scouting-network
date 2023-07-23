@@ -136,7 +136,10 @@ import Footer from './Footer/Footer';
     <br /> <br />
     {/* categories */}
 
-    <div className="categories-wrapper paddings innerWidth">
+    <div className="categories-wrapper ">
+      <div className="categories-container paddings innerWidth">
+
+      
       <div className="categories1">
         <img src={data[3].imag} alt="" />
         <h4>Female Footballers</h4>
@@ -152,8 +155,9 @@ import Footer from './Footer/Footer';
       <div className="categories3">
         <img src={data[5].imag}  alt="" />
         <h4>Talent Scout</h4>
-        <span>Lorem ipsum dolor sit, amet <br /> consectetur adipisicing elit or what you <br /> Boko del Harum voluptates architecto debitis !</span>
+        <span>Lorem ipsum dolor sit, amet <br /> consectetur adipisicing elit or what you <br /> Boko del Harum voluptates architecto debitis </span>
         <p>Read More</p>
+      </div>
       </div>
 
     </div>
@@ -177,7 +181,7 @@ import Footer from './Footer/Footer';
           </div>
           <div className='scout-top-details'>
             <div className='stout'>
-            <img  src={data[14].imag} alt="" />
+            <img  src={data[17].imag} alt="" />
             </div>
            
             <div className="scout-top-text">
@@ -201,7 +205,7 @@ import Footer from './Footer/Footer';
         <div className="scout-down">
         <div className='scout-down-details'>
             <div className='stout'>
-            <img  src={data[16].imag} alt="" />
+            <img  src={data[14].imag} alt="" />
             </div>
            
             <div className="scout-down-text">
@@ -211,7 +215,7 @@ import Footer from './Footer/Footer';
           </div>
           <div className='scout-down-details'>
             <div className='stout'>
-            <img  src={data[17].imag} alt="" />
+            <img  src={data[16].imag} alt="" />
             </div>
            
             <div className="scout-down-text">
@@ -238,7 +242,7 @@ import Footer from './Footer/Footer';
             </div>
 
             <div className="testimonial-card1-texts">
-              <p>Lorem ipsum dolor sit amet consec adipisicing elit. Vero nam alias vel.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est</p>
             </div>
 
             <div className="testimonial-card1-ratings">
@@ -254,7 +258,7 @@ import Footer from './Footer/Footer';
           </div>
           <div className="testimonial-card2">
           <div className="testimonial-card-details">
-              <img src={data[18].imag}alt="" />
+              <img src={data[19].imag}alt="" />
               <div className="testimonial-card-details-info">
                 <p>San Barbz</p>
                 <span>HR Arravo</span>
@@ -262,7 +266,7 @@ import Footer from './Footer/Footer';
             </div>
 
             <div className="testimonial-card1-texts">
-              <p>Lorem ipsum dolor sit amet consec adipisicing elit. Vero nam alias vel.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est</p>
             </div>
 
             <div className="testimonial-card1-ratings">
@@ -278,7 +282,7 @@ import Footer from './Footer/Footer';
             </div>
             <div className="testimonial-card3">
             <div className="testimonial-card-details">
-              <img src={data[19].imag} alt="" />
+              <img src={data[18].imag} alt="" />
               <div className="testimonial-card-details-info">
                 <p>San Barbz</p>
                 <span>HR Arravo</span>
@@ -286,7 +290,7 @@ import Footer from './Footer/Footer';
             </div>
 
             <div className="testimonial-card1-texts">
-              <p>Lorem ipsum dolor sit amet consec adipisicing elit. Vero nam alias vel.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est.</p>
             </div>
 
             <div className="testimonial-card1-ratings">

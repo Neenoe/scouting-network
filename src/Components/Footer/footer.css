@@ -4,16 +4,22 @@
     justify-content: space-between;
     padding: 2rem;
     background: #223E88;
-   
+    width: 1433px;
+    height: 340px;
+    flex-shrink: 0;
+    /* margin: 0 auto;
+    margin-left: -2rem; */
 }
 .footer-container {
- width: 1433px;
-height: 370px;
+
+height: 340px;
 flex-shrink: 0;
 background: #223E88;
-margin-right: 2rem;
-width: 100%; /* Take the whole screen width */
+
+
   padding-left: 0;
+  /* margin: 0 auto; */
+
    
 }
 
@@ -353,12 +359,16 @@ cursor: pointer;
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
-        margin-bottom: 1rem;
+       margin-top: 1rem;
         padding-bottom: 1rem;
     }
     
     .hi-con {
         margin-left: 0.4rem;
 
+    }
+
+    .footer-container {
+        height: 407px;
     }
 }

@@ -35,7 +35,7 @@ function Blog() {
   const scrollRef = React.useRef(null);
 
 
-  const galleryImages = [images.r1, images.r2, images.r3, images.r4, images.r5];
+  const galleryImages = [images.r1, images.r2, images.r3];
  
   return (
     <div className='blog-container paddings innerWidth'>
@@ -106,7 +106,7 @@ function Blog() {
 
     <div className="highlight-wrapper innerWidth paddings">
       <div className="highlight-intro">
-        <h4>  Trending highlight</h4>
+        <h2>  Training highlight</h2>
         <button>Watch More</button>
         </div>
 
@@ -129,16 +129,18 @@ function Blog() {
       
 
     </div>
+
+    {/* signing */}
    
     
      <div className='r-gallery-images paddings innerWidth'>
      <div className="signee-intro">
-        <h4>  Latest Signings</h4>
+        <h2>  Latest Signings</h2>
         <button>View All</button>
         </div>
           <div className='r-gallery-images_container' ref={scrollRef}>
             {galleryImages.map((image, index) => (
-              <div className='r-gallery-images_card flex__center' key={`gallery_image-${index + 1}`}>
+              <div className='r-gallery-images_card ' key={`gallery_image-${index + 1}`}>
                 <img src={image} alt="img" />
               
               </div>
@@ -152,7 +154,7 @@ function Blog() {
     {/* Interviews */}
     <div className="interviews-wrapper innerWidth paddings">
     <div className="interviews-intro paddings">
-        <h4>  Explore Our interviews by Categories</h4>
+        <h2>  Explore Our interviews by Categories</h2>
         <div className="interviews-intro-btns">
         <button>All</button>
         <button>Male Footbller</button>
@@ -165,19 +167,19 @@ function Blog() {
 
         <div className="interviews-media">
           <div className='interviews-title'>
-          <img src={data[27].imag} alt="" />
-            <span>45s</span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, tempore!</p>
+          <img src={data[28].imag} alt="" />
+            <span>10m</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
           <div className='interviews-title'>
           <img src={data[27].imag} alt="" />
-            <span>45s</span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, tempore!</p>
+            <span>15m</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
           <div className='interviews-title'>
-          <img src={data[27].imag} alt="" />
-            <span>45s</span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, tempore!</p>
+          <img src={data[25].imag} alt="" />
+            <span>15m</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
 
         </div>
@@ -188,48 +190,13 @@ function Blog() {
   
 
     {/* weekly podcast */}
-    <div className="podcast innerWidth paddings">
-    <div className="mostviewed-intro">
-        <h4>  TRENDING HIGHLIGHT</h4>
-        <button>Watch More</button>
-        </div>
-
-        <div className="podcast-details">
-        <div className="podcast1">
-        <img src={data[30].imag} alt="" />
-        <div className="podcast-icon">
-          <BsFillPauseFill className='pause'/>
-          <img src={data[29].imag} alt="" />
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore facilis dolor animi sequi?</p>
-      </div>
-      <div className="podcast1">
-        <img src={data[30].imag} alt="" />
-        <div className="podcast-icon">
-          <BsFillPauseFill className='pause'/>
-          <img src={data[29].imag} alt="" />
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore facilis dolor animi sequi?</p>
-      </div>
-      <div className="podcast1">
-        <img src={data[31].imag} alt="" />
-        <div className="podcast-icon">
-          <BsFillPauseFill className='pause'/>
-          <img src={data[29].imag} alt="" />
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore facilis dolor animi sequi?</p>
-      </div>
-
-        </div>
-     
-
-    </div>
+   
 
     {/* top-rated */}
 
     <div className="toprated innerWidth paddings">
     <div className="toprated-intro">
-        <h4>  Trending highlight</h4>
+        <h2>  TOP RATED PODCAST</h2>
         <button>Watch More</button>
         </div>
 
