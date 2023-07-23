@@ -7,16 +7,19 @@ import {
   TextField,
   ThemeProvider,
   Typography,
+  useMediaQuery
 } from "@mui/material";
-import { onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import React, { useEffect, useState } from "react";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import React, { useState } from "react";
 import { ReactComponent as GoogleIcon } from "../assets/Svg/googleLogo.svg";
 import { theme } from "./Discover/theme";
 import { auth, provider } from "../firebase";
 import toast, { Toaster } from "react-hot-toast";
-import { useNavigate } from "react-router";
 
-const Login = ({setLocalValue, localValue}) => {
+const Login = ({setLocalValue, setOpen}) => {
+    const mdQuery = useMediaQuery('(min-width:900px)');
+    // const xsQuery = useMediaQuery('(min-width:0px)');
+
   const [checkStatus, setCheckStatus] = useState("remember");
 
   const [email, setEmail] = useState("");
@@ -30,40 +33,40 @@ const Login = ({setLocalValue, localValue}) => {
     event.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log(userCredential);
+        setLocalValue(userCredential.user.email)
+        setOpen(false);
       })
       .catch((error) => {
-        console.log(error);
         toast.error(`${error.code}. Please check login details`);
       });
   };
-  const navigate = useNavigate();
 
-  useEffect(()=> {
-    const listen = onAuthStateChanged(auth, (user)=> {
-      if (user) {
-        navigate('/')
-      }else {
-        return user
-      }
-    })
-    return () => {
-      listen();
-    }
-  }, [navigate])
+  // useEffect(()=> {
+  //   const listen = onAuthStateChanged(auth, (user)=> {
+  //     if (user) {
+  //       navigate('/')
+  //     }else {
+  //       return user
+  //     }
+  //   })
+  //   return () => {
+  //     listen();
+  //   }
+  // }, [navigate])
 
 
 const handleGoogleAuth = ()=> {
   signInWithPopup(auth, provider).then((data)=>{
     setLocalValue(data.user.email)
     localStorage.setItem("email", data.user.email)
+    setOpen(false)
   })
 }
 
-useEffect(()=>{
-  setLocalValue(localStorage.getItem('email'))
-  navigate('/Discover')
-},[navigate, setLocalValue])
+// useEffect(()=>{
+//   setLocalValue(localStorage.getItem('email'))
+//   navigate('/Discover')
+// },[navigate, setLocalValue])
 
   const handleCheckButton = (e) => {
     if (checkStatus === e.target.id) {
@@ -95,7 +98,7 @@ useEffect(()=>{
             startIcon={<GoogleIcon />}
             sx={{
               width: "100%",
-              height: "80px",
+              height: {xs:'60px', md:"80px"},
               color: "gray",
               borderColor: "#223E88",
               textTransform: "none",
@@ -105,11 +108,11 @@ useEffect(()=>{
           >
             Sign in with Google
           </Button>
-          <Typography fontWeight="500" textAlign="center" sx={{ mt: "29px" }}>
+          <Typography fontWeight="500" textAlign="center" sx={{ mt: {xs:'16px', md:"29px"} }}>
             OR
           </Typography>
           <div>
-            <Typography color="#817F7F" sx={{ mt: "16px" }}>
+            <Typography color="#817F7F" sx={{ mt: {xs:'8px', md:"16px"} }}>
               User Name
             </Typography>
             <TextField
@@ -121,7 +124,7 @@ useEffect(()=>{
               sx={{
                 fieldset: {
                   borderColor: "#223E88",
-                  height: "80px",
+                  height: {xs:'60px', md:"80px"},
                   borderRadius: "10px",
                 },
               }}
@@ -140,7 +143,7 @@ useEffect(()=>{
               sx={{
                 fieldset: {
                   borderColor: "#223E88",
-                  height: "80px",
+                  height: {xs:'60px', md:"80px"},
                   borderRadius: "10px",
                 },
               }}
@@ -150,7 +153,7 @@ useEffect(()=>{
             sx={{
               display: "flex",
               flexDirection: "row",
-              gap: "5px",
+              gap: {xs:'0px', md:"5px"},
               mt: "40px",
             }}
           >
@@ -160,7 +163,7 @@ useEffect(()=>{
                   checked={checkStatus === "remember"}
                   id="remember"
                   onClick={(e) => handleCheckButton(e)}
-                  size="large"
+                  size={mdQuery? 'large':'small'}
                   sx={{
                     color: theme.palette.primary,
                     "&.Mui-checked": {
@@ -177,7 +180,7 @@ useEffect(()=>{
                   checked={checkStatus === "forgotPass"}
                   id="forgotPass"
                   onClick={(e) => handleCheckButton(e)}
-                  size="large"
+                  size= {mdQuery? 'large':'small'}
                   sx={{
                     color: theme.palette.primary,
                     "&.Mui-checked": {
@@ -193,7 +196,7 @@ useEffect(()=>{
             variant="contained"
             sx={{
               width: "100%",
-              height: "80px",
+              height: {xs:'60px', md:"80px"},
               textTransform: "none",
               borderRadius: "10px",
               mt: "50px",

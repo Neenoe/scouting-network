@@ -7,9 +7,10 @@ import {
   TextField,
   ThemeProvider,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router";
 import {ReactComponent as GoogleIcon} from '../assets/Svg/googleLogo.svg';
@@ -17,7 +18,8 @@ import { theme } from "../Components/Discover/theme";
 import { auth, provider } from "../firebase";
 
 
-const Signup = ({setLocalValue, localValue}) => {
+const Signup = ({setLocalValue, setOpen}) => {
+  const mdQuery = useMediaQuery('(min-width:900px)');
 const [signupAs, setSignupAs] = useState('scout');
 
 const [email, setEmail] = useState('');
@@ -41,14 +43,13 @@ const handleSignUp = (event) =>{
   event.preventDefault();
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      console.log(userCredential)
-      setLocalValue(email)
+      setLocalValue(userCredential.user.email)
       localStorage.setItem('email', email)
+      setOpen(false)
       profileFunc();
     })
     .catch((error) => {
       toast.error(`${error.code}. Please check details`);
-      console.log(error)
     })
   ;
 }
@@ -58,12 +59,13 @@ const handleGoogleAuth = ()=> {
     setLocalValue(data.user.email)
     localStorage.setItem("email", data.user.email)
     profileFunc();
+    setOpen(false)
   })
 }
 
-useEffect(()=>{
-  setLocalValue(localStorage.getItem('email'))
-},[setLocalValue])
+// useEffect(()=>{
+//   setLocalValue(localStorage.getItem('email'))
+// },[setLocalValue])
 
 const handleCheckButton = (e)=>{
   if (signupAs=== e.target.id){
@@ -86,7 +88,7 @@ const handleCheckButton = (e)=>{
         startIcon={<GoogleIcon />}
         sx={{
           width: "100%",
-          height: "80px",
+          height: {xs:'60px', md:"80px"},
           color: "gray",
           borderColor: "#223E88",
           textTransform: "none",
@@ -96,11 +98,11 @@ const handleCheckButton = (e)=>{
       >
         Sign up with Google
       </Button>
-      <Typography fontWeight='500' textAlign="center" sx={{ mt: "29px" }}>
+      <Typography fontWeight='500' textAlign="center" sx={{ mt: {xs:'16px', md:"29px"}  }}>
         OR
       </Typography>
       <div>
-        <Typography color="#817F7F" sx={{ mt: "16px" }}>
+        <Typography color="#817F7F" sx={{ mt: {xs:'8px', md:"16px"}  }}>
            Name
         </Typography>
         <TextField
@@ -110,7 +112,7 @@ const handleCheckButton = (e)=>{
           sx={{
             fieldset: {
               borderColor: "#223E88",
-              height: "80px",
+              height: {xs:'60px', md:"80px"},
               borderRadius: "10px",
             },
           }}
@@ -129,7 +131,7 @@ const handleCheckButton = (e)=>{
           sx={{
             fieldset: {
               borderColor: "#223E88",
-              height: "80px",
+              height:{xs:'60px', md:"80px"},
               borderRadius: "10px",
             },
           }}
@@ -148,7 +150,7 @@ const handleCheckButton = (e)=>{
           sx={{
             fieldset: {
               borderColor: "#223E88",
-              height: "80px",
+              height: {xs:'60px', md:"80px"},
               borderRadius: "10px",
             },
           }}
@@ -161,7 +163,7 @@ const handleCheckButton = (e)=>{
             checked={signupAs === 'scout' ? true : false}
             id="scout"
             onClick={(e)=>handleCheckButton(e)}
-              size="large"
+            size={mdQuery? 'large':'small'}
               sx={{
                 color: theme.palette.primary,
                 "&.Mui-checked": {
@@ -178,7 +180,7 @@ const handleCheckButton = (e)=>{
             checked={signupAs === 'footballer'}
             id="footballer"
             onClick={(e)=>handleCheckButton(e)}
-            size="large"
+            size={mdQuery? 'large':'small'}
               sx={{
                 color: theme.palette.primary,
                 "&.Mui-checked": {
@@ -195,7 +197,7 @@ const handleCheckButton = (e)=>{
         variant="contained"
         sx={{
           width: "100%",
-          height: "80px",
+          height: {xs:'60px', md:"80px"},
           textTransform: "none",
           borderRadius: "10px",
           mt: "50px",
@@ -204,7 +206,7 @@ const handleCheckButton = (e)=>{
         Sign up
       </Button>
       <Stack gap="5px" direction="row" sx={{ mt: "38px" }}>
-        <Typography color="#817F7F">Already an account?</Typography>{" "}
+        <Typography color="#817F7F">Already have an account?</Typography>{" "}
         <Typography color="primary">Sign in</Typography>
       </Stack>
       </form>
