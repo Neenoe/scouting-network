@@ -98,7 +98,7 @@ import Footer from './Footer/Footer';
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transition: 'opacity 3s',
-            filter: 'brightness(60%)',
+            filter: 'brightness(40%)',
            
           }}
         />
@@ -114,22 +114,26 @@ import Footer from './Footer/Footer';
 
      
     </div>
+    <div className='media-right-container'>
     <div className="media-right innerWidth paddings">
       
-                    <div className='media-right-content'>
-                    <p>4000 + </p>
-                    <span>Footballers</span>
-                    </div>
-                    <div className='media-right-content'>
-                    <p>60% </p>
-                    <span>Signees</span>
-                    </div>
-                    <div className='media-right-content'>
-                    <p>2500+ </p>
-                    <span>Scouts</span>
-                    </div>
-                   
-                </div> <br /> <br />
+      <div className='media-right-content'>
+      <p>4000 + </p>
+      <span>Footballers</span>
+      </div>
+      <div className='media-right-content'>
+      <p>60% </p>
+      <span>Signees</span>
+      </div>
+      <div className='media-right-content'>
+      <p>2500+ </p>
+      <span>Scouts</span>
+      </div>
+     
+  </div>
+
+    </div>
+    <br /> <br />
     {/* categories */}
 
     <div className="categories-wrapper paddings innerWidth">
@@ -154,63 +158,7 @@ import Footer from './Footer/Footer';
 
     </div>
 
-    {/* ABOUT US */}
-
-    {/* <div className="about paddings innerWidth">
-      <h2>ABOUT US</h2>
-     <div className="about-us">
-      <div className="about-us1">
-        <img src={data[2].imag} alt="" />
-
-      </div>
-      <div className="about-us2">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestias quo natus! Animi aperiam beatae tempore quas! Modi dolore quisquam commodi suscipit nesciunt repellat consequuntur inventore praesentium tempora officia, esse soluta doloremque doloribus explicabo ab, adipisci tenetur voluptate quia eaque amet, maiores quas. Temporibus blanditiis accusantium ullam, non cum pariatur!</p>
-
-        <span>Read More</span>
-
-        </div>
-        <div className="about-us3">
-          <img src={data[12].imag} alt="" />
-
-        </div>
-        </div>
-
-    </div> */}
-
-    {/* our mission */}
-    {/* <div className="mission innerWidth paddings">
-      <div className="mission-left">
-        <img src={data[8].imag} alt="" />
-      </div>
-
-      <div className="mission-right flexColCenter">
-        <h4>OUR MISSION</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est, tempus euismod lectus efficitur ac. Morbi finibus mollis nibh, in blandit tellus pharetra eu<br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est, tempus euismod lectus efficitur ac. Morbi finibus mollis nibh, in blandit tellus pharetra eu</p>
-      </div>
-    </div> */}
-    {/* OUR PARTNERS */}
-
-    {/* <div className="partner paddings innerWidth">
-      <div className="partner-text">
-       <h2>OUR PARTNERS</h2>
-      </div>
-
-      <div className="partners paddings innerWidth">
-      <div>
-        <img src={logo4} alt="" />
-      </div>
-      <div>
-        <img src={logo5} alt="" />
-      </div>
-      <div>
-        <img src={logo6} alt="" />
-      </div>
-      <div>
-        <img src={logo7} alt="" />
-      </div>
-    </div>
-
-      </div> */}
+   
 
       {/* OUR SCOUT */}
       <div className='scout innerWidth paddings'>
@@ -240,7 +188,7 @@ import Footer from './Footer/Footer';
         </div>
         <div className="scout-middle">
         <div className='scout-middle-details'>
-            <div>
+            <div className='stout'>
             <img  src={data[15].imag} alt="" />
             </div>
            
@@ -252,7 +200,7 @@ import Footer from './Footer/Footer';
         </div>
         <div className="scout-down">
         <div className='scout-down-details'>
-            <div>
+            <div className='stout'>
             <img  src={data[16].imag} alt="" />
             </div>
            
@@ -262,7 +210,7 @@ import Footer from './Footer/Footer';
             </div>
           </div>
           <div className='scout-down-details'>
-            <div>
+            <div className='stout'>
             <img  src={data[17].imag} alt="" />
             </div>
            

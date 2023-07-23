@@ -34,15 +34,7 @@ function Blog() {
 
   const scrollRef = React.useRef(null);
 
-  const scroll = (direction) => {
-    const { current } = scrollRef;
 
-    if (direction === 'left') {
-      current.scrollLeft -= 200;
-    } else {
-      current.scrollLeft += 200;
-    }
-  };
   const galleryImages = [images.r1, images.r2, images.r3, images.r4, images.r5];
  
   return (
@@ -118,51 +110,26 @@ function Blog() {
         <button>Watch More</button>
         </div>
 
+ 
         <div className="highlight-details" ref={scrollRef}>
-          <div>
-          <p>{data[0].duration}</p>
-          <img src={data[20].imag} alt="" />
-          </div>
-          <div>
-          <p>{data[1].duration}</p>
-          <img src={data[21].imag} alt="" />
-          </div>
-          <div>
-          <p>{data[2].duration}</p>
-          <img src={data[22].imag} alt="" />
-          </div>
-          
-        </div>
+  <div className="highlight-item">
+    <img src={data[20].imag} alt="" />
+    <p>{data[0].duration}</p>
+  </div>
+  <div className="highlight-item">
+    <img src={data[21].imag} alt="" />
+    <p>{data[1].duration}</p>
+  </div>
+  <div className="highlight-item">
+    <img src={data[22].imag} alt="" />
+    <p>{data[2].duration}</p>
+  </div>
+</div>
 
       
 
     </div>
-    {/* Signees */}
-
-    {/* <div className="signee-wrapper innerWidth paddings">
-    <div className="signee-intro">
-        <h4>  Latest Signings</h4>
-        <button>View All</button>
-        </div>
-
-        <div className="signee-details">
-          <div>
-         
-          <img src={data[23].imag} alt="" />
-          </div>
-          <div>
-         
-          <img src={data[24].imag} alt="" />
-          </div>
-          <div>
-        
-          <img src={data[26].imag} alt="" />
-          </div>
-          
-        </div>
-
-
-    </div> */}
+   
     
      <div className='r-gallery-images paddings innerWidth'>
      <div className="signee-intro">
@@ -197,19 +164,19 @@ function Blog() {
         </div>
 
         <div className="interviews-media">
-          <div>
+          <div className='interviews-title'>
+          <img src={data[27].imag} alt="" />
             <span>45s</span>
-            <img src={data[27].imag} alt="" />
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, tempore!</p>
           </div>
-          <div>
+          <div className='interviews-title'>
+          <img src={data[27].imag} alt="" />
             <span>45s</span>
-            <img src={data[28].imag} alt="" />
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, tempore!</p>
           </div>
-          <div>
+          <div className='interviews-title'>
+          <img src={data[27].imag} alt="" />
             <span>45s</span>
-            <img src={data[25].imag} alt="" />
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, tempore!</p>
           </div>
 

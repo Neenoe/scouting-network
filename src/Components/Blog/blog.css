@@ -170,6 +170,11 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 }
+.highlight-item {
+    display: flex;
+   
+}
+
 .highlight-details,
 .signee-details,
 .help-media {
@@ -241,7 +246,10 @@ cursor: pointer;
 
 
 
-
+.interviews-title {
+    display: flex;
+    flex-direction: column;
+}
 .interviews-wrapper {
     display: flex;
     flex-direction: column;
@@ -648,21 +656,18 @@ display: none;
 
 /*  */
 
-@media screen and (max-width: 767px) {
 
 
-}
-@media screen and (max-width: 808px) {
-    .blog-media h3 {
-        color: #fdf7f7;
-    font-size: 22px;
-    font-weight: 700;
-    text-align: left;
-    align-items: flex-start;
-    
-    }
 
     @media screen and (max-width: 808px) {
+        .blog-media h3 {
+            color: #fdf7f7;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: left;
+        align-items: flex-start;
+        
+        }
     .blog-media span {
         color: #D7AE37;
     font-size: 22px;
@@ -717,6 +722,99 @@ margin-top: 4rem;
         margin-top: 4rem;
         margin-right: -1.8rem;
     }
+
+    .highlight-details {
+        /* Add necessary styles to the container */
+        position: relative;
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+      }
+      
+      .highlight-item {
+        /* Add necessary styles to each item */
+        position: relative;
+        margin-right: 16px;
+      }
+      
+      .highlight-item img {
+        /* Add necessary styles to the image */
+        width: 253px;
+        height: 239px;
+        border-radius: 15px;
+        margin-left: 1.5rem;
+      }
+      
+      .highlight-item p {
+        /* Add necessary styles to the paragraph */
+        position: absolute;
+        bottom: 170px; /* Adjust the vertical position as needed */
+        left: 10px; /* Adjust the horizontal position as needed */
+        color: #fff;
+        font-size: 14px;
+        padding: 1.5rem;
+        background: #424242;
+        width: 55px;
+    height: 50px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    color: #FFF;
+    font-size: 18px;
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+      }
+      .interviews-media {
+        /* Add necessary styles to the container */
+        position: relative;
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+      }
+      
+      .interviews-title {
+        /* Add necessary styles to each item */
+        position: relative;
+        margin-right: 16px;
+      }
+      
+      .interviews-title img {
+        /* Add necessary styles to the image */
+        width: 253px;
+        height: 239px;
+        border-radius: 15px;
+        margin-left: 1.5rem;
+      }
+      
+      .interviews-title span {
+        /* Add necessary styles to the paragraph */
+        position: absolute;
+        bottom: 190px; /* Adjust the vertical position as needed */
+        left: 30px; /* Adjust the horizontal position as needed */
+        color: #fff;
+        font-size: 14px;
+        padding: 1.5rem;
+        background: #424242;
+        width: 55px;
+    height: 50px;
+    padding: 1rem;
+    color: #FFF;
+    font-size: 18px;
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+      }
+      .interviews-intro-btns {
+        display: row;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+      .interviews-intro-btns button {
+        margin-top: 0.3rem
+      }
  .highlight-intro h4,
  .signee-intro h4,
  .mostviewed-intro h4,
@@ -729,6 +827,7 @@ font-size: 10px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
+margin-bottom: 1.3rem;
  }
 
  .interviews-intro {
@@ -768,39 +867,14 @@ font-size: 10px;
 height: 32px;
 font-size: 10px;
 }
-.highlight-details {
-    display: flex;
-    flex-direction: row;
-   
-}
-.highlight-details img {
-    width: 253px;
-height: 239px;
-border-radius: 15px;
-margin-left: 1.5rem;
-}
-.highlight-details p {
-    /* position:absolute;
-   left:35%;
-    background: #424242;
-    width: 38px;
-height: 30px;
-margin-bottom: -1rem;
-text-align: center;
-color: #FFF;
-font-size: 12px;
-font-family: Satoshi;
-font-style: normal;
-font-weight: 500;
-line-height: normal; */
-position: absolute;
 
+.mostviewed-intro button {
+    width: 90px;
+height: 32px;
+font-size: 10px;
 }
 
-.highlight-details :nth-child(1) {
-    display: flex;
-    flex-direction: column;
-}
+
 .r-gallery-images_card img {
     width: 253px;
     height: 239px;
@@ -834,22 +908,7 @@ position: absolute;
     width: 300px;
  }
 
- .mostviewed-details img {
-    height: 80px;
-    width: 80px;
- }
- .mostviwed-texts {
-    margin-left: 2rem;
- }
- .mostviwed-texts h6 {
-    font-size: 12px;
- }
- .mostviwed-texts p {
-    font-size: 10px;
- }
- .mostviwed-texts span {
-    font-size: 10px;
- }
+
 
  .play {
     width: 50px;
@@ -857,10 +916,7 @@ position: absolute;
     margin-bottom: 2rem;
     margin-left: -8rem;
  }
-
-}
-
-.interviews-intro h4{
+ .interviews-intro h4{
     font-size: 10px;
 }
 
@@ -886,13 +942,20 @@ position: absolute;
     height: 40px;
 
 }
+.highlight-intro 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-.help-media img {
-    width: 270px;
-    height: 253px;
+
+
 }
 
 }
+
+
 
 @media screen and (max-width: 1200px) {
     .highlight-details img {
@@ -906,4 +969,6 @@ position: absolute;
     .podcast1 {
         margin-left: 1.5rem;
     }
+
+   
 }
