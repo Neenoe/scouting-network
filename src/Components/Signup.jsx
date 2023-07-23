@@ -10,7 +10,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router";
 import {ReactComponent as GoogleIcon} from '../assets/Svg/googleLogo.svg';
@@ -18,7 +18,7 @@ import { theme } from "../Components/Discover/theme";
 import { auth, provider } from "../firebase";
 
 
-const Signup = ({setLocalValue, localValue}) => {
+const Signup = ({setLocalValue, setOpen}) => {
   const mdQuery = useMediaQuery('(min-width:900px)');
 const [signupAs, setSignupAs] = useState('scout');
 
@@ -43,14 +43,13 @@ const handleSignUp = (event) =>{
   event.preventDefault();
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      console.log(userCredential)
-      setLocalValue(email)
+      setLocalValue(userCredential.user.email)
       localStorage.setItem('email', email)
+      setOpen(false)
       profileFunc();
     })
     .catch((error) => {
       toast.error(`${error.code}. Please check details`);
-      console.log(error)
     })
   ;
 }
@@ -60,12 +59,13 @@ const handleGoogleAuth = ()=> {
     setLocalValue(data.user.email)
     localStorage.setItem("email", data.user.email)
     profileFunc();
+    setOpen(false)
   })
 }
 
-useEffect(()=>{
-  setLocalValue(localStorage.getItem('email'))
-},[setLocalValue])
+// useEffect(()=>{
+//   setLocalValue(localStorage.getItem('email'))
+// },[setLocalValue])
 
 const handleCheckButton = (e)=>{
   if (signupAs=== e.target.id){

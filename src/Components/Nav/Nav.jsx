@@ -9,7 +9,7 @@ import { FaLinesLeaning } from "react-icons/fa6";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md'
 import OutsideClickHandler from 'react-outside-click-handler'
-import { useIdleTimer } from 'react-idle-timer';
+
 
 const style = {
   maxHeight: {xs:"70%", md:"800px"},
@@ -139,9 +139,9 @@ function Nav() {
 
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>{authType === "login" ? 
-        <Login setLocalValue={setLocalValue} localValue={localValue}/>
+        <Login setOpen={setOpen} setLocalValue={setLocalValue} localValue={localValue}/>
          : 
-         <Signup setLocalValue={setLocalValue} localValue={localValue} />
+         <Signup setOpen={setOpen}  setLocalValue={setLocalValue} localValue={localValue} />
          }
          </Box>
       </Modal>

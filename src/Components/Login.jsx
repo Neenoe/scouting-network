@@ -9,17 +9,16 @@ import {
   Typography,
   useMediaQuery
 } from "@mui/material";
-import { onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import React, { useEffect, useState } from "react";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import React, { useState } from "react";
 import { ReactComponent as GoogleIcon } from "../assets/Svg/googleLogo.svg";
 import { theme } from "./Discover/theme";
 import { auth, provider } from "../firebase";
 import toast, { Toaster } from "react-hot-toast";
-import { useNavigate } from "react-router";
 
-const Login = ({setLocalValue, localValue}) => {
+const Login = ({setLocalValue, setOpen}) => {
     const mdQuery = useMediaQuery('(min-width:900px)');
-    const xsQuery = useMediaQuery('(min-width:0px)');
+    // const xsQuery = useMediaQuery('(min-width:0px)');
 
   const [checkStatus, setCheckStatus] = useState("remember");
 
@@ -34,40 +33,40 @@ const Login = ({setLocalValue, localValue}) => {
     event.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log(userCredential);
+        setLocalValue(userCredential.user.email)
+        setOpen(false);
       })
       .catch((error) => {
-        console.log(error);
         toast.error(`${error.code}. Please check login details`);
       });
   };
-  const navigate = useNavigate();
 
-  useEffect(()=> {
-    const listen = onAuthStateChanged(auth, (user)=> {
-      if (user) {
-        navigate('/')
-      }else {
-        return user
-      }
-    })
-    return () => {
-      listen();
-    }
-  }, [navigate])
+  // useEffect(()=> {
+  //   const listen = onAuthStateChanged(auth, (user)=> {
+  //     if (user) {
+  //       navigate('/')
+  //     }else {
+  //       return user
+  //     }
+  //   })
+  //   return () => {
+  //     listen();
+  //   }
+  // }, [navigate])
 
 
 const handleGoogleAuth = ()=> {
   signInWithPopup(auth, provider).then((data)=>{
     setLocalValue(data.user.email)
     localStorage.setItem("email", data.user.email)
+    setOpen(false)
   })
 }
 
-useEffect(()=>{
-  setLocalValue(localStorage.getItem('email'))
-  navigate('/Discover')
-},[navigate, setLocalValue])
+// useEffect(()=>{
+//   setLocalValue(localStorage.getItem('email'))
+//   navigate('/Discover')
+// },[navigate, setLocalValue])
 
   const handleCheckButton = (e) => {
     if (checkStatus === e.target.id) {
