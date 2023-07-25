@@ -587,7 +587,7 @@ line-height: normal;
 }
 .categories-container {
    
-   padding: 1rem;
+   padding-left: 1.5rem;
    background-color: none;
 }
 .categories1,
@@ -596,7 +596,7 @@ line-height: normal;
     border-radius: 10px;
 background: #F4F7FF;
 border: none;
-padding-left: 0.2rem ;
+padding-left: 0.6rem ;
 
 }
 
