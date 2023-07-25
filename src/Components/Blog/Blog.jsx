@@ -115,14 +115,17 @@ function Blog() {
   <div className="highlight-item">
     <img src={data[20].imag} alt="" />
     <p>{data[0].duration}</p>
+    <BsFillPauseFill className='stop'/>
   </div>
   <div className="highlight-item">
     <img src={data[21].imag} alt="" />
     <p>{data[1].duration}</p>
+    <BsFillPauseFill className='stop'/>
   </div>
   <div className="highlight-item">
     <img src={data[22].imag} alt="" />
     <p>{data[2].duration}</p>
+    <BsFillPauseFill className='stop'/>
   </div>
 </div>
 
@@ -138,14 +141,28 @@ function Blog() {
         <h2>  Latest Signings</h2>
         <button>View All</button>
         </div>
-          <div className='r-gallery-images_container' ref={scrollRef}>
+          {/* <div className='r-gallery-images_container' ref={scrollRef}>
             {galleryImages.map((image, index) => (
               <div className='r-gallery-images_card ' key={`gallery_image-${index + 1}`}>
                 <img src={image} alt="img" />
               
               </div>
             ))}
-          </div>
+          </div> */}
+               <div className="highlight-details" ref={scrollRef}>
+  <div className="highlight-item">
+    <img src={data[23].imag} alt="" />
+   
+  </div>
+  <div className="highlight-item">
+    <img src={data[24].imag} alt="" />
+   
+  </div>
+  <div className="highlight-item">
+    <img src={data[26].imag} alt="" />
+   
+  </div>
+</div>
 
          
         </div>
@@ -167,17 +184,17 @@ function Blog() {
 
         <div className="interviews-media">
           <div className='interviews-title'>
-          <img src={data[28].imag} alt="" />
+          <img src={data[25].imag} alt="" />
             <span>10m</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
           <div className='interviews-title'>
-          <img src={data[27].imag} alt="" />
+          <img src={data[28].imag} alt="" />
             <span>15m</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
           <div className='interviews-title'>
-          <img src={data[25].imag} alt="" />
+          <img src={data[27].imag} alt="" />
             <span>15m</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
@@ -207,7 +224,7 @@ function Blog() {
           <BsFillPauseFill className='pause'/>
           <img src={data[29].imag} alt="" />
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore facilis dolor animi sequi?</p>
+        <p>Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.</p>
       </div>
       <div className="toprated1">
         <img src={data[33].imag} alt="" />
@@ -215,7 +232,7 @@ function Blog() {
           <BsFillPauseFill className='pause'/>
           <img src={data[29].imag} alt="" />
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore facilis dolor animi sequi?</p>
+        <p>Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.</p>
       </div>
       <div className="toprated1">
         <img src={data[34].imag} alt="" />
@@ -223,7 +240,7 @@ function Blog() {
           <BsFillPauseFill className='pause'/>
           <img src={data[29].imag} alt="" />
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore facilis dolor animi sequi?</p>
+        <p>Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.</p>
       </div>
 
         </div>

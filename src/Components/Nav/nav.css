@@ -196,4 +196,8 @@ cursor: pointer;
        margin-left: -9rem;
     }
 
+    .hamburger {
+        margin-right: -2.4rem;
+    }
+
 }
