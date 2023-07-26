@@ -3,22 +3,26 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 2rem;
-    background: #223E88;
-    width: 1433px;
-    height: 340px;
-    flex-shrink: 0;
+    /* background: #223E88;
+    max-width: 433px; */
+    /* height: 340px;
+    flex-shrink: 0; */
     /* margin: 0 auto;
     margin-left: -2rem; */
+    padding-top: 3rem;
+    padding-left: 4rem;
 }
 .footer-container {
 
 height: 340px;
-flex-shrink: 0;
 background: #223E88;
+max-width:100vw;
+margin-left: -2rem;
 
 
-  padding-left: 0;
-  /* margin: 0 auto; */
+
+
+
 
    
 }
@@ -370,5 +374,6 @@ cursor: pointer;
 
     .footer-container {
         height: 407px;
+       
     }
 }

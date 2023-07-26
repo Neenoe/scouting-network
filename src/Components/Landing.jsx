@@ -50,15 +50,16 @@ import Footer from './Footer/Footer';
     <Nav/>
            
 
-   <div >
+   <div className='media-container'>
 
   
-      <div
+      <div 
         style={{
           position: 'relative',
           overflow: 'hidden',
-          width: '100%',
+         
           height: '400px', // Adjust the height as needed
+          marginLeft: '3.7rem'
         }}
       >
 
