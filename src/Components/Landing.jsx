@@ -5,14 +5,7 @@ import {data} from './../Constants/data'
 import image1 from './../assets/Assets-9.jpeg';
 import image2 from './../assets/Assets-10.jpeg';
 import image3 from './../assets/Assets-11.jpeg';
-import logo4 from './../assets/gallery04.png'
-import logo5 from './../assets/chef.png'
-import logo6 from './../assets/findus.png'
-import logo7 from './../assets/knife.png'
-import { AiOutlineStar } from "react-icons/ai";
 import { AiFillStar } from "react-icons/ai"
-import { FaPhone } from "react-icons/fa6";
-import { FaM } from 'react-icons/fa6'
 import Footer from './Footer/Footer';
 
 
@@ -70,22 +63,6 @@ import Footer from './Footer/Footer';
 
                 </div>
 
-                {/* <div className="media-right">
-                    <div className='media-right-content'>
-                    <p>4000 + </p>
-                    <span>Footballers</span>
-                    </div>
-                    <div className='media-right-content'>
-                    <p>60% </p>
-                    <span>Signees</span>
-                    </div>
-                    <div className='media-right-content'>
-                    <p>2500+ </p>
-                    <span>Scouts</span>
-                    </div>
-                   
-                </div> */}
-
             </section>
          
         <div
@@ -105,13 +82,19 @@ import Footer from './Footer/Footer';
         />
       </div>
       <div className='navigation'>
-        {/* <button onClick={previousSlide}>Previous Slide</button>
-        <button onClick={nextSlide}>Next Slide</button> */}
-        <div onClick={previousSlide}/>
-        <div />
-        <div onClick={nextSlide}/>
-
-      </div>
+            <div
+              className={currentSlide === 0 ? 'active' : ''}
+              onClick={() => setCurrentSlide(0)}
+            />
+            <div
+              className={currentSlide === 1 ? 'active' : ''}
+              onClick={() => setCurrentSlide(1)}
+            />
+            <div
+              className={currentSlide === 2 ? 'active' : ''}
+              onClick={() => setCurrentSlide(2)}
+            />
+          </div>
 
      
     </div>
@@ -308,37 +291,7 @@ import Footer from './Footer/Footer';
             </div>
         </div>
       </div>
-      {/* PARTNERSHIP */}
-      {/* <div className="partnersip innerWidth paddings">
-      <h3>BECOME A  PARTNER</h3>
-      <div className="partnership-info">
-        <div className="partnership-info-left">
-          <div className="partnership-info-left-icon1">
-            <FaPhone className='sks'/>
-            <p>Phone</p>
-          </div>
-          <div className="partnership-info-left-icon2">
-            <FaM className='sks'/>
-            <p>Mail</p>
-          </div>
-        </div>
-
-        <div className="partnership-info-right">
-        <label for="username" placeholder='Your Name'></label>
-        <input type="text" id="username" name="username" placeholder='Your Name' className='input1'></input>
-        <label for="email" placeholder='Your Name'></label>
-        <input type="text" id="username" name="username" placeholder='Your Email' className='input1'></input>
-        <label for="text" placeholder='Your Name'></label>
-        <input type="text" id="username" name="username" placeholder='Message' className='input1'></input>
-        <div className='partner-btn'>
-          <button>SUBMIT</button>
-        </div>
-        
-        </div>
-      </div>
-      
-
-      </div> */}
+     
       {/* FOOTER */}
   
      <Footer/>

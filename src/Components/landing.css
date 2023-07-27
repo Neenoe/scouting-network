@@ -97,23 +97,6 @@ margin-top: -5rem;
 }
 
 .media-rightt {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 200px;
-    border: 0px solid #D7AE37;
-    width: 50%;
-
-    text-align: end;
-   
-    align-self: flex-end;
-    align-items: center;
-    align-content: end;
-   
-    width: 481px;
-height: 176px;
-z-index: 1;
-background: #D7AE37; */
 position: absolute;
 right: 0;
 }
@@ -156,9 +139,9 @@ margin-right: 2rem;
 
 }
 
-.navigation :nth-child(2) {
+/* .navigation :nth-child(2) {
     background-color: #D7AE37;
-}
+} */
 
 .navigation div {
     width: 30px;
@@ -168,7 +151,10 @@ margin-right: 2rem;
     border-radius: 50%;
 }
 
-
+.navigation div.active {
+    background-color: #D7AE37;
+  }
+  
 
 .categories-container {
     flex-direction: row;
@@ -186,8 +172,7 @@ margin-right: 2rem;
     
     
 }
-.categories-wrapper img,
-.about-us img {
+.categories-wrapper img {
     width: 348px;
     height: 309px;
     filter: drop-shadow(10px 10px 10px white);
@@ -221,14 +206,10 @@ padding: 1rem;
 .categories2,
 .categories3 {
     background-color: white;
-   
     box-sizing: border-box;
-    
-    
     border: 1px solid #223E88;
     width: 398px;
-   
-    border-radius: 10px 10px 0px 0px;
+   border-radius: 10px 10px 0px 0px;
 
 }
 
@@ -455,9 +436,6 @@ line-height: normal;
 .testimonial-card1-ratings {
     display: flex;
     flex-direction: row;
-    /* position: absolute;
-    top: 515%;
-    left: 40%; */
     margin-top: 2.5rem;
     margin-left: 3.5rem;
 }
@@ -476,9 +454,6 @@ line-height: normal;
 
 
 @media screen and (max-width: 1310px) {
-    .about-us p {
-        color: red;
-    }
   
 
     .categories1 {
@@ -487,23 +462,6 @@ line-height: normal;
     }
     .categories2 {
         margin-right: 1rem;
-    }
-
-    .about-us1 img {
-        margin-right: 1.5rem;
-        width: 320px;
-        height: 380px;
-    }
-
-    .about-us3 img {
-        margin-left: 1.5rem;
-        width: 320px;
-        height: 380px;
-    }
-
-    .about-us2 {
-        width: 400px;
-        margin-top: 2rem;
     }
   
 
@@ -691,9 +649,6 @@ border-radius: revert;
    align-items: flex-start;
    align-content: flex-start;
    justify-items: flex-start;
-
-
-
 }
 
 .testimonial-card3 {

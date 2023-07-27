@@ -37,7 +37,11 @@ function Nav() {
     setAuthType(e.target.id);
   };
   const handleClose = () => setOpen(false);
-
+  
+  const handleToggleMenu = () => {
+    setToggleMenu(!toggleMenu);
+  };
+  
 
 
   return (
@@ -80,13 +84,13 @@ function Nav() {
         
 
         <div className='app__navbar-smallscreen'>
-      <GiHamburgerMenu color='#fff' className="hamburger" fontSize={25} onClick={() => setToggleMenu(true)}/>
+      <GiHamburgerMenu color='#fff' className="hamburger" fontSize={25} onClick={handleToggleMenu}/>
 
 
     {toggleMenu && (
     <div className='app__navbar-smallscreen_overlay '>
 
-      <OutsideClickHandler onOutsideClick={() => setToggleMenu(false)}>
+      {/* <OutsideClickHandler onOutsideClick={handleToggleMenu}> */}
       
       <ul className='app__navbar-smallscreen-links'>
       <Link to="/">
@@ -116,7 +120,7 @@ function Nav() {
       
     </ul>
 
-      </OutsideClickHandler>
+      {/* </OutsideClickHandler> */}
       
 
     </div>
