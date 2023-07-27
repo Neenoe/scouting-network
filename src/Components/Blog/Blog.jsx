@@ -45,7 +45,7 @@ function Blog() {
           
         </div>
           {/* media */}
-          <div
+          <div className='blogging'
       style={{
         position: 'relative',
         width: '100%',
@@ -66,6 +66,7 @@ function Blog() {
           width: '100%',
           height: '100%',
           objectFit: 'cover',
+          
         }}
       />
          
