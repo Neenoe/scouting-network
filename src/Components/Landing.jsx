@@ -14,6 +14,7 @@ import Footer from './Footer/Footer';
 
 
 
+
     function Landing () {
       const [currentSlide, setCurrentSlide] = useState(0);
       const images = [image1, image2, image3]; // Replace with your image URLs

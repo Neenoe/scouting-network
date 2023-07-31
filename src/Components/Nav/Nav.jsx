@@ -5,6 +5,7 @@ import { Box, Modal } from "@mui/material";
 import Login from "../Login";
 import Signup from "../Signup";
 import { GiHamburgerMenu } from 'react-icons/gi';
+import ScoutLogo from '../ScoutLogo'
 
 
 // import logo from './../../assets/ScoutRight.svg'
@@ -47,7 +48,7 @@ function Nav() {
     <div className="head">
       <div className="header">
         <div className="header-logo">
-          <h3>SCOUTING REPORT</h3>
+        <ScoutLogo/>
         </div>
         <div
           className={`header-list flexStart`}
