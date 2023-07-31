@@ -11,7 +11,7 @@ import './footer.css'
 import { SocialIcon } from 'react-social-icons';
 function Footer() {
   return (
-    <div className='footer-container'>
+    <div className='footer-container innerWidth'>
             <div className="footer">
         <div className="footer-left">
         <div className="footer-scout">

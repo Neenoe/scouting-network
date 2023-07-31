@@ -57,7 +57,7 @@ const Discover = () => {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <div className="paddings innerWidth discover">
+        <div className=" innerWidth discover">
           <Nav />
         </div>
 

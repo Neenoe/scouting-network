@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 import { Box, Modal } from "@mui/material";
 import Login from "../Login";
 import Signup from "../Signup";
-import { BiMenuAltRight } from "react-icons/bi";
-import { FaLinesLeaning } from "react-icons/fa6";
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { MdOutlineRestaurantMenu } from 'react-icons/md'
-import OutsideClickHandler from 'react-outside-click-handler'
+
+
+// import logo from './../../assets/ScoutRight.svg'
 
 
 const style = {

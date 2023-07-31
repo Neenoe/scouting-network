@@ -37,7 +37,7 @@ import Footer from './Footer/Footer';
 
 
   return (
-    <div className='landing-wrapper paddings'>
+    <div className='landing-wrapper innerWidth'>
         <div className="landing-container ">
          
     <Nav/>
@@ -46,13 +46,13 @@ import Footer from './Footer/Footer';
    <div className='media-container'>
 
   
-      <div 
+      <div className='mediaa'
         style={{
           position: 'relative',
           overflow: 'hidden',
          
           height: '400px', // Adjust the height as needed
-          marginLeft: '3.7rem'
+          marginLeft: '4rem'
         }}
       >
 
@@ -127,19 +127,19 @@ import Footer from './Footer/Footer';
       <div className="categories1">
         <img src={data[3].imag} alt="" />
         <h4>Female Footballers</h4>
-        <span>Lorem ipsum dolor sit, amet <br /> consectetur adipisicing elit or what you <br /> Boko del Harum voluptates architecto debitis </span>
+        <span>Skilled, passionate athletes,From local pitches to international stages,they inspire millions of young footballers </span>
         <p>Read More</p>
       </div>
       <div className="categories2">
         <img src={data[11].imag}  alt="" />
         <h4>Male Footballers</h4>
-        <span>Lorem ipsum dolor sit, amet <br /> consectetur adipisicing elit or what you <br /> Boko del Harum voluptates architecto debitis </span>
+        <span>Talented, passionate athletes breaking barriers, inspiring on and off the pitch, and elevating the sport to new heights. </span>
         <p>Read More</p>
       </div>
       <div className="categories3">
         <img src={data[5].imag}  alt="" />
         <h4>Talent Scout</h4>
-        <span>Lorem ipsum dolor sit, amet <br /> consectetur adipisicing elit or what you <br /> Boko del Harum voluptates architecto debitis </span>
+        <span>Keen-eyed talent hunters, identifying potential stars, and shaping the future of the beautiful game with precision.</span>
         <p>Read More</p>
       </div>
       </div>

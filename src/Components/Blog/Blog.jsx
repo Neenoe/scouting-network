@@ -38,7 +38,7 @@ function Blog() {
   const galleryImages = [images.r1, images.r2, images.r3];
  
   return (
-    <div className='blog-container paddings innerWidth'>
+    <div className='blog-container innerWidth'>
         <div className="blog-wrapper">
             <Nav/>
 
