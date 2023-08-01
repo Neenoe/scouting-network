@@ -199,10 +199,14 @@ cursor: pointer;
         align-items: start;
         justify-content: start;
         flex-direction: column;
+        color: #817F7F;
+        font-size: 20px;
     }
 
     .header-list {
         display: none;
+        color: #817F7F;
+        font-size: 10px;
     }
     .header-btn button{
        margin-left: -9rem;
