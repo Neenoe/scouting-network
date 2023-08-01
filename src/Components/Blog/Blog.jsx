@@ -142,14 +142,7 @@ function Blog() {
         <h2>  Latest Signings</h2>
         <button>View All</button>
         </div>
-          {/* <div className='r-gallery-images_container' ref={scrollRef}>
-            {galleryImages.map((image, index) => (
-              <div className='r-gallery-images_card ' key={`gallery_image-${index + 1}`}>
-                <img src={image} alt="img" />
-              
-              </div>
-            ))}
-          </div> */}
+         
                <div className="highlight-details" ref={scrollRef}>
   <div className="highlight-item">
     <img src={data[23].imag} alt="" />
@@ -219,7 +212,7 @@ function Blog() {
         </div>
 
         <div className="toprated-details">
-        <div className="toprated1">
+        <div className="toprated1 paddings">
         <img src={data[32].imag} alt="" />
         <div className="toprated-icon">
           <BsFillPauseFill className='pause'/>

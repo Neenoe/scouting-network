@@ -12,6 +12,10 @@
 
 }
 
+.active {
+    color: #161037;
+   font-weight: 700;
+  }
 
 .head {
   
@@ -28,7 +32,7 @@ font-weight: 700;
 }
 
 .header-list {
-    color: #9CA0A3;
+    color: #817F7F;
     font-size: 20px;
     display: flex;
     flex-direction: row;
@@ -41,12 +45,11 @@ font-weight: 700;
 
 .header-list div {
     margin-left: 6rem;
+    
 }
 
 
-#root > div > div > div > div.head > div > div.header-list.flexStart > a:nth-child(1) > div {
-    color: #161037;
-}
+
 
 .header-btn {
     width: 234px;

@@ -732,6 +732,7 @@ margin-top: 4rem;
         overflow-x: auto;
         scroll-behavior: smooth;
        
+       
       }
 
       .highlight-intro {
@@ -750,6 +751,7 @@ margin-top: 4rem;
         position: relative;
         margin-right: 1px;
         margin-left: -1rem;
+        padding-left: 1.5rem;
       }
       
       .highlight-item img {
@@ -819,11 +821,15 @@ line-height: normal;
         overflow-x: auto;
         scroll-behavior: smooth;
       }
-      
+      .interviews-intro h2 {
+        color: red;
+      }
       .interviews-title {
         /* Add necessary styles to each item */
         position: relative;
-        margin-right: 16px;
+        margin-right: 1px;
+        padding: 0.5rem;
+        margin-left: 1rem;
       }
       
       .interviews-title img {
@@ -857,24 +863,11 @@ line-height: normal;
         display: row;
         flex-wrap: wrap;
         margin-top: 1rem;
+        padding: 1.5rem;
       }
       .interviews-intro-btns button {
         margin-top: 0.3rem
       }
- /* .highlight-intro h4,
- .signee-intro h4,
- .mostviewed-intro h4,
- .toprated-intro h4,
- .help-intro h4,
- .interviews-intro h4 {
-    color: #424242;
-font-family: Satoshi;
-font-size: 10px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-bottom: 1.3rem;
- } */
 
  .interviews-intro {
     display: flex;
@@ -929,7 +922,6 @@ font-size: 10px;
 .interviews-intro h2 {
     
     color: #424242;
-   
     font-size: 10px;
     font-style: normal;
     font-weight: 700;
@@ -939,8 +931,9 @@ font-size: 10px;
     align-items: left;
     display: flex;
     flex-direction: row;
-    margin-left: -3rem;
+    margin-left: -2rem;
     margin-bottom: 2rem;
+    padding: 1rem;
 }
 
 .interviews-intro-btns {
@@ -1106,7 +1099,7 @@ line-height: normal;
 }
 
 .toprated-details {
-    width: 368px;
+    width: 468px;
 height: 246px;
 }
 

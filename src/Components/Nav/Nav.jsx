@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./nav.css";
 import { Link } from "react-router-dom";
 import { Box, Modal } from "@mui/material";
@@ -8,7 +8,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import ScoutLogo from '../ScoutLogo'
 
 
-// import logo from './../../assets/ScoutRight.svg'
+
 
 
 const style = {
@@ -41,6 +41,17 @@ function Nav() {
   const handleToggleMenu = () => {
     setToggleMenu(!toggleMenu);
   };
+
+  const [activeLink, setActiveLink] = useState("/");
+  useEffect(() => {
+    // This function will be called whenever activeLink changes
+    // We'll update the active state of the links here.
+    const currentPath = window.location.pathname;
+    setActiveLink(currentPath);
+  }, [activeLink]);
+  const handleLinkClick = (path) => {
+  setActiveLink(path);
+};
   
 
 
@@ -50,22 +61,19 @@ function Nav() {
         <div className="header-logo">
         <ScoutLogo/>
         </div>
-        <div
-          className={`header-list flexStart`}
-        >
-          <Link to="/">
-            {" "}
-            <div>Home</div>{" "}
-          </Link>
-          <Link to="/discover">
-            {" "}
-            <div>Discover</div>{" "}
-          </Link>
-        
-          <Link to="/blog">
-            {" "}
-            <div>Blog</div>{" "}
-          </Link>
+        <div className="header-list flexStart">
+        <Link to="/" onClick={() => handleLinkClick("/")}>
+          {" "}
+          <div className={activeLink === "/" ? "active" : ""}>Home</div>{" "}
+        </Link>
+        <Link to="/discover" onClick={() => handleLinkClick("/discover")}>
+          {" "}
+          <div className={activeLink === "/discover" ? "active" : ""}>Discover</div>{" "}
+        </Link>
+        <Link to="/blog" onClick={() => handleLinkClick("/blog")}>
+          {" "}
+          <div className={activeLink === "/blog" ? "active" : ""}>Blog</div>{" "}
+        </Link>
           <div
             id="login"
             onClick={(e) => handleOpen(e)}
@@ -93,17 +101,17 @@ function Nav() {
       {/* <OutsideClickHandler onOutsideClick={handleToggleMenu}> */}
       
       <ul className='app__navbar-smallscreen-links'>
-      <Link to="/">
+      <Link to="/" onClick={() => handleLinkClick("/")}>
             {" "}
-            <div>HOME</div>{" "}
+            <div className={activeLink === "/" ? "active" : ""} >HOME</div>{" "}
           </Link>
-          <Link to="/discover">
+          <Link to="/discover" onClick={() => handleLinkClick("/discover")}>
             {" "}
-            <div>DISCOVER</div>{" "}
+            <div className={activeLink === "/discover" ? "active" : ""}>DISCOVER</div>{" "}
           </Link>
-          <Link to="/blog">
+          <Link to="/blog" onClick={() => handleLinkClick("/blog")}>
             {" "}
-            <div>BLOG</div>{" "}
+            <div className={activeLink === "/blog" ? "active" : ""}>BLOG</div>{" "}
           </Link>
           <div
             id="login"
