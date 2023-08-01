@@ -20,10 +20,10 @@ function Footer() {
         <div className="footer-icons-icon">
        
        <div className="social-icon1">
-       <SocialIcon network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2'   />
-       <SocialIcon network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' />
-       <SocialIcon network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' />
-       <SocialIcon network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' />
+       <SocialIcon url="https://twitter.com" network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2'   />
+       <SocialIcon url="https://facebook.com" network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' />
+       <SocialIcon url="https://youtube.com" network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' />
+       <SocialIcon url="https://instagram.com" network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' />
 
        </div>
 
