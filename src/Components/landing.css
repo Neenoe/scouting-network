@@ -8,13 +8,6 @@ body {
 .landing-container {
     margin-top: -1rem;
 }
-/* .media-container {
-    width: 100%;
-}
-.mediaa {
-    max-width: 1340px;
-    margin: 0 auto;
-} */
 
 .mediaa {
     width: 94.7%;
@@ -92,11 +85,11 @@ line-height: normal;
     border: 0px solid #D7AE37;
     width: 100%;
 
-    text-align: end;
+    text-align: flex-end;
    
     align-self: flex-end;
     align-items: center;
-    align-content: end;
+    align-content: flex-end;
    
     width: 461px;
 height: 176px;
@@ -383,7 +376,7 @@ line-height: normal;
 .testimonial-card2,
 .testimonial-card3 {
     width: 366px;
-    height: 389px;
+    height: 399px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #F4F7FF;
@@ -429,28 +422,21 @@ margin-right: 1.5rem;
 }
 
 .testimonial-card1-texts p {
-    display: flex;
-    flex-direction: row;
-    text-align: start;
-    padding: 1rem;
-    font-size: 24px;
+    width: 292px;
     color: #817F7F;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-color: #817F7F;
-
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    font-family: Satoshi;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    padding-left: 1rem;
 }
 
 .testimonial-card1-ratings {
     display: flex;
     flex-direction: row;
-    margin-top: 2.5rem;
+    margin-top: 0.5rem;
     margin-left: 3.5rem;
 }
 
@@ -637,10 +623,12 @@ padding-left: 0.6rem ;
     justify-content: center;
     align-items: center;
    
+    padding: none;
+   
 }
 
 .testimonial-card1-texts p {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: -2rem;
     
 }
@@ -656,7 +644,7 @@ padding-left: 0.6rem ;
 .testimonial-card3 {
     margin-top: 1.5rem;
     width: 328px;
-height: 283px;
+height: 303px;
 border-radius: revert;
 }
 .testimonial-card1-ratings {
@@ -680,6 +668,10 @@ margin-top: -0.5%;
 .testimonial-card-details img {
     width: 90px;
     height: 90px;
+    margin-top: -1.8rem;
+}
+.testimonial-card-details-info {
+    margin-top: -1.2rem;
 }
 
 }

@@ -9,13 +9,7 @@ import { AiFillStar } from "react-icons/ai"
 import Footer from './Footer/Footer';
 
 
-
-
-
-
-
-
-    function Landing () {
+function Landing () {
       const [currentSlide, setCurrentSlide] = useState(0);
       const images = [image1, image2, image3]; // Replace with your image URLs
       const slideInterval = 3000; // Change slide every 3 seconds
@@ -23,10 +17,7 @@ import Footer from './Footer/Footer';
       const nextSlide = useCallback(() => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
       }, [images.length]);
-      const previousSlide = () => {
-        setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
-      };
-    
+  
       useEffect(() => {
         const interval = setInterval(nextSlide, slideInterval);
     
@@ -227,7 +218,7 @@ import Footer from './Footer/Footer';
             </div>
 
             <div className="testimonial-card1-texts">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est</p>
+              <p>"Getting signed up through a website was a game-changer for my football career! The platform connected me with scouts worldwide, and within weeks, I had opportunities I never dreamed of. Forever grateful!"</p>
             </div>
 
             <div className="testimonial-card1-ratings">
@@ -251,7 +242,7 @@ import Footer from './Footer/Footer';
             </div>
 
             <div className="testimonial-card1-texts">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est</p>
+              <p>"Signing up players through this website has been a game-changer for my scouting efforts. It's a goldmine of undiscovered talent, and I found a true gem who's now making waves in the football world. Thank you!"</p>
             </div>
 
             <div className="testimonial-card1-ratings">
@@ -275,7 +266,7 @@ import Footer from './Footer/Footer';
             </div>
 
             <div className="testimonial-card1-texts">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus auctor est.</p>
+              <p>"Discovering talent through this website has been a game-changer for my scouting career. I found a hidden gem, and watching them grow into a star player is incredibly rewarding. Grateful for this platform!"</p>
             </div>
 
             <div className="testimonial-card1-ratings">

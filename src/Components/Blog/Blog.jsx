@@ -1,22 +1,12 @@
-import React , { useState, useRef, useEffect } from 'react'
+import React , { useState, useRef } from 'react'
 import Nav from './../Nav/Nav'
 import {meal} from './../../Constants/index'
 import './blog.css'
 import { BsFillPauseFill, BsFillPlayFill, BsPauseFill} from 'react-icons/bs'
 import {data} from './../../Constants/data'
 import Footer from './../Footer/Footer';
-import {images } from './../../Constants';
-// import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
 
 
-// import required modules
-import { Navigation } from 'swiper/modules';
 function Blog() {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
@@ -34,8 +24,6 @@ function Blog() {
 
   const scrollRef = React.useRef(null);
 
-
-  const galleryImages = [images.r1, images.r2, images.r3];
  
   return (
     <div className='blog-container innerWidth'>

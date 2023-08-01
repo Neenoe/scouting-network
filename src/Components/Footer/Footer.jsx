@@ -1,12 +1,4 @@
 import React from 'react'
-import insta from './../../assets/instagram.png'
-import facebook from './../../assets/facebook.png'
-import twitter from './../../assets/twitter.png'
-import { YouTube } from '@mui/icons-material';
-import youtube from './../../assets/youtube.png'
-import { BsTwitter } from 'react-icons/bs';
-import { BsInstagram } from 'react-icons/bs';
-import { AiFillFacebook} from "react-icons/ai"
 import './footer.css'
 import { SocialIcon } from 'react-social-icons';
 function Footer() {
@@ -36,10 +28,10 @@ function Footer() {
        </div>
 
        <div className="social-icon">
-       <SocialIcon network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2' style={{width: 12}} />
-       <SocialIcon network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' style={{width: 12}} />
-       <SocialIcon network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 12}} />
-       <SocialIcon network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 12}} />
+       <SocialIcon url="https://twitter.com"  network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2' style={{width: 12}} />
+       <SocialIcon url="https://facebook.com"  network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' style={{width: 12}} />
+       <SocialIcon url="https://youtube.com"  network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 12}} />
+       <SocialIcon url="https://instagram.com"  network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 12}} />
 
        </div>
        
@@ -92,10 +84,11 @@ function Footer() {
 
           </div>
           <div className='footer-4'>
-          <SocialIcon network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2'  style={{width: 30, height: 30}} />
-       <SocialIcon network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' style={{width: 30, height: 30}} />
-       <SocialIcon network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 30, height: 30}} />
-       <SocialIcon network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 30, height: 30}} />
+          <SocialIcon url="https://twitter.com"  network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2'  style={{width: 30, height: 30}} />
+       <SocialIcon url="https://facebook.com"  network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' style={{width: 30, height: 30}} />
+       <SocialIcon url="https://youtube.com"  network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 30, height: 30}} />
+       <SocialIcon url="https://instagram.com"  network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 30, height: 30}} />
+      
 
           </div>
 
