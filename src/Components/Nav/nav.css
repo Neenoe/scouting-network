@@ -3,9 +3,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  margin: auto;
   
   padding: 2rem;
+  
   
 
     
@@ -23,12 +24,7 @@
    margin-left: 2rem;
    padding: 1.5rem;
    
-}
-
-.header-logo h3 {
-    color: #223E88;
-font-size: 32px;
-font-weight: 700;
+   
 }
 
 .header-list {
