@@ -112,7 +112,7 @@ function Landing () {
     <br /> <br />
     {/* categories */}
 
-    <div className="categories-wrapper ">
+    {/* <div className="categories-wrapper ">
       <div className="categories-container paddings innerWidth">
 
       
@@ -136,6 +136,35 @@ function Landing () {
       </div>
       </div>
 
+    </div> */}
+    <div className="categories-container">
+      <div className="categories-box">
+        <div className="categories-image">
+        <img src={data[11].imag} alt="" />
+
+        </div>
+        <h4>Male Footballers</h4>
+        <span>Skilled, passionate athletes,From local pitches to international stages,they inspire millions of young footballers </span>
+        <p>Read More</p>
+      </div>
+      <div className="categories-box">
+        <div className="categories-image">
+        <img src={data[3].imag} alt="" />
+
+        </div>
+        <h4>Female Footballers</h4>
+        <span>Talented, passionate athletes breaking barriers, inspiring on and off the pitch, and elevating the sport to new heights. </span>
+        <p>Read More</p>
+      </div>
+      <div className="categories-box">
+        <div className="categories-image">
+        <img src={data[20].imag} alt="" />
+
+        </div>
+        <h4>Football Scout</h4>
+        <span>Keen-eyed talent hunters, identifying potential stars, and shaping the future of the beautiful game with precision.</span>
+        <p>Read More</p>
+      </div>
     </div>
 
    
@@ -205,83 +234,82 @@ function Landing () {
 
       {/* TESTIMONIAL */}
 
-      <div className="testimonial innerWidth paddings">
-        <h3>TESTIMONIAL</h3>
-        <div className="testimonial-details">
-          <div className="testimonial-card1">
-            <div className="testimonial-card-details">
-              <img src={data[7].imag} alt="" />
-              <div className="testimonial-card-details-info">
-                <p>San Barbz</p>
-                <span>HR Arravo</span>
-              </div>
-            </div>
 
-            <div className="testimonial-card1-texts">
+      <div className="testimonial-wrapper">
+        <h3>TESTIMONIALS</h3>
+        <div className="testimonial-container">
+        <div className="testimonial-box">
+          <div className="testimonial-details">
+            <div className="testimonial-image">
+            <img src={data[7].imag} alt="" />
+            </div>
+            <div className="testimonial-name">
+              <p>Karl Jose</p>
+              <p>HR Arrow</p>
+            </div>
+            </div>
+            <div className="testimonial-note">
               <p>"Getting signed up through a website was a game-changer for my football career! The platform connected me with scouts worldwide, and within weeks, I had opportunities I never dreamed of. Forever grateful!"</p>
             </div>
-
-            <div className="testimonial-card1-ratings">
-             
+            <div className="testimonial-rate">
+            <AiFillStar className='star'/>
               <AiFillStar className='star'/>
               <AiFillStar className='star'/>
               <AiFillStar className='star'/>
               <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              
             </div>
-
-          </div>
-          <div className="testimonial-card2">
-          <div className="testimonial-card-details">
-              <img src={data[19].imag}alt="" />
-              <div className="testimonial-card-details-info">
-                <p>San Barbz</p>
-                <span>HR Arravo</span>
-              </div>
+           
+          
+        </div>
+        <div className="testimonial-box">
+          <div className="testimonial-details">
+            <div className="testimonial-image">
+            <img src={data[19].imag} alt="" />
             </div>
-
-            <div className="testimonial-card1-texts">
-              <p>"Signing up players through this website has been a game-changer for my scouting efforts. It's a goldmine of undiscovered talent, and I found a true gem who's now making waves in the football world. Thank you!"</p>
+            <div className="testimonial-name">
+              <p>Kemi Abiola</p>
+              <p>HR Arrow</p>
             </div>
-
-            <div className="testimonial-card1-ratings">
-             
-              <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              
             </div>
-            
-            </div>
-            <div className="testimonial-card3">
-            <div className="testimonial-card-details">
-              <img src={data[18].imag} alt="" />
-              <div className="testimonial-card-details-info">
-                <p>San Barbz</p>
-                <span>HR Arravo</span>
-              </div>
-            </div>
-
-            <div className="testimonial-card1-texts">
+            <div className="testimonial-note">
               <p>"Discovering talent through this website has been a game-changer for my scouting career. I found a hidden gem, and watching them grow into a star player is incredibly rewarding. Grateful for this platform!"</p>
             </div>
-
-            <div className="testimonial-card1-ratings">
-             
+            <div className="testimonial-rate">
+            <AiFillStar className='star'/>
               <AiFillStar className='star'/>
               <AiFillStar className='star'/>
               <AiFillStar className='star'/>
               <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              
             </div>
-
-            
-            </div>
+           
+          
         </div>
+        <div className="testimonial-box">
+          <div className="testimonial-details">
+            <div className="testimonial-image">
+            <img src={data[18].imag} alt="" />
+            </div>
+            <div className="testimonial-name">
+              <p>Suarez Boaz</p>
+              <p>HR Arrow</p>
+            </div>
+            </div>
+            <div className="testimonial-note">
+              <p>"Getting signed up through a website was a game-changer for my football career! The platform connected me with scouts worldwide, and within weeks, I had opportunities I never dreamed of. Forever grateful!"</p>
+            </div>
+            <div className="testimonial-rate">
+            <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+            </div>
+           
+          
+        </div>
+        </div>
+       
+
       </div>
      
       {/* FOOTER */}
