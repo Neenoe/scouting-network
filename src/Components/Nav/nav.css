@@ -6,6 +6,7 @@
   margin: auto;
   
   padding: 2rem;
+  max-width: 1450px;
   
   
 
@@ -21,8 +22,11 @@
 .head {
   
   
-   margin-left: 2rem;
-   padding: 1.5rem;
+   /* margin-left: 2rem;
+   padding: 1.5rem; */
+   /* max-width: 1300px; */
+   margin: auto;
+   width: 100%;
    
    
 }
@@ -40,7 +44,7 @@
 }
 
 .header-list div {
-    margin-left: 6rem;
+    margin-left: 5.5rem;
     
 }
 
@@ -60,17 +64,17 @@ justify-content: center;
 }
 
 .header-btn button {
-    width: 97px;
-    height: 28px;
+    width: 184px;
+    height: 72px;
     border-radius: 10px;
 background: #223E88;
 color: #FFF;
-font-family: Satoshi;
-font-size: 11px;
+font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
 cursor: pointer;
+border: none;
 }
 
 .menu-icon {
@@ -100,6 +104,9 @@ cursor: pointer;
   transition-duration: 2s;
 
 }
+.app__navbar-smallscreen_overlay ul {
+    transition: all 1900ms ease-in-out;
+}
 
 
 .app__navbar-smallscreen-links {
@@ -127,11 +134,14 @@ cursor: pointer;
     cursor: pointer;
     transition: 0.5s ease-in-out;
     border: none;
+   
+   margin-left: -2rem;
 
 }
 
 .app__navbar-smallscreen_links {
     list-style: none;
+    transition: 0.5s ease-in-out;
 }
 
 .app__navbar-smallscreen_links li {
@@ -140,6 +150,7 @@ cursor: pointer;
     font-size: 2rem;
     text-align: center;
     font-family: var(--font-base);
+
 }
 
 .app__navbar-smallscreen_links li:hover {
@@ -154,7 +165,10 @@ cursor: pointer;
        
         justify-content: space-around;
         flex-wrap: nowrap;
+        
+        margin: auto;
     }
+  
 
   
   
@@ -206,6 +220,8 @@ cursor: pointer;
     }
     .header-btn button{
        margin-left: -9rem;
+       width: 88px;
+       height: 50px;
     }
 
     .hamburger {

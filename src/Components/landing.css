@@ -296,14 +296,24 @@ line-height: normal;
     height: 350px;
 } */
 .stout img{
-    width: 350px;
-    height: 350px;
+    width: 235px;
+    height: 235px;
     border-radius: 50%;
     clip-path: inset(5px 20px 25px 20px round 50%);
 }
-.scout-top-text,
-.scout-middle-text,
+
 .scout-down-text {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.scout-down-text span {
+    margin-left: 0.5rem;
+}
+.scout-top-text,
+.scout-middle-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -311,7 +321,11 @@ line-height: normal;
 }
 
 .scout-top-text {
-    align-items: left;
+    align-items: start;
+}
+
+.scout-top-text span {
+    margin-left: 0.5rem;
 }
 .scout-top-text p,
 .scout-middle-text p,
@@ -335,6 +349,7 @@ font-weight: 400;
 line-height: normal;
 margin-right: 1.9rem;
 }
+
 
 .star {
     width: 35px;

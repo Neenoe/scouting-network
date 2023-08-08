@@ -3,31 +3,21 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 2rem;
-    /* background: #223E88;
-    max-width: 433px; */
-    /* height: 340px;
-    flex-shrink: 0; */
-    /* margin: 0 auto;
-    margin-left: -2rem; */
     padding-top: 3rem;
     padding-left: 4rem;
+    margin: 0 auto;
+    max-width: 1400px;
+    background: #223E88;
     
 }
+
+
 .footer-container {
 
-height: 340px;
 background: #223E88;
-max-width:100vw;
-/* margin-left: -2rem; */
+margin: 0 auto;
 width: 100%;
-
-
-
-
-
-
-
-   
+height: 563px;
 }
 
 .footer-mobile {
@@ -36,18 +26,24 @@ width: 100%;
 .footer-scout {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.foot-img {
+ margin-right: -2rem;
 }
 
 .footer-icons {
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
+    margin-top: 3rem;
 }
 
 
 .hi-con {
     margin-left: 1rem;
-    margin-top: 1rem;
+    margin-top: 4rem;
 }
 .footer-icons-icon img {
     width: 50px;
@@ -60,10 +56,17 @@ width: 100%;
     display: flex;
     flex-direction: column;
 }
+
+.footer-icons h3 {
+    align-items: left;
+    display: flex;
+    justify-content: start;
+    margin-left: 2.2rem;
+}
 .social-icon1 {
     display: flex;
     flex-direction: row;
-
+    margin-left: 1rem;
 }
 
 .social-icon {
@@ -90,11 +93,10 @@ font-size: 20px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-margin-top: 1.4rem;
+margin-top: 3rem;
 align-items: flex-start;
 text-align: flex-start;
 display: flex;
-
 }
 
 .footer-right-info{
@@ -105,11 +107,12 @@ display: flex;
 .footer-right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
-    margin-left: 2rem;
     text-align: start;
-    width: 600px;
+    width: 550px;
+    margin: 0 auto;
+
 }
 .footer-right p {
     color: #FFF;
@@ -125,26 +128,30 @@ line-height: normal;
 font-size: 20px;
 font-style: normal;
 font-weight: 400;
-line-height: normal;
-
+line-height: 25px;
+margin-top: 1rem;
 }
 
 
 .footer-right-info1 {
     height: 40px;
+    margin-top: 1rem;
 
 }
 
 .info {
     height: 40px;
-    width: 300px;
+    width: 500px;
     padding: 1.5rem;
+    border-radius: 10px;
+    border: none;
 }
 
 .footer-right-info2 button {
     height: 52px;
-    width: 100px;
-    margin-left: -0.2rem;
+    width: 145px;
+    margin-left: -6rem;
+    margin-top: 0.9rem;
     margin-bottom: 0.5rem;
     padding: 0.2rem;
     background: #D7AE37;
@@ -157,6 +164,7 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 cursor: pointer;
+border-radius: 10px;
 }
 
 @media screen and (max-width: 808px) {
@@ -257,6 +265,35 @@ cursor: pointer;
   
 }
 
+@media screen and (max-width: 1030px) {
+    .info {
+        height: 40px;
+        width: 300px;
+        padding: 1.5rem;
+        border-radius: 10px;
+        border: none;
+    }
+    .footer-right-info2 button {
+        height: 52px;
+        width: 85px;
+        margin-left: -5rem;
+        margin-top: 0.9rem;
+        margin-bottom: 0.5rem;
+        padding: 0.2rem;
+        background: #D7AE37;
+        color: white;
+        border: none;
+        color: #FFF;
+    font-size: 20px;
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+    border-radius: 10px;
+    }
+}
+
 
 
 
@@ -274,6 +311,7 @@ cursor: pointer;
         justify-content: flex-start;
         align-items: start;
         padding: 1rem;
+        background: #223E88;
        
     }
     
@@ -293,12 +331,20 @@ cursor: pointer;
     .footer-1 h3 {
         width: 199px;
     color: #FFF;
-    font-family: Inter;
+  
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-align: start;
+    }
+    .footer-1 span {
+        color: #D7AE37;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
     }
     
     .footer-1 button {
@@ -363,13 +409,19 @@ cursor: pointer;
     .footer-4 {
        
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
        margin-top: 1rem;
         padding-bottom: 1rem;
     }
-    
+    .mobile-icon {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1.5rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
     .hi-con {
         margin-left: 0.4rem;
 
@@ -378,5 +430,9 @@ cursor: pointer;
     .footer-container {
         height: 407px;
        
+    }
+    .footer-logo div {
+        width: 50px;
+        height: 50px;
     }
 }

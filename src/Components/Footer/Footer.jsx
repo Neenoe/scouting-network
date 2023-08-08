@@ -1,13 +1,17 @@
 import React from 'react'
 import './footer.css'
 import { SocialIcon } from 'react-social-icons';
+import FooterLogo from './../FooterLogo'
 function Footer() {
   return (
     <div className='footer-container innerWidth'>
             <div className="footer">
         <div className="footer-left">
         <div className="footer-scout">
-          <h3>SCOUTRIGHT</h3>
+          <div className="scout-img">
+        <FooterLogo className='foot-img'/>
+          </div>
+          
           <p>Footballers</p>
           <p>Scouts</p>
           <p>Support</p>
@@ -42,7 +46,7 @@ function Footer() {
 
         <div className="footer-right">
           <p>Susbribe Newsletter</p>
-          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente temporibus quidsdem </span>
+          <span>Never miss what matters with our <br /> daily free newsletter delivered into <br /> your inbox </span>
           <div className="footer-right-info innerWidth">
             <div className="footer-right-info1">
             <label for="username" placeholder='Your Name'></label>
@@ -65,7 +69,7 @@ function Footer() {
         
         <div className='footer-mobile'>
           <div className='footer-1'>
-            <h3>football is played with the head your foot is the tool</h3>
+            <h3>Football is <span>played</span>  with the head <span>  your foot</span> is the tool</h3>
             <button>SIGN UP</button>
 
           </div>
@@ -83,11 +87,18 @@ function Footer() {
             <p>Discover</p>
 
           </div>
-          <div className='footer-4'>
-          <SocialIcon url="https://twitter.com"  network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2'  style={{width: 30, height: 30}} />
+          <div className='footer-4' style={{marginBottom: '2rem'}}>
+            <div className="mobile-icon">
+            <SocialIcon url="https://twitter.com"  network="twitter" className='hi-con'  bgColor="#fff" fgColor='#1DA1F2'  style={{width: 30, height: 30}} />
        <SocialIcon url="https://facebook.com"  network="facebook" className='hi-con' bgColor="#fff" fgColor='#1DA1F2' style={{width: 30, height: 30}} />
        <SocialIcon url="https://youtube.com"  network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 30, height: 30}} />
        <SocialIcon url="https://instagram.com"  network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 30, height: 30}} />
+            </div>
+            <div className="footer-logo" style={{width: '50px', height: '80px', marginBottom: '3rem'}}>
+            <FooterLogo style={{height: '50%', width: '50%'}}/>
+            </div>
+           
+         
       
 
           </div>

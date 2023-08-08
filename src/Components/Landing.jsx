@@ -114,15 +114,7 @@ function Landing () {
 
    
     <div className="categories-container">
-      <div className="categories-box">
-        <div className="categories-image">
-        <img src={data[11].imag} alt="" />
-
-        </div>
-        <h4>Male Footballers</h4>
-        <span>Skilled, passionate athletes,From local pitches to international stages,they inspire millions of young footballers </span>
-        <p>Read More</p>
-      </div>
+      
       <div className="categories-box">
         <div className="categories-image">
         <img src={data[3].imag} alt="" />
@@ -130,6 +122,15 @@ function Landing () {
         </div>
         <h4>Female Footballers</h4>
         <span>Talented, passionate athletes breaking barriers, inspiring on and off the pitch, and elevating the sport to new heights. </span>
+        <p>Read More</p>
+      </div>
+      <div className="categories-box">
+        <div className="categories-image">
+        <img src={data[11].imag} alt="" />
+
+        </div>
+        <h4>Male Footballers</h4>
+        <span>Skilled, passionate athletes,From local pitches to international stages,they inspire millions of young footballers </span>
         <p>Read More</p>
       </div>
       <div className="categories-box">
@@ -156,8 +157,8 @@ function Landing () {
             </div>
            
             <div className="scout-top-text">
-              <p>Tony Young</p>
-              <span>HR Arvado</span>
+              <p>Diana Asak</p>
+              <span>Asistant Coach at AOA</span>
             </div>
           </div>
           <div className='scout-top-details'>
@@ -166,8 +167,8 @@ function Landing () {
             </div>
            
             <div className="scout-top-text">
-              <p>Fantana Wills</p>
-              <span>Arvado</span>
+              <p>Koko Kenibo</p>
+              <span>Scout</span>
             </div>
           </div>
         </div>
@@ -178,8 +179,8 @@ function Landing () {
             </div>
            
             <div className="scout-middle-text">
-              <p>Scot Ryan</p>
-              <span>HR Arvado</span>
+              <p>Alabi Kazeem</p>
+              <span>Head coach at AOA</span>
             </div>
           </div>
         </div>
@@ -190,8 +191,8 @@ function Landing () {
             </div>
            
             <div className="scout-down-text">
-              <p>Tracy Blair</p>
-              <span>HR Arvado</span>
+              <p>Aselemi Umor</p>
+              <span>Scout</span>
             </div>
           </div>
           <div className='scout-down-details'>
@@ -200,8 +201,8 @@ function Landing () {
             </div>
            
             <div className="scout-down-text">
-              <p>Samuel Felix</p>
-              <span>HR Arvado</span>
+              <p>Nkechi Okafor</p>
+              <span>Scout</span>
             </div>
           </div>
         </div>
@@ -252,7 +253,7 @@ function Landing () {
             </div>
             </div>
             <div className="testimonial-note">
-              <p>"Discovering talent through this website has been a game-changer for my scouting career. I found a hidden gem, and watching them grow into a star player is incredibly rewarding. Grateful for this platform!"</p>
+              <p>"Signing up players through this website has been a game-changer for my scouting efforts. It's a goldmine of undiscovered talent, and I found a true gem who's now making waves in the football world. Thank you!"</p>
             </div>
             <div className="testimonial-rate">
             <AiFillStar className='star'/>
@@ -275,7 +276,7 @@ function Landing () {
             </div>
             </div>
             <div className="testimonial-note">
-              <p>"Getting signed up through a website was a game-changer for my football career! The platform connected me with scouts worldwide, and within weeks, I had opportunities I never dreamed of. Forever grateful!"</p>
+              <p>"Discovering talent through this website has been a game-changer for my scouting career. I found a hidden gem, and watching them grow into a star player is incredibly rewarding. Grateful for this platform!"</p>
             </div>
             <div className="testimonial-rate">
             <AiFillStar className='star'/>

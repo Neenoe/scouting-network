@@ -6,6 +6,8 @@ import Login from "../Login";
 import Signup from "../Signup";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import ScoutLogo from '../ScoutLogo'
+import { motion } from "framer-motion";
+
 
 
 
@@ -61,7 +63,16 @@ function Nav() {
         <div className="header-logo">
         <ScoutLogo/>
         </div>
-        <div className="header-list flexStart">
+        
+        <div className="header-list flexStart" 
+      /**
+       * Setting the initial keyframe to "null" will use
+       * the current value to allow for interruptable keyframes.
+       */
+      whileHover={{ scale: [null, 1.5, 1.4] }}
+      transition={{ duration: 0.3 }}>
+     
+    
         <Link to="/" onClick={() => handleLinkClick("/")}>
           {" "}
           <div className={activeLink === "/" ? "active" : ""}>Home</div>{" "}
