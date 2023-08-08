@@ -340,13 +340,20 @@ line-height: normal;
 
 .interviews-media p {
     width: 321px;
-flex-direction: column;
-flex-shrink: 0;
-color: #817F7F;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+    color: #817F7F;
+    font-family: Satoshi;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    height: 70px;
+    padding: 0;
 }
 
 
@@ -595,61 +602,50 @@ display: none;
     color: var(--color-white);
 }
 
-/* .swiper {
-    width: 30%;
-    height: 100%;
-  }
-  .mySwiper {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-  
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-   */
-   .swiper {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-  
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-.mySwiper {
-    margin-bottom: 2rem;
-}  
 
+  
+  
 .stop {
-    display: none;
+    /* Add necessary styles to the paragraph */
+    position: relative;
+    
+    /* Adjust the horizontal position as needed */
+      color: #fff;
+      /* left: 25%;
+      top: 90%; */
+      bottom: 40%;
+      left: 40%;
+      font-size: 14px;
+      padding: 1.5rem;
+      background: #424242;
+    
+  padding: 1rem;
+  width: 44px;
+  height: 44px;
+flex-shrink: 0;
+fill: #544F4F;
+stroke-width: 1px;
+stroke: #D9D9D9;
+border-radius: 50%;
+
+}
+
+.stop1 {
+    position: relative;
+    top: 50%;
+    right: 50%;
+    font-size: 14px;
+    padding: 1.5rem;
+    background: #424242;
+  
+padding: 1rem;
+width: 44px;
+height: 44px;
+flex-shrink: 0;
+fill: #544F4F;
+stroke-width: 1px;
+stroke: #D9D9D9;
+border-radius: 50%;
 }
 
 /*  */
@@ -755,42 +751,51 @@ margin-top: 4rem;
       }
       
       .highlight-item img {
-        /* Add necessary styles to the image */
+      
         width: 253px;
         height: 239px;
         border-radius: 15px;
         margin-left: 1.5rem;
       }
       
+    
       .highlight-item p {
         /* Add necessary styles to the paragraph */
         position: absolute;
       /* Adjust the horizontal position as needed */
         color: #fff;
         font-size: 14px;
-        padding: 1.5rem;
+        text-align: center;
+        
         background: #424242;
-        width: 35px;
-    height: 30px;
-    padding: 1rem;
+        width: 27px;
+    height: 27px;
+    margin-top: -0.1%;
+    margin-top: 3%;
+    padding: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
    
     color: #FFF;
-    font-size: 18px;
+    font-size: 12px;
     font-family: Satoshi;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    display: none;
+  
       }
 
-    .stop {
+    .stop,
+    .stop1 {
             /* Add necessary styles to the paragraph */
             position: absolute;
             display: flex;
             /* Adjust the horizontal position as needed */
               color: #fff;
-              left: 45%;
-              top: 30%;
+              left: 50%;
+              top: 26%;
               font-size: 14px;
               padding: 1.5rem;
               background: #424242;
@@ -843,21 +848,24 @@ line-height: normal;
       .interviews-title span {
         /* Add necessary styles to the paragraph */
         position: absolute;
-        bottom: 190px; /* Adjust the vertical position as needed */
+        bottom: 170px; /* Adjust the vertical position as needed */
         left: 30px; /* Adjust the horizontal position as needed */
         color: #fff;
         font-size: 14px;
         padding: 1.5rem;
         background: #424242;
-        width: 55px;
-    height: 50px;
-    padding: 1rem;
+        width: 27px;
+        height: 27px;
+    
     color: #FFF;
-    font-size: 18px;
+    font-size: 12px;
     font-family: Satoshi;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
       }
       .interviews-intro-btns {
         display: row;
@@ -1011,7 +1019,7 @@ line-height: normal;
 .interviews-title img {
     
     width: 173px;
-    height: 119px;
+height: 119px;
     
     margin-left: 1rem;
 }
@@ -1023,7 +1031,28 @@ line-height: normal;
     margin-left: -1.5rem;
 }
  .interviews-media p {
-    display: none;
+    color: #817F7F;
+    font-family: Satoshi;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+   display: flex;
+   width: 180px;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   text-align: center;
+   padding-left: 2.5rem;
+
+  margin-left: -1rem;
+ 
+ }
+
+ .interviews-media span {
+    padding: 1rem;
+    top: 0.5%;
+    left: 18%;
  }
 
 
@@ -1099,7 +1128,7 @@ line-height: normal;
 }
 
 .toprated-details {
-    width: 388px;
+   
 height: 246px;
 }
 

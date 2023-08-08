@@ -2,6 +2,7 @@ import React from 'react'
 import './footer.css'
 import { SocialIcon } from 'react-social-icons';
 import FooterLogo from './../FooterLogo'
+import FooterLogoMobile from '../FooterLogoMobile';
 function Footer() {
   return (
     <div className='footer-container innerWidth'>
@@ -95,7 +96,7 @@ function Footer() {
        <SocialIcon url="https://instagram.com"  network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 30, height: 30}} />
             </div>
             <div className="footer-logo" style={{width: '50px', height: '80px', marginBottom: '3rem'}}>
-            <FooterLogo style={{height: '50%', width: '50%'}}/>
+            <FooterLogoMobile style={{height: '50%', width: '50%'}}/>
             </div>
            
          

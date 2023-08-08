@@ -71,7 +71,7 @@ function Blog() {
 
 <div className="blog-media-left">
   <h3>Stay <span>Updated</span> <br /> With <span>Latest</span> News</h3>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. et accusamus veniam quasi molestiae fuhjkhghgiat hic molestias.</p>
+  <p>"Stay informed and up-to-date with the latest breaking news from around the world. Get your daily dose of updates here!"</p>
 
 </div>
 <div className="blog-media-right">
@@ -93,7 +93,7 @@ function Blog() {
 
     {/* highlight */}
 
-    <div className="highlight-wrapper innerWidth paddings">
+    <div className="highlight-wrapper paddings">
       <div className="highlight-intro">
         <h2>  Training highlight</h2>
         <button>Watch More</button>
@@ -102,19 +102,21 @@ function Blog() {
  
         <div className="highlight-details" ref={scrollRef}>
   <div className="highlight-item">
-    <img src={data[20].imag} alt="" />
+   
+   <img src={data[20].imag} alt="" />
+   
     <p>{data[0].duration}</p>
-    <BsFillPauseFill className='stop'/>
+    <BsFillPlayFill className='stop1'/>
   </div>
   <div className="highlight-item">
     <img src={data[21].imag} alt="" />
     <p>{data[1].duration}</p>
-    <BsFillPauseFill className='stop'/>
+    <BsFillPlayFill className='stop1'/>
   </div>
   <div className="highlight-item">
     <img src={data[22].imag} alt="" />
     <p>{data[2].duration}</p>
-    <BsFillPauseFill className='stop'/>
+    <BsFillPlayFill className='stop1'/>
   </div>
 </div>
 
@@ -168,17 +170,20 @@ function Blog() {
           <div className='interviews-title'>
           <img src={data[25].imag} alt="" />
             <span>10m</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-          <div className='interviews-title'>
-          <img src={data[28].imag} alt="" />
-            <span>15m</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <BsFillPlayFill className='stop'/>
+            <p>Electrifying interview with one outstanding young footballer at trials</p>
           </div>
           <div className='interviews-title'>
           <img src={data[27].imag} alt="" />
             <span>15m</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <BsFillPlayFill className='stop'/>
+            <p>Insightful interview with one of the top scouts.</p>
+          </div>
+          <div className='interviews-title'>
+          <img src={data[28].imag} alt="" />
+            <span>15m</span>
+            <BsFillPlayFill className='stop'/>
+            <p>Spot light on new signee after medicals.</p>
           </div>
 
         </div>
@@ -209,7 +214,7 @@ function Blog() {
         <p>Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.</p>
       </div>
       <div className="toprated1">
-        <img src={data[33].imag} alt="" />
+        <img src={data[34].imag} alt="" />
         <div className="toprated-icon">
           <BsFillPauseFill className='pause'/>
           <img src={data[29].imag} alt="" />
@@ -217,7 +222,7 @@ function Blog() {
         <p>Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.</p>
       </div>
       <div className="toprated1">
-        <img src={data[34].imag} alt="" />
+        <img src={data[33].imag} alt="" />
         <div className="toprated-icon">
           <BsFillPauseFill className='pause'/>
           <img src={data[29].imag} alt="" />
