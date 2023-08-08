@@ -222,11 +222,11 @@ function Landing () {
         <div className="testimonial-box">
           <div className="testimonial-details">
             <div className="testimonial-image">
-            <img src={data[7].imag} alt="" />
+            <img src={data[36].imag} alt="" />
             </div>
             <div className="testimonial-name">
-              <p>Karl Jose</p>
-              <p>HR Arrow</p>
+              <p>Timilehin Oruan</p>
+              <p>Footballer</p>
             </div>
             </div>
             <div className="testimonial-note">

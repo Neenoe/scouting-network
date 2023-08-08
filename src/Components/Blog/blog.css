@@ -348,12 +348,11 @@ line-height: normal;
     line-height: normal;
     text-align: flex-start;
     display: flex;
-    flex-direction: column;
     margin-left: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 0;
+    margin-bottom: 2rem;
+    margin-top: -10%;
     height: 70px;
-    padding: 0;
+    
 }
 
 
@@ -1033,7 +1032,7 @@ height: 119px;
  .interviews-media p {
     color: #817F7F;
     font-family: Satoshi;
-    font-size: 10px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1046,6 +1045,7 @@ height: 119px;
    padding-left: 2.5rem;
 
   margin-left: -1rem;
+  margin-top: 0.5%;
  
  }
 
