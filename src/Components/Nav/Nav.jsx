@@ -60,17 +60,11 @@ function Nav() {
   return (
     <div className="head">
       <div className="header">
+       
         <div className="header-logo">
         <ScoutLogo/>
-        </div>
-        
-        <div className="header-list flexStart" 
-      /**
-       * Setting the initial keyframe to "null" will use
-       * the current value to allow for interruptable keyframes.
-       */
-      whileHover={{ scale: [null, 1.5, 1.4] }}
-      transition={{ duration: 0.3 }}>
+        </div> 
+        <div className="header-list flexStart">
      
     
         <Link to="/" onClick={() => handleLinkClick("/")}>
@@ -97,9 +91,10 @@ function Nav() {
               REGISTER
             </button>
           </div>
-        </div>
+          </div>
 
         {/*  */}
+        
         
 
         <div className='app__navbar-smallscreen'>
@@ -139,7 +134,7 @@ function Nav() {
       
     </ul>
 
-      {/* </OutsideClickHandler> */}
+     
       
 
     </div>
@@ -162,6 +157,7 @@ function Nav() {
          </Box>
       </Modal>
     </div>
+    
   );
 }
 
