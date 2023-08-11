@@ -93,7 +93,7 @@ function Blog() {
 
     {/* highlight */}
 
-    <div className="highlight-wrapper paddings">
+    <div className="highlight-wrapper">
       <div className="highlight-intro">
         <h2>  Training highlight</h2>
         <button>Watch More</button>
