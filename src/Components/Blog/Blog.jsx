@@ -102,20 +102,32 @@ function Blog() {
  
         <div className="highlight-details" ref={scrollRef}>
   <div className="highlight-item">
+    <div className="highlight-img">
+    <img src={data[20].imag} alt="" />
    
-   <img src={data[20].imag} alt="" />
+   <p className='highlight-time'>{data[0].duration}</p>
+
+    </div>
    
-    <p>{data[0].duration}</p>
+ 
     <BsFillPlayFill className='stop1'/>
   </div>
   <div className="highlight-item">
+  <div className="highlight-img">
     <img src={data[21].imag} alt="" />
-    <p>{data[1].duration}</p>
+   
+   <p className='highlight-time'>{data[0].duration}</p>
+
+    </div>
     <BsFillPlayFill className='stop1'/>
   </div>
   <div className="highlight-item">
+  <div className="highlight-img">
     <img src={data[22].imag} alt="" />
-    <p>{data[2].duration}</p>
+   
+   <p className='highlight-time'>{data[0].duration}</p>
+
+    </div>
     <BsFillPlayFill className='stop1'/>
   </div>
 </div>
@@ -154,7 +166,10 @@ function Blog() {
 
     {/* Interviews */}
     <div className="interviews-wrapper innerWidth paddings">
-    <div className="interviews-intro paddings">
+    <div className="interviews-intro">
+      <div className='interview-details'>
+
+      
         <h2>  Explore Our interviews by Categories</h2>
         <div className="interviews-intro-btns">
         <button>All</button>
@@ -165,27 +180,39 @@ function Blog() {
   
         </div>
         </div>
+        
 
         <div className="interviews-media">
           <div className='interviews-title'>
-          <img src={data[25].imag} alt="" />
-            <span>10m</span>
+            <div className="interviews-img">
+            <img src={data[25].imag} alt="" />
+            <span className="time-span">10m</span>
+            </div>
+         
+            
             <BsFillPlayFill className='stop'/>
             <p>Electrifying interview with one outstanding young footballer at trials</p>
           </div>
           <div className='interviews-title'>
-          <img src={data[27].imag} alt="" />
-            <span>15m</span>
+          <div className="interviews-img">
+            <img src={data[27].imag} alt="" />
+            <span className="time-span">10m</span>
+            </div>
+           
             <BsFillPlayFill className='stop'/>
             <p>Insightful interview with one of the top scouts.</p>
           </div>
           <div className='interviews-title'>
-          <img src={data[28].imag} alt="" />
-            <span>15m</span>
+          <div className="interviews-img">
+            <img src={data[28].imag} alt="" />
+            <span className="time-span">10m</span>
+            </div>
+           
             <BsFillPlayFill className='stop'/>
             <p>Spot light on new signee after medicals.</p>
           </div>
 
+        </div>
         </div>
      
 
@@ -211,7 +238,7 @@ function Blog() {
           <BsFillPauseFill className='pause'/>
           <img src={data[29].imag} alt="" />
         </div>
-        <p>Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.</p>
+        <p>Top scout bear their thoughts <br /> about the young talents</p>
       </div>
       <div className="toprated1">
         <img src={data[34].imag} alt="" />
@@ -219,7 +246,7 @@ function Blog() {
           <BsFillPauseFill className='pause'/>
           <img src={data[29].imag} alt="" />
         </div>
-        <p>Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.</p>
+        <p>A talk on how to connect with <br /> football scout.</p>
       </div>
       <div className="toprated1">
         <img src={data[33].imag} alt="" />
@@ -227,7 +254,7 @@ function Blog() {
           <BsFillPauseFill className='pause'/>
           <img src={data[29].imag} alt="" />
         </div>
-        <p>Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.</p>
+        <p>Time out with the successful  <br /> players at the just concluded trials</p>
       </div>
 
         </div>
