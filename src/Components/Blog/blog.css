@@ -870,85 +870,7 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
       }
-      /* .interviews-media {
-      
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        display: flex;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        width: 100%;
-      }
-   
-      .interviews-title {
-       
-        position: relative;
-        margin-right: 1px;
-        padding: 0.5rem;
-        margin-left: 1rem;
-        display: flex;
-        width: 100%;
-      }
-      
-      .interviews-title img {
-       
-        width: 253px;
-        height: 239px;
-        border-radius: 15px;
-        margin-left: 1.5rem;
-      }
-      
-      .interviews-title span {
-    
-        position: absolute;
-        bottom: 170px; 
-        left: 30px; 
-        color: #fff;
-        font-size: 14px;
-        padding: 1.5rem;
-        background: #424242;
-        width: 27px;
-        height: 27px;
-    
-    color: #FFF;
-    font-size: 12px;
-    font-family: Satoshi;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      }
-      .interviews-intro-btns {
-        display: row;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-        padding: 1.5rem;
-      }
-      .interviews-intro-btns button {
-        margin-top: 0.3rem
-      }
-
-
- .interviews-intro-btns {
-    display: flex;
-    flex-direction: row;
-    
- }
-
- .interviews-intro-btn button {
-
-display: flex;
-flex-direction: row;
-padding: 0;
-font-size: 10px;
- } */
-
- /* 
-  */
+ 
 
  .highlight-intro button {
     width: 76px;
@@ -969,38 +891,7 @@ font-size: 10px;
 
 
 
-/*  */
-/* .interviews-media {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 808px;
-    margin: 0 auto;
-  }
-  
-  .interviews-title {
-    width: calc(50% - 10px);
-    margin-bottom: 20px;
-  }
-  
-  .interviews-img {
-    position: relative;
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-  }
-  
-  .time-span {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-  }
-   */
+
 
   .interviews-img {
     width: 173px;
@@ -1296,11 +1187,18 @@ margin-bottom: 2rem;
     cursor: pointer;
    
   }
-  
+  .interviews-media span {
+    width: 29.16px;
+    height: 27px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0.3rem;
+  }
   .interviews-title p {
     text-align: center;
     font-size: 10px;
-margin-bottom:-15% ;
    width: 170px;
     padding-top: -1rem;
   }
