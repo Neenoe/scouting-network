@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./nav.css";
 import { Link } from "react-router-dom";
 import { Box, Modal } from "@mui/material";
 import Login from "../Login";
 import Signup from "../Signup";
-import { BiMenuAltRight } from "react-icons/bi";
-import { FaLinesLeaning } from "react-icons/fa6";
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { MdOutlineRestaurantMenu } from 'react-icons/md'
-import OutsideClickHandler from 'react-outside-click-handler'
+import ScoutLogo from '../ScoutLogo'
+import { motion } from "framer-motion";
+
+
+
+
 
 
 const style = {
@@ -37,31 +39,46 @@ function Nav() {
     setAuthType(e.target.id);
   };
   const handleClose = () => setOpen(false);
+  
+  const handleToggleMenu = () => {
+    setToggleMenu(!toggleMenu);
+  };
 
+  const [activeLink, setActiveLink] = useState("/");
+  useEffect(() => {
+    // This function will be called whenever activeLink changes
+    // We'll update the active state of the links here.
+    const currentPath = window.location.pathname;
+    setActiveLink(currentPath);
+  }, [activeLink]);
+  const handleLinkClick = (path) => {
+  setActiveLink(path);
+};
+  
 
 
   return (
-    <div>
-      <div className="header flexCenter innerWidth">
+    <div className="head">
+      <div className="header">
+       
         <div className="header-logo">
-          <h3>SCOUTING REPORT</h3>
-        </div>
-        <div
-          className={`header-list flexStart`}
-        >
-          <Link to="/">
-            {" "}
-            <div>Home</div>{" "}
-          </Link>
-          <Link to="/discover">
-            {" "}
-            <div>Discover</div>{" "}
-          </Link>
-        
-          <Link to="/blog">
-            {" "}
-            <div>Blog</div>{" "}
-          </Link>
+        <ScoutLogo/>
+        </div> 
+        <div className="header-list flexStart">
+     
+    
+        <Link to="/" onClick={() => handleLinkClick("/")}>
+          {" "}
+          <div className={activeLink === "/" ? "active" : ""}>Home</div>{" "}
+        </Link>
+        <Link to="/discover" onClick={() => handleLinkClick("/discover")}>
+          {" "}
+          <div className={activeLink === "/discover" ? "active" : ""}>Discover</div>{" "}
+        </Link>
+        <Link to="/blog" onClick={() => handleLinkClick("/blog")}>
+          {" "}
+          <div className={activeLink === "/blog" ? "active" : ""}>Blog</div>{" "}
+        </Link>
           <div
             id="login"
             onClick={(e) => handleOpen(e)}
@@ -74,32 +91,33 @@ function Nav() {
               REGISTER
             </button>
           </div>
-        </div>
+          </div>
 
         {/*  */}
         
+        
 
         <div className='app__navbar-smallscreen'>
-      <GiHamburgerMenu color='#fff' className="hamburger" fontSize={25} onClick={() => setToggleMenu(true)}/>
+      <GiHamburgerMenu color='#fff' className="hamburger" fontSize={25} onClick={handleToggleMenu}/>
 
 
     {toggleMenu && (
     <div className='app__navbar-smallscreen_overlay '>
 
-      <OutsideClickHandler onOutsideClick={() => setToggleMenu(false)}>
+      {/* <OutsideClickHandler onOutsideClick={handleToggleMenu}> */}
       
       <ul className='app__navbar-smallscreen-links'>
-      <Link to="/">
+      <Link to="/" onClick={() => handleLinkClick("/")}>
             {" "}
-            <div>HOME</div>{" "}
+            <div className={activeLink === "/" ? "active" : ""} >HOME</div>{" "}
           </Link>
-          <Link to="/discover">
+          <Link to="/discover" onClick={() => handleLinkClick("/discover")}>
             {" "}
-            <div>DISCOVER</div>{" "}
+            <div className={activeLink === "/discover" ? "active" : ""}>DISCOVER</div>{" "}
           </Link>
-          <Link to="/blog">
+          <Link to="/blog" onClick={() => handleLinkClick("/blog")}>
             {" "}
-            <div>BLOG</div>{" "}
+            <div className={activeLink === "/blog" ? "active" : ""}>BLOG</div>{" "}
           </Link>
           <div
             id="login"
@@ -116,7 +134,7 @@ function Nav() {
       
     </ul>
 
-      </OutsideClickHandler>
+     
       
 
     </div>
@@ -139,6 +157,7 @@ function Nav() {
          </Box>
       </Modal>
     </div>
+    
   );
 }
 

@@ -57,7 +57,7 @@ const Discover = () => {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <div className="paddings innerWidth discover">
+        <div className=" innerWidth discover">
           <Nav />
         </div>
 
@@ -175,10 +175,10 @@ const Discover = () => {
                           <Grid item xs={4}>
                             <Stack
                               direction="row"
-                              sx={{ alignItems: "center", gap: {xs:"2px", md:"5px"} }}
+                              sx={{alignItems: {xs:'end', md:"center"}, gap: {xs:"2px", md:"5px"} }}
                             >
                               <Profile height={mdQuery?'23px':'12px'} width={mdQuery?'19px':'10px'} />
-                              <Typography fontSize={mdQuery?'12px': '8px'} sx={{display:{xs:'none', md:'block'}}}>
+                              <Typography fontSize={mdQuery?'12px': '6px'} >
                                 {player?.age} yrs
                               </Typography>
                             </Stack>
@@ -193,23 +193,25 @@ const Discover = () => {
                               }}
                             >
                               <Pitch height={mdQuery?'23px':'12px'} width={mdQuery?'19px':'10px'} />
-                              <Typography fontSize={mdQuery?'12px': '8px'} sx={{display:{xs:'none', md:'block'}}}>
+                              <Typography fontSize={mdQuery?'12px': '6px'} >
                                 {player?.position}
                               </Typography>
                             </Stack>
                           </Grid>
                           <Grid item xs={4}>
+                            
                             <Stack
                               direction="row"
                               sx={{
+          
                                 alignItems: "center",
-                                paddingLeft: "30px",
+                                paddingLeft: {xs:'18px', md:"30px"},
                                 gap: {xs:"2px", md:"5px"},
                               }}
                             >
                               <Boot height={mdQuery?'23px':'12px'} width={mdQuery?'19px':'10px'}/>
-                              <Typography fontSize={mdQuery?'12px': '8px'} sx={{display:{xs:'none', md:'block'}}}>
-                                {player?.foot}
+                              <Typography fontSize={mdQuery?'12px': '6px'} >
+                                {mdQuery? player?.foot : player?.foot.substring(0, 1)}
                               </Typography>
                             </Stack>
                           </Grid>
@@ -219,7 +221,7 @@ const Discover = () => {
                               sx={{ alignItems: "center", gap: {xs:"2px", md:"5px"} }}
                             >
                               <Location height={mdQuery?'23px':'12px'} width={mdQuery?'19px':'10px'}/>
-                              <Typography fontSize={mdQuery?'12px': '8px'} sx={{display:{xs:'none', md:'block'}}}>
+                              <Typography fontSize={mdQuery?'12px': '6px'} >
                                 {player?.location}
                               </Typography>
                             </Stack>
@@ -235,8 +237,8 @@ const Discover = () => {
                               }}
                             >
                               <Profile height={mdQuery?'23px':'12px'} width={mdQuery?'19px':'10px'}/>
-                              <Typography fontSize={mdQuery?'12px': '8px'} sx={{display:{xs:'none', md:'block'}}}>
-                                {player?.gender}
+                              <Typography fontSize={mdQuery?'12px': '6px'}>
+                                {mdQuery? player?.gender : player?.gender.substring(0, 1)}
                               </Typography>
                             </Stack>
                           </Grid>
@@ -245,13 +247,13 @@ const Discover = () => {
                               direction="row"
                               sx={{
                                 alignItems: "center",
-                                paddingLeft: "30px",
+                                paddingLeft: {xs:'18px', md:"30px"},
                                gap: {xs:"2px", md:"5px"},
 
                               }}
                             >
                               <Star height={mdQuery?'23px':'12px'} width={mdQuery?'19px':'10px'}/>
-                              <Typography fontSize={mdQuery?'12px': '8px'} sx={{display:{xs:'none', md:'block'}}}>
+                              <Typography fontSize={mdQuery?'12px': '6px'}>
                                 {player?.rating}/5
                               </Typography>
                             </Stack>

@@ -5,23 +5,11 @@ import {data} from './../Constants/data'
 import image1 from './../assets/Assets-9.jpeg';
 import image2 from './../assets/Assets-10.jpeg';
 import image3 from './../assets/Assets-11.jpeg';
-import logo4 from './../assets/gallery04.png'
-import logo5 from './../assets/chef.png'
-import logo6 from './../assets/findus.png'
-import logo7 from './../assets/knife.png'
-import { AiOutlineStar } from "react-icons/ai";
 import { AiFillStar } from "react-icons/ai"
-import { FaPhone } from "react-icons/fa6";
-import { FaM } from 'react-icons/fa6'
 import Footer from './Footer/Footer';
 
 
-
-
-
-
-
-    function Landing () {
+function Landing () {
       const [currentSlide, setCurrentSlide] = useState(0);
       const images = [image1, image2, image3]; // Replace with your image URLs
       const slideInterval = 3000; // Change slide every 3 seconds
@@ -29,10 +17,7 @@ import Footer from './Footer/Footer';
       const nextSlide = useCallback(() => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
       }, [images.length]);
-      const previousSlide = () => {
-        setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
-      };
-    
+  
       useEffect(() => {
         const interval = setInterval(nextSlide, slideInterval);
     
@@ -44,21 +29,22 @@ import Footer from './Footer/Footer';
 
 
   return (
-    <div className='landing-wrapper paddings'>
+    <div className='landing-wrapper innerWidth'>
         <div className="landing-container ">
          
     <Nav/>
            
 
-   <div >
+   <div className='media-container'>
 
   
-      <div
+      <div className='mediaa'
         style={{
           position: 'relative',
           overflow: 'hidden',
-          width: '100%',
+         
           height: '400px', // Adjust the height as needed
+          marginLeft: '4rem'
         }}
       >
 
@@ -68,22 +54,6 @@ import Footer from './Footer/Footer';
                     <p>Football is played with the head <br /> Your foot is the tool</p>
 
                 </div>
-
-                {/* <div className="media-right">
-                    <div className='media-right-content'>
-                    <p>4000 + </p>
-                    <span>Footballers</span>
-                    </div>
-                    <div className='media-right-content'>
-                    <p>60% </p>
-                    <span>Signees</span>
-                    </div>
-                    <div className='media-right-content'>
-                    <p>2500+ </p>
-                    <span>Scouts</span>
-                    </div>
-                   
-                </div> */}
 
             </section>
          
@@ -104,13 +74,19 @@ import Footer from './Footer/Footer';
         />
       </div>
       <div className='navigation'>
-        {/* <button onClick={previousSlide}>Previous Slide</button>
-        <button onClick={nextSlide}>Next Slide</button> */}
-        <div onClick={previousSlide}/>
-        <div />
-        <div onClick={nextSlide}/>
-
-      </div>
+            <div
+              className={currentSlide === 0 ? 'active' : ''}
+              onClick={() => setCurrentSlide(0)}
+            />
+            <div
+              className={currentSlide === 1 ? 'active' : ''}
+              onClick={() => setCurrentSlide(1)}
+            />
+            <div
+              className={currentSlide === 2 ? 'active' : ''}
+              onClick={() => setCurrentSlide(2)}
+            />
+          </div>
 
      
     </div>
@@ -136,53 +112,63 @@ import Footer from './Footer/Footer';
     <br /> <br />
     {/* categories */}
 
-    <div className="categories-wrapper paddings innerWidth">
-      <div className="categories1">
+   
+    <div className="categories-container">
+      
+      <div className="categories-box">
+        <div className="categories-image">
         <img src={data[3].imag} alt="" />
-        <h4>Female Footballers</h4>
-        <span>Lorem ipsum dolor sit, amet <br /> consectetur adipisicing elit or what you <br /> Boko del Harum voluptates architecto debitis </span>
-        <p>Read More</p>
-      </div>
-      <div className="categories2">
-        <img src={data[11].imag}  alt="" />
-        <h4>Male Footballers</h4>
-        <span>Lorem ipsum dolor sit, amet <br /> consectetur adipisicing elit or what you <br /> Boko del Harum voluptates architecto debitis </span>
-        <p>Read More</p>
-      </div>
-      <div className="categories3">
-        <img src={data[5].imag}  alt="" />
-        <h4>Talent Scout</h4>
-        <span>Lorem ipsum dolor sit, amet <br /> consectetur adipisicing elit or what you <br /> Boko del Harum voluptates architecto debitis !</span>
-        <p>Read More</p>
-      </div>
 
+        </div>
+        <h4>Female Footballers</h4>
+        <span>Talented, passionate athletes breaking barriers, inspiring on and off the pitch, and elevating the sport to new heights. </span>
+        <p>Read More</p>
+      </div>
+      <div className="categories-box">
+        <div className="categories-image">
+        <img src={data[11].imag} alt="" />
+
+        </div>
+        <h4>Male Footballers</h4>
+        <span>Skilled, passionate athletes,From local pitches to international stages,they inspire millions of young footballers </span>
+        <p>Read More</p>
+      </div>
+      <div className="categories-box">
+        <div className="categories-image">
+        <img src={data[20].imag} alt="" />
+
+        </div>
+        <h4>Football Scout</h4>
+        <span>Keen-eyed talent hunters, identifying potential stars, and shaping the future of the beautiful game with precision.</span>
+        <p>Read More</p>
+      </div>
     </div>
 
    
 
       {/* OUR SCOUT */}
       <div className='scout innerWidth paddings'>
-
-        <h3>OUR TOP SCOUTS</h3>
-        <div className="scout-top">
+      <h3>OUR TOP SCOUTS</h3>
+ <div className="scout-wrapper">
+ <div className="scout-top">
           <div className='scout-top-details'>
             <div className='stout'>
             <img  src={data[13].imag} alt="" />
             </div>
            
             <div className="scout-top-text">
-              <p>Tony Young</p>
-              <span>HR Arvado</span>
+              <p>Diana Asak</p>
+              <span>Asistant Coach at AOA</span>
             </div>
           </div>
           <div className='scout-top-details'>
             <div className='stout'>
-            <img  src={data[14].imag} alt="" />
+            <img  src={data[17].imag} alt="" />
             </div>
            
             <div className="scout-top-text">
-              <p>Fantana Wills</p>
-              <span>Arvado</span>
+              <p>Koko Kenibo</p>
+              <span>Scout</span>
             </div>
           </div>
         </div>
@@ -193,147 +179,120 @@ import Footer from './Footer/Footer';
             </div>
            
             <div className="scout-middle-text">
-              <p>Scot Ryan</p>
-              <span>HR Arvado</span>
+              <p>Alabi Kazeem</p>
+              <span>Head coach at AOA</span>
             </div>
           </div>
         </div>
         <div className="scout-down">
         <div className='scout-down-details'>
             <div className='stout'>
-            <img  src={data[16].imag} alt="" />
+            <img  src={data[14].imag} alt="" />
             </div>
            
             <div className="scout-down-text">
-              <p>Tracy Blair</p>
-              <span>HR Arvado</span>
+              <p>Aselemi Umor</p>
+              <span>Scout</span>
             </div>
           </div>
           <div className='scout-down-details'>
             <div className='stout'>
-            <img  src={data[17].imag} alt="" />
+            <img  src={data[16].imag} alt="" />
             </div>
            
             <div className="scout-down-text">
-              <p>Samuel Felix</p>
-              <span>HR Arvado</span>
+              <p>Nkechi Okafor</p>
+              <span>Scout</span>
             </div>
           </div>
         </div>
+
+ </div>
+        
+       
 
       </div>
 
       {/* TESTIMONIAL */}
 
-      <div className="testimonial innerWidth paddings">
-        <h3>TESTIMONIAL</h3>
-        <div className="testimonial-details">
-          <div className="testimonial-card1">
-            <div className="testimonial-card-details">
-              <img src={data[7].imag} alt="" />
-              <div className="testimonial-card-details-info">
-                <p>San Barbz</p>
-                <span>HR Arravo</span>
-              </div>
-            </div>
 
-            <div className="testimonial-card1-texts">
-              <p>Lorem ipsum dolor sit amet consec adipisicing elit. Vero nam alias vel.</p>
+      <div className="testimonial-wrapper">
+        <h3>TESTIMONIALS</h3>
+        <div className="testimonial-container">
+        <div className="testimonial-box">
+          <div className="testimonial-details">
+            <div className="testimonial-image">
+            <img src={data[36].imag} alt="" />
             </div>
-
-            <div className="testimonial-card1-ratings">
-             
-              <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              
+            <div className="testimonial-name">
+              <p>Timilehin Oruan</p>
+              <p>Footballer</p>
             </div>
-
-          </div>
-          <div className="testimonial-card2">
-          <div className="testimonial-card-details">
-              <img src={data[18].imag}alt="" />
-              <div className="testimonial-card-details-info">
-                <p>San Barbz</p>
-                <span>HR Arravo</span>
-              </div>
             </div>
-
-            <div className="testimonial-card1-texts">
-              <p>Lorem ipsum dolor sit amet consec adipisicing elit. Vero nam alias vel.</p>
+            <div className="testimonial-note">
+              <p>"Getting signed up through a website was a game-changer for my football career! The platform connected me with scouts worldwide, and within weeks, I had opportunities I never dreamed of. Forever grateful!"</p>
             </div>
-
-            <div className="testimonial-card1-ratings">
-             
+            <div className="testimonial-rate">
+            <AiFillStar className='star'/>
               <AiFillStar className='star'/>
               <AiFillStar className='star'/>
               <AiFillStar className='star'/>
               <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              
             </div>
-            
-            </div>
-            <div className="testimonial-card3">
-            <div className="testimonial-card-details">
-              <img src={data[19].imag} alt="" />
-              <div className="testimonial-card-details-info">
-                <p>San Barbz</p>
-                <span>HR Arravo</span>
-              </div>
-            </div>
-
-            <div className="testimonial-card1-texts">
-              <p>Lorem ipsum dolor sit amet consec adipisicing elit. Vero nam alias vel.</p>
-            </div>
-
-            <div className="testimonial-card1-ratings">
-             
-              <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              <AiFillStar className='star'/>
-              
-            </div>
-
-            
-            </div>
+           
+          
         </div>
+        <div className="testimonial-box">
+          <div className="testimonial-details">
+            <div className="testimonial-image">
+            <img src={data[19].imag} alt="" />
+            </div>
+            <div className="testimonial-name">
+              <p>Kemi Abiola</p>
+              <p>HR Arrow</p>
+            </div>
+            </div>
+            <div className="testimonial-note">
+              <p>"Signing up players through this website has been a game-changer for my scouting efforts. It's a goldmine of undiscovered talent, and I found a true gem who's now making waves in the football world. Thank you!"</p>
+            </div>
+            <div className="testimonial-rate">
+            <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+            </div>
+           
+          
+        </div>
+        <div className="testimonial-box">
+          <div className="testimonial-details">
+            <div className="testimonial-image">
+            <img src={data[18].imag} alt="" />
+            </div>
+            <div className="testimonial-name">
+              <p>Suarez Boaz</p>
+              <p>HR Arrow</p>
+            </div>
+            </div>
+            <div className="testimonial-note">
+              <p>"Discovering talent through this website has been a game-changer for my scouting career. I found a hidden gem, and watching them grow into a star player is incredibly rewarding. Grateful for this platform!"</p>
+            </div>
+            <div className="testimonial-rate">
+            <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+              <AiFillStar className='star'/>
+            </div>
+           
+          
+        </div>
+        </div>
+       
+
       </div>
-      {/* PARTNERSHIP */}
-      {/* <div className="partnersip innerWidth paddings">
-      <h3>BECOME A  PARTNER</h3>
-      <div className="partnership-info">
-        <div className="partnership-info-left">
-          <div className="partnership-info-left-icon1">
-            <FaPhone className='sks'/>
-            <p>Phone</p>
-          </div>
-          <div className="partnership-info-left-icon2">
-            <FaM className='sks'/>
-            <p>Mail</p>
-          </div>
-        </div>
-
-        <div className="partnership-info-right">
-        <label for="username" placeholder='Your Name'></label>
-        <input type="text" id="username" name="username" placeholder='Your Name' className='input1'></input>
-        <label for="email" placeholder='Your Name'></label>
-        <input type="text" id="username" name="username" placeholder='Your Email' className='input1'></input>
-        <label for="text" placeholder='Your Name'></label>
-        <input type="text" id="username" name="username" placeholder='Message' className='input1'></input>
-        <div className='partner-btn'>
-          <button>SUBMIT</button>
-        </div>
-        
-        </div>
-      </div>
-      
-
-      </div> */}
+     
       {/* FOOTER */}
   
      <Footer/>

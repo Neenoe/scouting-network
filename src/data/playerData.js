@@ -7,7 +7,7 @@ export const playerData =[
         age: 13,
         position:"CB",
         foot:"RIGHT",
-        location:"Abeokuta,Ogun",
+        location:"Lagos,NG",
         gender:"MALE",
         rating:3
     },
@@ -18,7 +18,7 @@ export const playerData =[
         age: 15,
         position:"RB",
         foot:"RIGHT",
-        location:"Benin, Edo",
+        location:"Lagos,NG",
         gender:"FEMALE",
         rating:4
     },
@@ -29,7 +29,7 @@ export const playerData =[
         age: 14,
         position:"DM",
         foot:"RIGHT",
-        location:"Ogbomoso, Oyo",
+        location:"Lagos,NG",
         gender:"FEMALE",
         rating:3
     },
@@ -40,9 +40,9 @@ export const playerData =[
         age: 15,
         position:"CM",
         foot:"RIGHT",
-        location:"Kano State",
+        location:"Lagos,NG",
         gender:"MALE",
-        rating:2.5
+        rating:2
     },
     {
         id: 5,
@@ -51,9 +51,9 @@ export const playerData =[
         age: 13,
         position:"LW",
         foot:"LEFT",
-        location:"Ikeja, Lagos",
+        location:"Lagos,NG",
         gender:"MALE",
-        rating:4.5
+        rating:4
     },
     {
         id: 6,
@@ -62,7 +62,7 @@ export const playerData =[
         age: 14,
         position:"CF",
         foot:"RIGHT",
-        location:"Owerri, Imo",
+        location:"Lagos,NG",
         gender:"FEMALE",
         rating:3
     }

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.blogging {
+   max-width: 95%;
+   margin-left: 3.7rem;
+}
 
 .blog-media-left span {
     color: blue;
@@ -121,14 +125,22 @@ margin-top: 3rem;
 }
 
 
-.highlight-intro h2,
+.highlight-intro h4,
 .mostviewed-intro h6 {
     color: #161037;
 font-size: 20px;
-font-family: Satoshi;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
+}
+
+.highlight-intro h2 {
+    color: #161037;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-top: 1rem;
 }
 
 .highlight-intro button,
@@ -150,7 +162,7 @@ margin-bottom: 1rem;
 }
 
 .highlight-details img{
-    width: 363px;
+    width: 383px;
     height: 309px;
     border-radius: 20px;
 }
@@ -207,11 +219,9 @@ line-height: normal;
 
 }
 
-.signee-intro h2,
-.help-intro h4 {
+.signee-intro h2 {
     color: #161037;
 font-size: 20px;
-font-family: Satoshi;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -238,9 +248,8 @@ cursor: pointer;
     margin-bottom: 1rem;
 }
 
-.signee-details img,
-.help-media img{
-    width: 403px;
+.signee-details img{
+    width: 375px;
     height: 309px;
 }
 
@@ -249,18 +258,27 @@ cursor: pointer;
 .interviews-title {
     display: flex;
     flex-direction: column;
+    
 }
 .interviews-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: auto;
 }
 .interviews-intro {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    max-width: 1400px;
   
 }
-.interviews-intro h4 {
+.interview-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.interviews-intro h2 {
     color: #161037;
     font-size: 24px;
     font-style: normal;
@@ -280,8 +298,30 @@ font-weight: 400;
 line-height: normal;
 cursor: pointer;
 border: none;
+margin-bottom: 1rem;
+}
+.interviews-img {
+    width: 383px;
+    height: 309px;
+    position: relative;
+    display: inline-block;
 }
 
+.interviews-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.time-span {
+    position: absolute;
+    top: 10px; /* Adjust the top value according to your design */
+    left: 10px; /* Adjust the left value according to your design */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
 .interviews-intro-btns :nth-child(1) {
     background: hsl(224, 60%, 33%);
     color: white;
@@ -331,32 +371,22 @@ line-height: normal;
 
 .interviews-media p {
     width: 321px;
-flex-direction: column;
-flex-shrink: 0;
-color: #817F7F;
-font-size: 18px;
-font-family: Satoshi;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+    color: #817F7F;
+    font-family: Satoshi;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: flex-start;
+    display: flex;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    margin-top: -10%;
+    height: 70px;
+    
 }
 
-.help-media {
-    margin-top: 2rem;
-    overflow-x: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
 
-.help-media::-webkit-scrollbar {
-    display: none;
-}
-.help-media img {
-    width: 365px;
-    height: 290px;
-    border-radius: 15px;
-    margin-left: 1.5rem;
-}
 .mostviewed-details {
     display: flex;
     flex-direction: row;
@@ -422,10 +452,9 @@ line-height: normal;
     flex-direction: column;
 
 }
-.mostviewed-intro h4,
-.toprated-intro h4{
+.mostviewed-intro h2,
+.toprated-intro h2{
     color: #161037;
-font-family: Satoshi;
 font-size: 24px;
 font-style: normal;
 font-weight: 700;
@@ -484,8 +513,8 @@ text-transform: capitalize;
 
 .pause {
     background-color: #544F4F;
-    width: 64.625px;
-    height: 64.625px;
+    width: 44.625px;
+    height: 44.625px;
     color: #FFF;
     border-radius: 50%;
 }
@@ -501,6 +530,7 @@ font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: 29px;
+margin-top: 1rem;
 }
 
 /*  */
@@ -541,11 +571,11 @@ display: none;
 .r-gallery-images_card {
     /* position: relative;
     min-width: 301px; */
-    height: 447px;
+ 
     margin-right: 2rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .r-gallery__image-icon {
@@ -565,6 +595,7 @@ display: none;
     
     opacity: 1;
     transition: 0.5s ease;
+    border-radius: 10px;
 }
 
 .r-gallery-images_card:hover img {
@@ -601,58 +632,72 @@ display: none;
     color: var(--color-white);
 }
 
-/* .swiper {
-    width: 30%;
-    height: 100%;
-  }
-  .mySwiper {
-    display: flex;
-    flex-direction: row;
-  }
+
   
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
   
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.stop {
+    /* Add necessary styles to the paragraph */
+    position: relative;
+    
+    /* Adjust the horizontal position as needed */
+      color: #fff;
+      /* left: 25%;
+      top: 90%; */
+      bottom: 40%;
+      left: 40%;
+      font-size: 14px;
+      padding: 1.5rem;
+      background: #424242;
+    
+  padding: 1rem;
+  width: 44px;
+  height: 44px;
+flex-shrink: 0;
+fill: #544F4F;
+stroke-width: 1px;
+stroke: #D9D9D9;
+border-radius: 50%;
+
+}
+
+.stop1 {
+    position: relative;
+    top: 50%;
+    right: 50%;
+    font-size: 14px;
+    padding: 1.5rem;
+    background: #424242;
   
-  .swiper-slide img {
-    display: block;
+padding: 1rem;
+width: 44px;
+height: 44px;
+flex-shrink: 0;
+fill: #544F4F;
+stroke-width: 1px;
+stroke: #D9D9D9;
+border-radius: 50%;
+}
+
+.highlight-img {
+    width: 393px;
+    height: 303px;
+    position: relative;
+    display: inline-block;
+}
+.highlight-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-  }
-   */
-   .swiper {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-  
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-.mySwiper {
-    margin-bottom: 2rem;
-}  
+}
+.highlight-time {
+    position: absolute;
+    top: 10px; /* Adjust the top value according to your design */
+    left: 10px; /* Adjust the left value according to your design */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
 
 /*  */
 
@@ -660,6 +705,10 @@ display: none;
 
 
     @media screen and (max-width: 808px) {
+        .blogging {
+            margin-left: -0.1%;
+            max-width: 100%;
+        }
         .blog-media h3 {
             color: #fdf7f7;
         font-size: 22px;
@@ -729,127 +778,99 @@ margin-top: 4rem;
         display: flex;
         overflow-x: auto;
         scroll-behavior: smooth;
+       
+       
+      }
+
+      .highlight-intro {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+      }
+
+      .highlight-intro h2 {
+        margin-bottom: 2rem;
       }
       
       .highlight-item {
         /* Add necessary styles to each item */
         position: relative;
-        margin-right: 16px;
+        margin-right: 1px;
+        margin-left: -1rem;
+       
       }
       
       .highlight-item img {
-        /* Add necessary styles to the image */
+      
         width: 253px;
         height: 239px;
         border-radius: 15px;
         margin-left: 1.5rem;
       }
       
+    
       .highlight-item p {
         /* Add necessary styles to the paragraph */
         position: absolute;
-        bottom: 170px; /* Adjust the vertical position as needed */
-        left: 10px; /* Adjust the horizontal position as needed */
+      /* Adjust the horizontal position as needed */
         color: #fff;
         font-size: 14px;
-        padding: 1.5rem;
+        text-align: center;
+        
         background: #424242;
-        width: 55px;
-    height: 50px;
-    padding: 1rem;
-    margin-top: 1.5rem;
-    margin-left: 1.5rem;
+        width: 27px;
+    height: 27px;
+    margin-top: -0.1%;
+    margin-top: 3%;
+    padding: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
     color: #FFF;
-    font-size: 18px;
+    font-size: 12px;
     font-family: Satoshi;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+  
       }
-      .interviews-media {
-        /* Add necessary styles to the container */
-        position: relative;
-        display: flex;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-      }
-      
-      .interviews-title {
-        /* Add necessary styles to each item */
-        position: relative;
-        margin-right: 16px;
-      }
-      
-      .interviews-title img {
-        /* Add necessary styles to the image */
-        width: 253px;
-        height: 239px;
-        border-radius: 15px;
-        margin-left: 1.5rem;
-      }
-      
-      .interviews-title span {
-        /* Add necessary styles to the paragraph */
-        position: absolute;
-        bottom: 190px; /* Adjust the vertical position as needed */
-        left: 30px; /* Adjust the horizontal position as needed */
-        color: #fff;
-        font-size: 14px;
-        padding: 1.5rem;
-        background: #424242;
-        width: 55px;
-    height: 50px;
-    padding: 1rem;
-    color: #FFF;
-    font-size: 18px;
-    font-family: Satoshi;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-      }
-      .interviews-intro-btns {
-        display: row;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-      }
-      .interviews-intro-btns button {
-        margin-top: 0.3rem
-      }
- .highlight-intro h4,
- .signee-intro h4,
- .mostviewed-intro h4,
- .toprated-intro h4,
- .help-intro h4,
- .interviews-intro h4 {
-    color: #424242;
+
+
+    .stop1 {
+            /* Add necessary styles to the paragraph */
+            position: absolute;
+            display: flex;
+            /* Adjust the horizontal position as needed */
+              color: #fff;
+              left: 50%;
+              top: 26%;
+              font-size: 14px;
+              padding: 1.5rem;
+              background: #424242;
+            
+          padding: 1rem;
+          width: 44px;
+          height: 44px;
+flex-shrink: 0;
+fill: #544F4F;
+stroke-width: 1px;
+stroke: #D9D9D9;
+border-radius: 50%;
+
+    }
+
+      .signee-intro h2 {
+        color: #424242;
 font-family: Satoshi;
 font-size: 10px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
-margin-bottom: 1.3rem;
- }
-
- .interviews-intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
- }
-
- .interviews-intro-btns {
-    display: flex;
-    flex-direction: row;
-    
- }
-
- .interviews-intro-btn button {
-
-display: flex;
-flex-direction: row;
-padding: 0;
-font-size: 10px;
- }
+      }
+ 
 
  .highlight-intro button {
     width: 76px;
@@ -868,13 +889,19 @@ height: 32px;
 font-size: 10px;
 }
 
-.mostviewed-intro button {
-    width: 90px;
-height: 32px;
-font-size: 10px;
-}
 
 
+
+
+  .interviews-img {
+    width: 173px;
+    height: 119px;
+  }
+
+  .interviews-img img {
+    width: 100%;
+    height: 100%;
+  }
 .r-gallery-images_card img {
     width: 253px;
     height: 239px;
@@ -884,29 +911,89 @@ font-size: 10px;
     opacity: 1;
     transition: 0.5s ease;
 }
-.interviews-intro h4 {
+.interviews-intro h2 {
     
-    margin-bottom: 0.7rem;
-}
-
-.interviews-intro {
-    display: flex;
-    flex-direction: column;
-    
-}
-.interviews-wrapper {
-    margin-top: -8rem;
-}
-
-.interviews-media img {
-    
-    width: 273px;
-    height: 239px;
-}
- .interviews-media p {
+    color: #424242;
     font-size: 10px;
-    width: 300px;
- }
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    justify-content: left;
+    align-items: left;
+    display: flex;
+    flex-direction: row;
+    margin-left: -2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.interviews-intro-btns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    
+}
+
+.interviews-intro-btns :nth-child(1) {
+    width: 41px;
+height: 32px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #223E88;
+color: #FFF;
+font-size: 10px;
+font-style: normal;
+font-weight: 700;
+}
+.interviews-intro-btns :nth-child(2) {
+    width: 95px;
+height: 32px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #F4F4F4;
+color: #817F7F;
+font-family: Satoshi;
+font-size: 10px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.interviews-intro-btns :nth-child(4) {
+    width: 95px;
+height: 32px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #F4F4F4;
+color: #817F7F;
+font-family: Satoshi;
+font-size: 10px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.interviews-intro-btns :nth-child(3) {
+    width: 110px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #F4F4F4;
+    color: #817F7F;
+font-family: Satoshi;
+font-size: 10px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    
+}
+
+.interviews-intro-btns :nth-child(5) {
+    display: none;
+}
+
 
 
 
@@ -916,9 +1003,7 @@ font-size: 10px;
     margin-bottom: 2rem;
     margin-left: -8rem;
  }
- .interviews-intro h4{
-    font-size: 10px;
-}
+
 
 .podcast1,
 .toprated1 {
@@ -952,6 +1037,227 @@ font-size: 10px;
 
 
 }
+
+.highlight-intro h2 {
+    color: #424242;
+font-family: Satoshi;
+font-size: 10px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.highlight-details {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-left: -2rem;
+}
+.highlight-item img {
+    width: 173px;
+    height: 119px;
+
+}
+
+.toprated-intro h2 {
+    color: #424242;
+font-size: 10px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.toprated-details {
+   
+height: 246px;
+}
+
+.toprated1 img {
+    width: 173px;
+height: 162px;
+
+}
+.pause {
+    width: 18.625px;
+height: 18.625px;
+
+}
+.toprated-icon img {
+    width: 72.244px;
+height: 16.143px;
+}
+
+.toprated1 p {
+width: 200px;
+height: 23px;
+flex-shrink: 0;
+color: #817F7F;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: 10px;
+margin-top: 1rem;
+display: flex;
+flex-direction: row;
+text-align: left;
+justify-content: start;
+align-items: left;
+}
+
+.toprated1 {
+    background: none;
+    margin-left: 0.3rem;
+    margin-right: -1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: left;
+    height: 246px;
+
+
+}
+.toprated-details {
+    margin-left: -2rem;
+    height: 246px;
+
+}
+#root > div > div > div.toprated.innerWidth.paddings > div.toprated-details > div:nth-child(2) > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+#root > div > div > div.toprated.innerWidth.paddings > div.toprated-details > div:nth-child(1) > img {
+    margin-right: 1.5rem;
+}
+#root > div > div > div.toprated.innerWidth.paddings > div.toprated-details > div:nth-child(2) > div > svg {
+    margin-left: 1.5rem;
+}
+.interviews-media {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    width: 100%;
+   
+    justify-content: space-between;
+  }
+  
+  .interviews-title {
+    flex: 0 0 auto; /* Prevent flex items from growing */
+    width: 179px;
+    text-align: center;
+    margin-right: 35px;
+  }
+  
+  .interviews-img {
+    position: relative;
+    width: 179px;
+    height: 131px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  
+  .time-span {
+    position: absolute;
+    top: -14px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+   
+    border-radius: 4px;
+    font-size: 12px;
+    left: -15px;
+    bottom: 9%;
+    width: 29.16px;
+height: 27px;
+margin-bottom: 2rem;
+
+  }
+  
+  .stop {
+    position: relative;
+    top: -70px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+   
+  }
+  .interviews-media span {
+    width: 29.16px;
+    height: 27px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0.3rem;
+  }
+  .interviews-title p {
+    text-align: center;
+    font-size: 10px;
+   width: 170px;
+    padding-top: -1rem;
+  }
+  .interview-details {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .interviews-intro-btns {
+    margin-left: -8%;
+  }
+  .highlight-details {
+    display: flex;
+    overflow-x: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: none;
+  }
+  
+  .highlight-item {
+    flex: 0 0 auto;
+    width: 197px;
+    margin-right: 10px;
+    position: relative;
+  }
+  
+  .highlight-img {
+    position: relative;
+    width: 173px;
+    height: 119px;
+   
+    margin-bottom: 10px;
+  }
+  
+  .highlight-time {
+    position: absolute;
+    top: 3px;
+    left: 1px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  .stop1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+
 
 }
 
