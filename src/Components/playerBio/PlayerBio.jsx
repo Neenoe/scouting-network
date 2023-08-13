@@ -23,18 +23,17 @@ import { useParams } from "react-router";
 import { playerData } from "../../data/playerData";
 
 const PlayerBio = () => {
-
-  const {id } = useParams();
+  const { id } = useParams();
   const playerID = id;
-  const fetchedPlayers = playerData
+  const fetchedPlayers = playerData;
 
-  const fetchedPlayer = fetchedPlayers.find(item=> item.id == playerID);
-  
-//   for (let i = 0; i < fetchedPlayers.length; i++) {
-//     if (fetchedPlayers[i].id == playerID) {
-//         console.log(fetchedPlayers[i]);
-//     }
-// }
+  const fetchedPlayer = fetchedPlayers.find((item) => item.id == playerID);
+
+  //   for (let i = 0; i < fetchedPlayers.length; i++) {
+  //     if (fetchedPlayers[i].id == playerID) {
+  //         console.log(fetchedPlayers[i]);
+  //     }
+  // }
 
   const mdQuery = useMediaQuery("(min-width:900px)");
   const [star, setStar] = useState(5);
@@ -43,14 +42,14 @@ const PlayerBio = () => {
     setStar(nextValue);
   };
   const attributes = [
-    "AGE",
-    "GENDER",
-    "LOCATION",
-    "HEIGHT",
-    "FOOT",
-    "POSITION",
-    "RATING",
-    "AVAILABILITY",
+    { name: "AGE", value: fetchedPlayer.age },
+    { name: "GENDER", value: fetchedPlayer.gender },
+    { name: "LOCATION", value: fetchedPlayer.location },
+    { name: "HEIGHT", value: `${fetchedPlayer.height} FT` },
+    { name: "FOOT", value: fetchedPlayer.foot },
+    { name: "POSITION", value: fetchedPlayer.position },
+    { name: "RATING", value: `${fetchedPlayer.rating}/5` },
+    { name: "AVAILABILITY", value: fetchedPlayer.availability },
   ];
 
   const [buttonIndex, setButtonIndex] = useState(0);
@@ -139,10 +138,11 @@ const PlayerBio = () => {
                       fontSize: mdQuery ? "18px" : "10px",
                     }}
                   >
-                    Hey, football fanatics! I'm {fetchedPlayer.name}, a passionate 15-year-old 
-                    midfielder from Nigeria. Since my early days kicking 
-                    the ball around the local park, my love for the game has 
-                    grown into an unstoppable drive to become the best.
+                    Hey, football fanatics! I'm {fetchedPlayer.name}, a
+                    passionate 15-year-old midfielder from Nigeria. Since my
+                    early days kicking the ball around the local park, my love
+                    for the game has grown into an unstoppable drive to become
+                    the best.
                   </Typography>
                   <Stack direction="row" gap="52px">
                     <Button sx={{ textTransform: "none" }} variant="outlined">
@@ -299,7 +299,7 @@ const PlayerBio = () => {
                       }`,
                     }}
                   >
-                    {item}
+                    {item.name}
                   </Button>
                 ))}
               </Stack>
@@ -311,7 +311,7 @@ const PlayerBio = () => {
                 {attributes.map((item, index) => (
                   <Box key={index}>
                     <Typography fontSize="10px" fontWeight="bold">
-                      {item}
+                      {item.name}
                     </Typography>
                     <Box
                       sx={{
@@ -320,9 +320,12 @@ const PlayerBio = () => {
                         background: "white",
                         border: `1px solid ${theme.palette.primary.main}`,
                         borderRadius: "5px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
                       }}
                     >
-
+                      <Typography fontWeight='bold' fontSize='10px' color={theme.palette.grey[500]}>{item.value}</Typography>
                     </Box>
                   </Box>
                 ))}
@@ -400,10 +403,20 @@ const PlayerBio = () => {
               >
                 <Typography>What is On Your Mind?!</Typography>
                 <Stack gap={{ xs: "19px", md: "57px" }} direction="row">
-                  <Box sx={{height:{xs:"20.47px", md:"36.96px"}, width:{xs:"23.37px", md:"51px"}}}>
+                  <Box
+                    sx={{
+                      height: { xs: "20.47px", md: "36.96px" },
+                      width: { xs: "23.37px", md: "51px" },
+                    }}
+                  >
                     <ImageSvg />
                   </Box>
-                  <Box sx={{height:{xs:"20.47px", md:"36.96px"}, width:{xs:"23.37px", md:"51px"}}}>
+                  <Box
+                    sx={{
+                      height: { xs: "20.47px", md: "36.96px" },
+                      width: { xs: "23.37px", md: "51px" },
+                    }}
+                  >
                     <VideoSvg />
                   </Box>
                 </Stack>
@@ -413,14 +426,20 @@ const PlayerBio = () => {
             <Box
               sx={{
                 width: "full",
-                mt: {xs:"15px", md:"25px"},
+                mt: { xs: "15px", md: "25px" },
                 background: theme.palette.primary.lighter,
-                padding: {xs:"22px 20px", md:"26px 54px"},
-                borderRadius: {xs:"none", md:"10px"},
+                padding: { xs: "22px 20px", md: "26px 54px" },
+                borderRadius: { xs: "none", md: "10px" },
               }}
             >
-              <Stack direction="row" gap={{xs:"12px", md:"40px"}}>
-                <Avatar src={sixth} sx={{ height: {xs:"48px", md:"91px"}, width: {xs:"48px", md:"91px"}}} />
+              <Stack direction="row" gap={{ xs: "12px", md: "40px" }}>
+                <Avatar
+                  src={sixth}
+                  sx={{
+                    height: { xs: "48px", md: "91px" },
+                    width: { xs: "48px", md: "91px" },
+                  }}
+                />
                 <Box>
                   <Typography sx={{ fontWeight: "bold" }}>
                     {fetchedPlayer.name}
@@ -430,11 +449,11 @@ const PlayerBio = () => {
               </Stack>
               <Typography
                 sx={{
-                  maxWidth: {xs:"291px", md:"928px"},
-                  fontSize: {xs:"10px", md:"13px"},
+                  maxWidth: { xs: "291px", md: "928px" },
+                  fontSize: { xs: "10px", md: "13px" },
                   fontWeight: "regular",
                   color: theme.palette.grey[500],
-                  mt: {xs:"9px", md:"64px"},
+                  mt: { xs: "9px", md: "64px" },
                 }}
               >
                 The atmosphere was electric as fans filled the City Stadium to
@@ -444,7 +463,12 @@ const PlayerBio = () => {
                 highly anticipated matchup.
               </Typography>
               <Box
-                sx={{ width: "full", height: {xs:"141px", md:"450px"}, mt: {xs:"15px", md:"27px"}, mb: {xs:"9px", md:"24px"} }}
+                sx={{
+                  width: "full",
+                  height: { xs: "141px", md: "450px" },
+                  mt: { xs: "15px", md: "27px" },
+                  mb: { xs: "9px", md: "24px" },
+                }}
               >
                 <ReactPlayer
                   light={true}
@@ -458,39 +482,54 @@ const PlayerBio = () => {
               <LikeSvg />
               <Stack
                 direction="row"
-                gap={{xs:'18px', md:'41px'}}
-                sx={{ alignItems: "center", mt: {xs:'12.8px', md:'24px'}, mb: {xs:'28px', md:'65px'} }}
+                gap={{ xs: "18px", md: "41px" }}
+                sx={{
+                  alignItems: "center",
+                  mt: { xs: "12.8px", md: "24px" },
+                  mb: { xs: "28px", md: "65px" },
+                }}
               >
-                <Avatar src={fifth} sx={{ height: {xs:'35px', md:'91px'}, width: {xs:'35px', md:'91px'}}} />
+                <Avatar
+                  src={fifth}
+                  sx={{
+                    height: { xs: "35px", md: "91px" },
+                    width: { xs: "35px", md: "91px" },
+                  }}
+                />
 
                 <input
                   placeholder="Write a comment"
-                 style={{
-                  fontSize: mdQuery? '18px': '10px',
-                  border: `1px solid ${theme.palette.primary.main}`,
-                  height: {xs:'22px', md:'80px'},
-                  borderRadius: "50px",
-                  width:'100%',
-                  textTransform:'none',
-                  padding: mdQuery? '8px 32px': '4px 17px',
-                  backgroundColor:'inherit',
-                }}/>
-
-                
+                  style={{
+                    fontSize: mdQuery ? "18px" : "10px",
+                    border: `1px solid ${theme.palette.primary.main}`,
+                    height: { xs: "22px", md: "80px" },
+                    borderRadius: "50px",
+                    width: "100%",
+                    textTransform: "none",
+                    padding: mdQuery ? "8px 32px" : "4px 17px",
+                    backgroundColor: "inherit",
+                  }}
+                />
               </Stack>
             </Box>
 
             <Box
-             sx={{
-              width: "full",
-              mt: {xs:"15px", md:"25px"},
-              background: theme.palette.primary.lighter,
-              padding: {xs:"22px 20px", md:"26px 54px"},
-              borderRadius: {xs:"none", md:"10px"},
-            }}
+              sx={{
+                width: "full",
+                mt: { xs: "15px", md: "25px" },
+                background: theme.palette.primary.lighter,
+                padding: { xs: "22px 20px", md: "26px 54px" },
+                borderRadius: { xs: "none", md: "10px" },
+              }}
             >
-              <Stack direction="row" gap={{xs:"12px", md:"40px"}}>
-                <Avatar src={sixth} sx={{ height: {xs:"48px", md:"91px"}, width: {xs:"48px", md:"91px"}}} />
+              <Stack direction="row" gap={{ xs: "12px", md: "40px" }}>
+                <Avatar
+                  src={sixth}
+                  sx={{
+                    height: { xs: "48px", md: "91px" },
+                    width: { xs: "48px", md: "91px" },
+                  }}
+                />
                 <Box>
                   <Typography sx={{ fontWeight: "bold" }}>
                     {fetchedPlayer.name}
@@ -500,11 +539,11 @@ const PlayerBio = () => {
               </Stack>
               <Typography
                 sx={{
-                  maxWidth: {xs:"291px", md:"928px"},
-                  fontSize: {xs:"10px", md:"13px"},
+                  maxWidth: { xs: "291px", md: "928px" },
+                  fontSize: { xs: "10px", md: "13px" },
                   fontWeight: "regular",
                   color: theme.palette.grey[500],
-                  mt: {xs:"9px", md:"64px"},
+                  mt: { xs: "9px", md: "64px" },
                 }}
               >
                 It was a hard-fought match filled with camaraderie and
@@ -512,7 +551,12 @@ const PlayerBio = () => {
                 football encounter.
               </Typography>
               <Box
-                sx={{ width: "full", height: {xs:"141px", md:"450px"}, mt: {xs:"15px", md:"27px"}, mb: {xs:"9px", md:"24px"} }}
+                sx={{
+                  width: "full",
+                  height: { xs: "141px", md: "450px" },
+                  mt: { xs: "15px", md: "27px" },
+                  mb: { xs: "9px", md: "24px" },
+                }}
               >
                 <img
                   src={third}
@@ -522,25 +566,35 @@ const PlayerBio = () => {
               </Box>
               <LikeSvg />
               <Stack
-               direction="row"
-               gap={{xs:'18px', md:'41px'}}
-               sx={{ alignItems: "center", mt: {xs:'12.8px', md:'24px'}, mb: {xs:'28px', md:'65px'} }}
+                direction="row"
+                gap={{ xs: "18px", md: "41px" }}
+                sx={{
+                  alignItems: "center",
+                  mt: { xs: "12.8px", md: "24px" },
+                  mb: { xs: "28px", md: "65px" },
+                }}
               >
-                <Avatar src={fifth} sx={{ height: {xs:'35px', md:'91px'}, width: {xs:'35px', md:'91px'}}} />
+                <Avatar
+                  src={fifth}
+                  sx={{
+                    height: { xs: "35px", md: "91px" },
+                    width: { xs: "35px", md: "91px" },
+                  }}
+                />
 
-               
                 <input
                   placeholder="Write a comment"
-                 style={{
-                  fontSize: mdQuery? '18px': '10px',
-                  border: `1px solid ${theme.palette.primary.main}`,
-                  height: {xs:'22px', md:'80px'},
-                  borderRadius: "50px",
-                  width:'100%',
-                  textTransform:'none',
-                  padding: mdQuery? '8px 32px': '4px 17px',
-                  backgroundColor:'inherit',
-                }}/>
+                  style={{
+                    fontSize: mdQuery ? "18px" : "10px",
+                    border: `1px solid ${theme.palette.primary.main}`,
+                    height: { xs: "22px", md: "80px" },
+                    borderRadius: "50px",
+                    width: "100%",
+                    textTransform: "none",
+                    padding: mdQuery ? "8px 32px" : "4px 17px",
+                    backgroundColor: "inherit",
+                  }}
+                />
               </Stack>
             </Box>
           </Box>
