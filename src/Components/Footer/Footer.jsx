@@ -50,7 +50,7 @@ function Footer() {
           <span>Never miss what matters with our <br /> daily free newsletter delivered into <br /> your inbox </span>
           <div className="footer-right-info innerWidth">
             <div className="footer-right-info1">
-            <label for="username" placeholder='Your Name'></label>
+            <label htmlFor="username" placeholder='Your Name'></label>
         <input type="text" id="username" name="username"  placeholder='Enter Your Email' className='info'></input>
             </div>
             <div className="footer-right-info2">

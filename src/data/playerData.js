@@ -9,7 +9,9 @@ export const playerData =[
         foot:"RIGHT",
         location:"Lagos,NG",
         gender:"MALE",
-        rating:3
+        rating:3,
+        height:"5'11",
+        availability: 'YES'
     },
     {
         id: 2,
@@ -20,7 +22,9 @@ export const playerData =[
         foot:"RIGHT",
         location:"Lagos,NG",
         gender:"FEMALE",
-        rating:4
+        rating:4,
+        height:"5",
+        availability: 'NO'
     },
     {
         id: 3,
@@ -31,7 +35,9 @@ export const playerData =[
         foot:"RIGHT",
         location:"Lagos,NG",
         gender:"FEMALE",
-        rating:3
+        rating:3,
+        height:"5'5",
+        availability: 'YES'
     },
     {
         id: 4,
@@ -42,7 +48,9 @@ export const playerData =[
         foot:"RIGHT",
         location:"Lagos,NG",
         gender:"MALE",
-        rating:2
+        rating:2,
+        height:"6'1",
+        availability: 'YES'
     },
     {
         id: 5,
@@ -53,7 +61,9 @@ export const playerData =[
         foot:"LEFT",
         location:"Lagos,NG",
         gender:"MALE",
-        rating:4
+        rating:4,
+        height:"5'8",
+        availability: 'NO'
     },
     {
         id: 6,
@@ -64,6 +74,8 @@ export const playerData =[
         foot:"RIGHT",
         location:"Lagos,NG",
         gender:"FEMALE",
-        rating:3
+        rating:3,
+        height:"5'3",
+        availability: 'YES'
     }
 ]
