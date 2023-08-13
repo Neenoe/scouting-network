@@ -3,66 +3,66 @@ export const playerData =[
     {
         id: 1,
         imageURL: third,
-        name: "JOHN",
+        name: "JOHN ADELEYE",
         age: 13,
         position:"CB",
         foot:"RIGHT",
-        location:"Abeokuta,Ogun",
+        location:"Lagos,NG",
         gender:"MALE",
         rating:3
     },
     {
         id: 2,
         imageURL: fourth,
-        name: "VICKY",
+        name: "VICKY ONAGA",
         age: 15,
         position:"RB",
         foot:"RIGHT",
-        location:"Benin, Edo",
+        location:"Lagos,NG",
         gender:"FEMALE",
         rating:4
     },
     {
         id: 3,
         imageURL: third,
-        name: "JUMOKE",
+        name: "JUMOKE JOHNSON",
         age: 14,
         position:"DM",
         foot:"RIGHT",
-        location:"Ogbomoso, Oyo",
+        location:"Lagos,NG",
         gender:"FEMALE",
         rating:3
     },
     {
         id: 4,
         imageURL: fourth,
-        name: "MUSA",
+        name: "MUSA DIABY",
         age: 15,
         position:"CM",
         foot:"RIGHT",
-        location:"Kano State",
+        location:"Lagos,NG",
         gender:"MALE",
-        rating:2.5
+        rating:2
     },
     {
         id: 5,
         imageURL: fifth,
-        name: "EMEKA",
+        name: "EMEKA CHUKWU",
         age: 13,
         position:"LW",
         foot:"LEFT",
-        location:"Ikeja, Lagos",
+        location:"Lagos,NG",
         gender:"MALE",
-        rating:4.5
+        rating:4
     },
     {
         id: 6,
         imageURL: fourth,
-        name: "CHIDERA",
+        name: "CHIDERA ALOZIE",
         age: 14,
         position:"CF",
         foot:"RIGHT",
-        location:"Owerri, Imo",
+        location:"Lagos,NG",
         gender:"FEMALE",
         rating:3
     }

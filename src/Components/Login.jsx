@@ -35,6 +35,7 @@ const Login = ({setLocalValue, setOpen}) => {
       .then((userCredential) => {
         setLocalValue(userCredential.user.email)
         setOpen(false);
+        toast.success(`Login Succesful!`);
       })
       .catch((error) => {
         toast.error(`${error.code}. Please check login details`);

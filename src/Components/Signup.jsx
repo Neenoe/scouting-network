@@ -47,6 +47,7 @@ const handleSignUp = (event) =>{
       localStorage.setItem('email', email)
       setOpen(false)
       profileFunc();
+      toast.success(`Signup Succesful!`);
     })
     .catch((error) => {
       toast.error(`${error.code}. Please check details`);
