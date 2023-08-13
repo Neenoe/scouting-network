@@ -13,7 +13,7 @@ const AppRoutes = () => {
         { path:'Discover', element: <Discover /> },
         { path:'ScoutProfile', element: <ScoutProfile /> },
         { path:'PlayerProfile', element: <PlayerProfile /> },
-        { path:'PlayerBio', element: <PlayerBio /> },
+        { path:'PlayerBio/:id', element: <PlayerBio /> },
         
     ]);
 	return <RouterProvider router={router} />;

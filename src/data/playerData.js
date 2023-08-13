@@ -3,7 +3,7 @@ export const playerData =[
     {
         id: 1,
         imageURL: third,
-        name: "JOHN",
+        name: "JOHN ADELEYE",
         age: 13,
         position:"CB",
         foot:"RIGHT",
@@ -14,7 +14,7 @@ export const playerData =[
     {
         id: 2,
         imageURL: fourth,
-        name: "VICKY",
+        name: "VICKY ONAGA",
         age: 15,
         position:"RB",
         foot:"RIGHT",
@@ -25,7 +25,7 @@ export const playerData =[
     {
         id: 3,
         imageURL: third,
-        name: "JUMOKE",
+        name: "JUMOKE JOHNSON",
         age: 14,
         position:"DM",
         foot:"RIGHT",
@@ -36,7 +36,7 @@ export const playerData =[
     {
         id: 4,
         imageURL: fourth,
-        name: "MUSA",
+        name: "MUSA DIABY",
         age: 15,
         position:"CM",
         foot:"RIGHT",
@@ -47,7 +47,7 @@ export const playerData =[
     {
         id: 5,
         imageURL: fifth,
-        name: "EMEKA",
+        name: "EMEKA CHUKWU",
         age: 13,
         position:"LW",
         foot:"LEFT",
@@ -58,7 +58,7 @@ export const playerData =[
     {
         id: 6,
         imageURL: fourth,
-        name: "CHIDERA",
+        name: "CHIDERA ALOZIE",
         age: 14,
         position:"CF",
         foot:"RIGHT",

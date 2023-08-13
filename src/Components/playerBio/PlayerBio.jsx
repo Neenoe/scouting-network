@@ -19,8 +19,23 @@ import { ReactComponent as LikeSvg } from "../../assets/Svg/like.svg";
 import meal from "../../assets/meal.mp4";
 import { third, sixth, fifth } from "../../Constants";
 import ReactPlayer from "react-player";
+import { useParams } from "react-router";
+import { playerData } from "../../data/playerData";
 
 const PlayerBio = () => {
+
+  const {id } = useParams();
+  const playerID = id;
+  const fetchedPlayers = playerData
+
+  const fetchedPlayer = fetchedPlayers.find(item=> item.id == playerID);
+  
+//   for (let i = 0; i < fetchedPlayers.length; i++) {
+//     if (fetchedPlayers[i].id == playerID) {
+//         console.log(fetchedPlayers[i]);
+//     }
+// }
+
   const mdQuery = useMediaQuery("(min-width:900px)");
   const [star, setStar] = useState(5);
 
@@ -73,7 +88,7 @@ const PlayerBio = () => {
                   }}
                 >
                   <Avatar
-                    src={sixth}
+                    src={fetchedPlayer.imageURL}
                     sx={{
                       width: mdQuery ? "251px" : "107px",
                       height: mdQuery ? "251px" : "107px",
@@ -91,7 +106,7 @@ const PlayerBio = () => {
                     fontWeight="bold"
                     fontSize={mdQuery ? "20px" : "15px"}
                   >
-                    TIMILEHIN ORIJAN
+                    {fetchedPlayer.name}
                   </Typography>
                   <Stack
                     direction="row"
@@ -109,7 +124,7 @@ const PlayerBio = () => {
                     fontWeight="light"
                     fontSize={mdQuery ? "18px" : "10px"}
                   >
-                    @TIMILEHIN ORJAN
+                    @{fetchedPlayer.name}
                   </Typography>
                   <Typography
                     fontSize={mdQuery ? "18px" : "10px"}
@@ -124,10 +139,10 @@ const PlayerBio = () => {
                       fontSize: mdQuery ? "18px" : "10px",
                     }}
                   >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec vel nibh sit amet justo tincidunt bibendum.Nam
-                    ultrices enim eget sagittis scelerisque. Aenean feugiat sem
-                    quis odio dapibus, non ullamcorper sem pulvinar.
+                    Hey, football fanatics! I'm {fetchedPlayer.name}, a passionate 15-year-old 
+                    midfielder from Nigeria. Since my early days kicking 
+                    the ball around the local park, my love for the game has 
+                    grown into an unstoppable drive to become the best.
                   </Typography>
                   <Stack direction="row" gap="52px">
                     <Button sx={{ textTransform: "none" }} variant="outlined">
@@ -260,6 +275,7 @@ const PlayerBio = () => {
               >
                 {attributes.map((item, index) => (
                   <Button
+                    key={index}
                     onClick={() => setButtonIndex(index)}
                     variant="contained"
                     sx={{
@@ -305,7 +321,9 @@ const PlayerBio = () => {
                         border: `1px solid ${theme.palette.primary.main}`,
                         borderRadius: "5px",
                       }}
-                    ></Box>
+                    >
+
+                    </Box>
                   </Box>
                 ))}
               </Stack>
@@ -405,7 +423,7 @@ const PlayerBio = () => {
                 <Avatar src={sixth} sx={{ height: {xs:"48px", md:"91px"}, width: {xs:"48px", md:"91px"}}} />
                 <Box>
                   <Typography sx={{ fontWeight: "bold" }}>
-                    TIMILEHIN ORLAN
+                    {fetchedPlayer.name}
                   </Typography>
                   <Typography>2d</Typography>
                 </Box>
@@ -475,7 +493,7 @@ const PlayerBio = () => {
                 <Avatar src={sixth} sx={{ height: {xs:"48px", md:"91px"}, width: {xs:"48px", md:"91px"}}} />
                 <Box>
                   <Typography sx={{ fontWeight: "bold" }}>
-                    TIMILEHIN ORLAN
+                    {fetchedPlayer.name}
                   </Typography>
                   <Typography>2d</Typography>
                 </Box>

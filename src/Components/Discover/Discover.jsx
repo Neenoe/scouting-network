@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ThemeProvider,
   TextField,
@@ -23,9 +23,13 @@ import { ReactComponent as Pitch } from "../../assets/Svg/pitch.svg";
 import { ReactComponent as Boot } from "../../assets/Svg/boot.svg";
 import { ReactComponent as Location } from "../../assets/Svg/location.svg";
 import { ReactComponent as Star } from "../../assets/Svg/star.svg";
-import { useNavigate } from "react-router-dom";
+import { generatePath, useNavigate } from "react-router-dom";
 
 const Discover = () => {
+
+  const [id, setId] = useState();
+	const navigate = useNavigate();
+
   const mdQuery = useMediaQuery('(min-width:900px)');
   const filterButtons = [
     "AGE",
@@ -40,11 +44,14 @@ const Discover = () => {
 
   const [buttonIndex, setButtonIndex] = useState(0);
 
-  const navigate = useNavigate();
-
-  const playerCardHandler= ()=>{
-    navigate('/PlayerBio');
+  const playerCardHandler= (player)=>{
+    setId(player.id);
   }
+
+  useEffect(() => {
+		id && navigate(generatePath('/playerBio/:id', { id }));
+	}, [id, navigate]);
+
 
   const breakpoints = {
     cursor:'pointer',
@@ -135,7 +142,7 @@ const Discover = () => {
                       // sx={{ width: {xs:'170px', md:"596px"}, height: {xs:'216px', md:"531px"} }}
                       sx={breakpoints}
                       id={player.id}
-                      onClick={playerCardHandler}
+                      onClick={()=>playerCardHandler(player)}
                     >
                       <Stack
                         sx={{
@@ -152,7 +159,7 @@ const Discover = () => {
                           src={player.imageURL}
                           sx={{ width: {xs:'67px', md:"148px"}, height: {xs:'67px', md:"148px"} }}
                         />
-                        <Typography fontSize={mdQuery?'18px': '12px'}>{player?.name}</Typography>
+                        <Typography fontSize={mdQuery?'18px': '12px'}>{player?.name.split(" ")[0]}</Typography>
                       </Stack>
                       <Box
                         sx={{
