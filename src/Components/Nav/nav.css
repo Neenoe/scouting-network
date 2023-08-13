@@ -6,13 +6,14 @@
 }
 
 .header {
-    max-width: 1400px;
+    max-width: 1263px;
     margin: auto;
     padding: 0 auto;
     display: flex;
     justify-content: space-between;
     height: 100%;
     align-items: center;
+    padding: 1rem;
 }
 .header-list {
     display: flex;
@@ -23,19 +24,22 @@
 }
 
 .header-list > div {
-    padding: 0 36px;
+    padding: 0 30px;
     color: #817F7F;
     font-size: 20px;
 }
 
 .header-list a {
-    padding: 0 36px;
+    padding: 0 30px;
     color: #817F7F;
     font-size: 20px;
 }
+.header-btn {
+    margin-left: 1rem;
+}
 
 .header-list button {
-    padding: 12px 8px;
+    padding: 2px 8px;
     border-radius: 10px;
     background: #223E88;
     color: #FFF;
@@ -45,6 +49,9 @@
     line-height: normal;
     cursor: pointer;
     border: none;
+    width: 234px;
+    height: 72px;
+    margin-right:-1.9rem ;
 }
 .header-logo {
     padding-top: 3rem;
@@ -154,12 +161,7 @@
 
 @media screen and (max-width: 808px){
 
-    .head {
-  
-  
-        margin-right: -1rem;
-        
-     }
+    
    
   .header {
     display: flex;
@@ -174,9 +176,7 @@
   .header-logo h3 {
     font-size: 16px;
   }
-  .header-logo {
-    margin-left: -4rem;
-  }
+  
 
     .app__navbar-links {
         display: none;
@@ -211,8 +211,6 @@
        cursor: pointer;
     }
 
-    .hamburger {
-        margin-right: -2.4rem;
-    }
+   
 
 }

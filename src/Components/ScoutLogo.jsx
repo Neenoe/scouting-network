@@ -3,7 +3,7 @@ import React from 'react'
 const ScoutLogo = () => {
   return (
     <div style={{width: '80px', height:'80px', margin:'0 auto'}}>
-      <svg xmlns="http://www.w3.org/2000/svg"  fill='#223E88'style={{width:'100%', height:'100%', marginLeft:'4rem', marginTop:'8px' }}  fill-rule="evenodd" clip-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 416.85 423.35">
+      <svg xmlns="http://www.w3.org/2000/svg"  fill='#223E88'style={{width:'100%', height:'100%', marginTop:'8px' }}  fill-rule="evenodd" clip-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 416.85 423.35">
 <defs/><g id="Layer_x0020_1"><g id="_1982251277104">
 <path d="M57.23 292.3h134.8c15.56 0 29.72-6.38 39.99-16.65 10.27-10.27 16.65-24.43 16.65-39.99 0-15.56-6.38-29.72-16.65-39.99-10.27-10.27-24.43-16.65-39.99-16.65h-61.72c-24.63 0-47.01-10.07-63.23-26.28-16.22-16.22-26.28-38.6-26.28-63.23 0-24.63 10.06-47.01 26.28-63.23S105.68 0 130.31 0h134.8v32.87h-134.8c-15.56 0-29.72 6.38-39.99 16.65-10.27 10.27-16.65 24.43-16.65 39.99 0 15.56 6.38 29.72 16.65 39.99 10.27 10.27 24.43 16.65 39.99 16.65h61.72c24.63 0 47.01 10.06 63.23 26.28s26.28 38.6 26.28 63.23c0 24.63-10.06 47.01-26.28 63.23s-38.6 26.28-63.23 26.28H57.23V292.3z" />
 <path d="m244.5 241.97-19.22-19.19h17.99c1.06 4.17 1.61 8.49 1.61 12.89 0 2.12-.13 4.23-.38 6.3z" />

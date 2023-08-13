@@ -36,15 +36,18 @@ function Landing () {
            
 
    <div className='media-container'>
+    <div className="media-wrapper">
+
+   
 
   
       <div className='mediaa'
         style={{
           position: 'relative',
           overflow: 'hidden',
-         
+          width: '100%',
           height: '400px', // Adjust the height as needed
-          marginLeft: '4rem'
+          borderRadius: '10px'
         }}
       >
 
@@ -87,14 +90,15 @@ function Landing () {
               onClick={() => setCurrentSlide(2)}
             />
           </div>
+          </div>
 
      
     </div>
-    <div className='media-right-container'>
+    {/* <div className='media-right-container'>
     <div className="media-right innerWidth paddings">
       
       <div className='media-right-content'>
-      <p>4000 + </p>
+      <p>4000+ </p>
       <span>Footballers</span>
       </div>
       <div className='media-right-content'>
@@ -108,14 +112,18 @@ function Landing () {
      
   </div>
 
-    </div>
+    </div> */}
     <br /> <br />
     {/* categories */}
 
    
     <div className="categories-container">
+    <div className="categories-details">
+          
+         
       
       <div className="categories-box">
+     
         <div className="categories-image">
         <img src={data[3].imag} alt="" />
 
@@ -141,6 +149,7 @@ function Landing () {
         <h4>Football Scout</h4>
         <span>Keen-eyed talent hunters, identifying potential stars, and shaping the future of the beautiful game with precision.</span>
         <p>Read More</p>
+      </div>
       </div>
     </div>
 
@@ -294,6 +303,7 @@ function Landing () {
       </div>
      
       {/* FOOTER */}
+    
   
      <Footer/>
     </div>

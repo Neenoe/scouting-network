@@ -4,19 +4,11 @@
     box-sizing: border-box;
 }
 
-.blogging {
-   max-width: 95%;
-   margin-left: 3.7rem;
-}
-
 .blog-media-left span {
     color: blue;
     font-size: 22px;
 }
 
-.blog-wrapper {
-    margin-top: -1rem;
-}
 
 .blog-media {
     display: flex;
@@ -35,10 +27,6 @@
     align-items: flex-start;
     align-self: center;
     margin-right: 0 auto;
-   
-    
-
-   
 }
 
 .blog-media-left h3 {
@@ -110,9 +98,27 @@ cursor: pointer;
 margin-top: 3rem;
 }
 
-.highlight-wrapper {
+.blog-hero {
+    width: 100%;
+    margin: auto;
+}
+.blog-hero-wrapper {
+    max-width: 1263px;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.highlight-container {
     display: flex;
     flex-direction: column;
+    max-width: 1263px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.highlight-wrapper {
+    width: 100%;
+    margin: auto;
 }
 
 .highlight-intro,
@@ -162,7 +168,7 @@ margin-bottom: 1rem;
 }
 
 .highlight-details img{
-    width: 383px;
+    width: 375px;
     height: 309px;
     border-radius: 20px;
 }
@@ -187,7 +193,7 @@ line-height: normal;
    
 }
 
-.highlight-details,
+.signing-details,
 .signee-details,
 .help-media {
     display: flex;
@@ -205,10 +211,7 @@ line-height: normal;
     display: none;
 }
 
-.highlight-wrapper {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .highlight-intro,
 .signee-intro,
@@ -261,17 +264,15 @@ cursor: pointer;
     
 }
 .interviews-wrapper {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     margin: auto;
 }
 .interviews-intro {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    max-width: 1400px;
-  
+    max-width: 1236px;
+    margin: auto;
+   padding: 1rem;
 }
 .interview-details {
     display: flex;
@@ -287,7 +288,6 @@ cursor: pointer;
 }
 .interviews-intro-btns button {
     padding: 0.7rem;
-    margin-left: 1rem;
     border-radius: 10px;
 background: #F4F4F4;
 color: #817F7F;
@@ -301,7 +301,7 @@ border: none;
 margin-bottom: 1rem;
 }
 .interviews-img {
-    width: 383px;
+    width: 375px;
     height: 309px;
     position: relative;
     display: inline-block;
@@ -347,7 +347,7 @@ height: 48px;
     display: none;
 }
 .interviews-media img {
-    width: 365px;
+    width: 375px;
 height: 270px;
 border-radius: 15px;
 }
@@ -381,7 +381,7 @@ line-height: normal;
     display: flex;
     margin-left: 1rem;
     margin-bottom: 2rem;
-    margin-top: -10%;
+    margin-top: -15%;
     height: 70px;
     
 }
@@ -536,12 +536,18 @@ margin-top: 1rem;
 /*  */
 .r-gallery-images {
   
-    display: flex;
-    flex-direction: column;
+    margin: auto;
     max-width: 100%;
-    position: relative;
+    
 }
 
+.signing-container {
+    max-width: 1263px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
 .r-gallery-images_container {
     display: flex;
     flex-direction: row;
@@ -568,69 +574,10 @@ margin-top: 1rem;
 .toprated-container::-webkit-scrollbar {
 display: none;
 }
-.r-gallery-images_card {
-    /* position: relative;
-    min-width: 301px; */
- 
-    margin-right: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
 
-.r-gallery__image-icon {
-    position: absolute;
-    color: #fff;
-    font-size: 2rem;
-    opacity: 0.5;
-    transition: .5s ease;
-    cursor: pointer;
-}
 
-.r-gallery-images_card img {
-    width: 393px;
-    height: 309px;
-    margin-left: 1.5rem;
-   
-    
-    opacity: 1;
-    transition: 0.5s ease;
-    border-radius: 10px;
-}
 
-.r-gallery-images_card:hover img {
-    opacity: 0.35;
-    
-}
 
-.r-gallery-images_card:hover .r-gallery-image-icon {
-    opacity: 1
-}
-
-.r-gallery-images_arrows {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-    position: absolute;
-    bottom: 5%;
-}
-
-.r-gallery__arrow-icon {
-    color: var(--color-golden);
-    font-size: 2rem;
-    cursor: pointer;
-    background-color: var(--color-black);
-    border-radius: 5px;
-    margin-right: 3rem;
-    margin-left: 1rem;
-
-}
-
-.r-gallery__arrow-icon:hover {
-    color: var(--color-white);
-}
 
 
   
@@ -679,7 +626,7 @@ border-radius: 50%;
 }
 
 .highlight-img {
-    width: 393px;
+    width: 375px;
     height: 303px;
     position: relative;
     display: inline-block;
@@ -1271,7 +1218,9 @@ margin-bottom: 2rem;
     .interviews-intro h4{
         font-size: 18px;
     }
-
+    .interviews-title {
+        margin-left: 1.2rem;
+    }
     .podcast1 {
         margin-left: 1.5rem;
     }
