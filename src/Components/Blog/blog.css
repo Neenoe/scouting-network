@@ -272,7 +272,7 @@ cursor: pointer;
     flex-direction: column;
     max-width: 1236px;
     margin: auto;
-   padding: 1rem;
+   padding: 0.5rem;
 }
 .interview-details {
     display: flex;
@@ -299,6 +299,7 @@ line-height: normal;
 cursor: pointer;
 border: none;
 margin-bottom: 1rem;
+margin-left: 0.5rem;
 }
 .interviews-img {
     width: 375px;
@@ -446,11 +447,19 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
-.podcast,
+
 .toprated {
+   
+    width: 100%;
+
+}
+
+.toprated-container {
     display: flex;
     flex-direction: column;
-
+    max-width: 1236px;
+    margin: auto;
+    padding: 1rem;
 }
 .mostviewed-intro h2,
 .toprated-intro h2{
@@ -467,31 +476,29 @@ text-transform: capitalize;
     flex-direction: row;
     justify-content: space-between;
     background: #F4F7FF;
-    height: 674px;
+    height: 574px;
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
   
 }
 
+/* .toprated1-img {
+    width: 395px;
+    height: 325px;
+}
+
+.toprated1-img img {
+    width: 100%;
+    height: 100%;
+} */
 .toprated-details::-webkit-scrollbar {
     display: none;
 }
-.podcast1,
-.toprated1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 557px;
-    border-radius: 10px;
-    background: #FFF;
-    box-shadow: #D7AE37;
-   
-}
 
-.podcast1 img,
+
 .toprated img {
-    width: 365px;
+    width: 375px;
     height: 325px;
     border-radius: 10px;
 }
@@ -504,11 +511,11 @@ text-transform: capitalize;
     margin-right: 2rem;
 }
 
-.podcast-icon img,
+
 .toprated-icon img {
     width: 202.025px;
     height: 45.143px;
-    margin-left: 4rem;
+    margin-left: 1rem;
 }
 
 .pause {
@@ -530,7 +537,9 @@ font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: 29px;
-margin-top: 1rem;
+margin-top: 1.5rem;
+padding-bottom: 1rem;
+text-align: left;
 }
 
 /*  */
@@ -646,7 +655,36 @@ border-radius: 50%;
     font-size: 12px;
 }
 
+
+
 /*  */
+
+/*  */
+
+.toprated1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+background: #FFF;
+margin: 0 auto;
+width: 373px;
+height: 457px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.toprated1-img {
+    width: 373px;
+    height: 301px;
+    margin: auto;
+}
+
+.toprated1-img img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
 
 
 
@@ -1035,7 +1073,7 @@ height: 16.143px;
 }
 
 .toprated1 p {
-width: 200px;
+width: 150px;
 height: 23px;
 flex-shrink: 0;
 color: #817F7F;
@@ -1054,7 +1092,7 @@ align-items: left;
 .toprated1 {
     background: none;
     margin-left: 0.3rem;
-    margin-right: -1rem;
+   
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -1063,24 +1101,12 @@ align-items: left;
 
 
 }
-.toprated-details {
-    margin-left: -2rem;
-    height: 246px;
-
-}
-#root > div > div > div.toprated.innerWidth.paddings > div.toprated-details > div:nth-child(2) > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: start;
+.toprated1-img {
+  width: fit-content;
+    height: 301px;
+    margin: auto;
 }
 
-#root > div > div > div.toprated.innerWidth.paddings > div.toprated-details > div:nth-child(1) > img {
-    margin-right: 1.5rem;
-}
-#root > div > div > div.toprated.innerWidth.paddings > div.toprated-details > div:nth-child(2) > div > svg {
-    margin-left: 1.5rem;
-}
 .interviews-media {
     display: flex;
     flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
@@ -1221,9 +1247,19 @@ margin-bottom: 2rem;
     .interviews-title {
         margin-left: 1.2rem;
     }
-    .podcast1 {
-        margin-left: 1.5rem;
-    }
+    
+    
+    /* .toprated-details div {
+        margin-left: 1.2rem;
+        margin-right: 0.3rem;
+    } */
 
+    #root > div > div > div.toprated > div > div.toprated-details > div:nth-child(2) {
+        margin-left: 1rem;
+    }
+    #root > div > div > div.toprated > div > div.toprated-details > div:nth-child(3) {
+        margin-left: 1rem;
+    }
+   
    
 }

@@ -239,15 +239,18 @@ function Blog() {
 
     {/* top-rated */}
 
-    <div className="toprated innerWidth paddings">
-    <div className="toprated-intro">
+    <div className="toprated">
+      <div className="toprated-container">
+      <div className="toprated-intro">
         <h2>  TOP RATED PODCAST</h2>
         <button>Watch More</button>
         </div>
-
         <div className="toprated-details">
-        <div className="toprated1 paddings">
-        <img src={data[32].imag} alt="" />
+        <div className="toprated1">
+          <div className="toprated1-img">
+          <img src={data[32].imag} alt="" />
+          </div>
+       
         <div className="toprated-icon">
           <BsFillPauseFill className='pause'/>
           <img src={data[29].imag} alt="" />
@@ -255,7 +258,9 @@ function Blog() {
         <p>Top scout bear their thoughts <br /> about the young talents</p>
       </div>
       <div className="toprated1">
-        <img src={data[34].imag} alt="" />
+      <div className="toprated1-img">
+          <img src={data[34].imag} alt="" />
+          </div>
         <div className="toprated-icon">
           <BsFillPauseFill className='pause'/>
           <img src={data[29].imag} alt="" />
@@ -263,7 +268,9 @@ function Blog() {
         <p>A talk on how to connect with <br /> football scout.</p>
       </div>
       <div className="toprated1">
-        <img src={data[33].imag} alt="" />
+      <div className="toprated1-img">
+          <img src={data[33].imag} alt="" />
+          </div>
         <div className="toprated-icon">
           <BsFillPauseFill className='pause'/>
           <img src={data[29].imag} alt="" />
@@ -272,6 +279,10 @@ function Blog() {
       </div>
 
         </div>
+      </div>
+  
+
+        
 
     </div>
     {/* help */}
