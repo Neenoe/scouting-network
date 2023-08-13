@@ -33,7 +33,10 @@ function Blog() {
           
         </div>
           {/* media */}
-          <div className='blogging'
+
+          <div className="blog-hero">
+            <div className="blog-hero-wrapper">
+            <div className='blogging'
       style={{
         position: 'relative',
         width: '100%',
@@ -90,18 +93,22 @@ function Blog() {
       
       </div>
     </div>
+            </div>
+      
+          </div>
+   
 
     {/* highlight */}
 
-    <div className="highlight-wrapper paddings">
+    <div className="highlight-wrapper">
+      <div className="highlight-container">
       <div className="highlight-intro">
         <h2>  Training highlight</h2>
         <button>Watch More</button>
         </div>
-
- 
         <div className="highlight-details" ref={scrollRef}>
-  <div className="highlight-item">
+          <div className="signee-details">
+          <div className="highlight-item">
     <div className="highlight-img">
     <img src={data[20].imag} alt="" />
    
@@ -130,23 +137,28 @@ function Blog() {
     </div>
     <BsFillPlayFill className='stop1'/>
   </div>
+
+          </div>
+ 
+  
+ 
 </div>
 
-      
-
-    </div>
+      </div>
+      </div>
 
     {/* signing */}
    
     
-     <div className='r-gallery-images paddings innerWidth'>
-     <div className="signee-intro">
+     <div className='r-gallery-images '>
+      <div className="signing-container">
+      <div className="signee-intro">
         <h2>  Latest Signings</h2>
         <button>View All</button>
         </div>
-         
-               <div className="highlight-details" ref={scrollRef}>
-  <div className="highlight-item">
+        <div className="highlight-details" ref={scrollRef}>
+          <div className="signing-details">
+          <div className="highlight-item">
     <img src={data[23].imag} alt="" />
    
   </div>
@@ -158,14 +170,16 @@ function Blog() {
     <img src={data[26].imag} alt="" />
    
   </div>
-</div>
+          </div>
 
-         
+</div>
+      </div>
+ 
         </div>
     
 
     {/* Interviews */}
-    <div className="interviews-wrapper innerWidth paddings">
+    <div className="interviews-wrapper">
     <div className="interviews-intro">
       <div className='interview-details'>
 
