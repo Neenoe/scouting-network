@@ -125,7 +125,7 @@ function Landing () {
       <div className="categories-box">
      
         <div className="categories-image">
-        <img src={data[3].imag} alt="" />
+        <img src={data[0].imag} alt="" />
 
         </div>
         <h4>Female Footballers</h4>
@@ -134,7 +134,7 @@ function Landing () {
       </div>
       <div className="categories-box">
         <div className="categories-image">
-        <img src={data[11].imag} alt="" />
+        <img src={data[8].imag} alt="" />
 
         </div>
         <h4>Male Footballers</h4>
@@ -143,7 +143,7 @@ function Landing () {
       </div>
       <div className="categories-box">
         <div className="categories-image">
-        <img src={data[20].imag} alt="" />
+        <img src={data[17].imag} alt="" />
 
         </div>
         <h4>Football Scout</h4>
@@ -162,7 +162,7 @@ function Landing () {
  <div className="scout-top">
           <div className='scout-top-details'>
             <div className='stout'>
-            <img  src={data[13].imag} alt="" />
+            <img  src={data[10].imag} alt="" />
             </div>
            
             <div className="scout-top-text">
@@ -172,7 +172,7 @@ function Landing () {
           </div>
           <div className='scout-top-details'>
             <div className='stout'>
-            <img  src={data[17].imag} alt="" />
+            <img  src={data[11].imag} alt="" />
             </div>
            
             <div className="scout-top-text">
@@ -184,7 +184,7 @@ function Landing () {
         <div className="scout-middle">
         <div className='scout-middle-details'>
             <div className='stout'>
-            <img  src={data[15].imag} alt="" />
+            <img  src={data[12].imag} alt="" />
             </div>
            
             <div className="scout-middle-text">
@@ -206,7 +206,7 @@ function Landing () {
           </div>
           <div className='scout-down-details'>
             <div className='stout'>
-            <img  src={data[16].imag} alt="" />
+            <img  src={data[13].imag} alt="" />
             </div>
            
             <div className="scout-down-text">
@@ -231,7 +231,7 @@ function Landing () {
         <div className="testimonial-box">
           <div className="testimonial-details">
             <div className="testimonial-image">
-            <img src={data[36].imag} alt="" />
+            <img src={data[33].imag} alt="" />
             </div>
             <div className="testimonial-name">
               <p>Timilehin Oruan</p>
@@ -254,7 +254,7 @@ function Landing () {
         <div className="testimonial-box">
           <div className="testimonial-details">
             <div className="testimonial-image">
-            <img src={data[19].imag} alt="" />
+            <img src={data[14].imag} alt="" />
             </div>
             <div className="testimonial-name">
               <p>Kemi Abiola</p>
@@ -277,7 +277,7 @@ function Landing () {
         <div className="testimonial-box">
           <div className="testimonial-details">
             <div className="testimonial-image">
-            <img src={data[18].imag} alt="" />
+            <img src={data[15].imag} alt="" />
             </div>
             <div className="testimonial-name">
               <p>Suarez Boaz</p>

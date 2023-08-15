@@ -1,6 +1,7 @@
 import React , { useState, useRef } from 'react'
 import Nav from './../Nav/Nav'
-import {meal} from './../../Constants/index'
+import {interviewthree, meal} from './../../Constants/index'
+import {trainingone, trainingtwo, trainingthree, interviewone, interviewtwo} from './../../Constants/index'
 import './blog.css'
 import { BsFillPauseFill, BsFillPlayFill, BsPauseFill} from 'react-icons/bs'
 import {data} from './../../Constants/data'
@@ -8,9 +9,23 @@ import Footer from './../Footer/Footer';
 
 
 function Blog() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef(null);
+  
 
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isHighlightVideoPlaying, setIsHighlightVideoPlaying] = useState(false);
+  const [isHighlightVideoOnePlaying, setIsHighlightVideoOnePlaying] = useState(false);
+  const [isHighlightVideoTwoPlaying, setIsHighlightVideoTwoPlaying] = useState(false);
+  const [isInterviewVideoPlaying, setIsInterviewVideoPlaying] = useState(false);
+  const [isInterviewVideoOnePlaying, setIsInterviewVideoOnePlaying] = useState(false);
+   const [isInterviewVideoTwoPlaying, setIsInterviewVideoTwoPlaying] = useState(false);
+
+  const videoRef = useRef(null);
+  const highlightVideoRef = useRef(null);
+  const highlightVideoOneRef = useRef(null);
+  const highlightVideoTwoRef = useRef(null);
+  const interviewVideoRef = useRef(null);
+   const interviewVideoOneRef = useRef(null);
+    const interviewVideoTwoRef = useRef(null);
   const handleVideo = () => {
     if (videoRef.current) {
       if (isPlaying) {
@@ -21,7 +36,79 @@ function Blog() {
       setIsPlaying(!isPlaying);
     }
   };
+ 
+  const handleHighlightVideo = () => {
+    const videoElement = highlightVideoRef.current;
+    if (videoElement) {
+      if (videoElement.paused) {
+        videoElement.play();
+      } else {
+        videoElement.pause();
+      }
+      setIsHighlightVideoPlaying(!videoElement.paused);
+    }
+  };
 
+   const handleHighlightVideoOne = () => {
+    const videoElement = highlightVideoOneRef.current;
+    if (videoElement) {
+      if (videoElement.paused) {
+        videoElement.play();
+      } else {
+        videoElement.pause();
+      }
+      setIsHighlightVideoOnePlaying(!videoElement.paused);
+    }
+  };
+
+  const handleHighlightVideoTwo = () => {
+    const videoElement = highlightVideoTwoRef.current;
+    if (videoElement) {
+      if (videoElement.paused) {
+        videoElement.play();
+      } else {
+        videoElement.pause();
+      }
+      setIsHighlightVideoTwoPlaying(!videoElement.paused);
+    }
+  };
+
+  const handleInterviewVideo = () => {
+    const videoElement = interviewVideoRef.current;
+    if (videoElement) {
+      if (videoElement.paused) {
+        videoElement.play();
+      } else {
+        videoElement.pause();
+      }
+      setIsInterviewVideoPlaying(!videoElement.paused);
+    }
+  }
+
+  const handleInterviewVideoOne = () => {
+    const videoElement = interviewVideoOneRef.current;
+    if (videoElement) {
+      if (videoElement.paused) {
+        videoElement.play();
+      } else {
+        videoElement.pause();
+      }
+      setIsInterviewVideoOnePlaying(!videoElement.paused);
+    }
+  }
+
+  const handleInterviewVideoTwo = () => {
+    const videoElement = interviewVideoTwoRef.current;
+    if (videoElement) {
+      if (videoElement.paused) {
+        videoElement.play();
+      } else {
+        videoElement.pause();
+      }
+      setIsInterviewVideoTwoPlaying(!videoElement.paused);
+    }
+  }
+ 
   const scrollRef = React.useRef(null);
 
  
@@ -41,6 +128,7 @@ function Blog() {
         position: 'relative',
         width: '100%',
         height: '400px', 
+        borderRadius: '10px'
       }}
     >
 
@@ -48,7 +136,7 @@ function Blog() {
       <video
       src={meal} type="video/mp4"
       ref={videoRef}
-        muted
+        
         loop
         style={{
           position: 'absolute',
@@ -57,6 +145,7 @@ function Blog() {
           width: '100%',
           height: '100%',
           objectFit: 'cover',
+          borderRadius: '10px'
           
         }}
       />
@@ -85,7 +174,7 @@ function Blog() {
 ) : <BsFillPlayFill color='#fff' fontSize={76} className='icon'/>}
 
 </div>
-  <button>Watch Now.</button>
+  <button>Watch Now</button>
 
 </div>
 
@@ -110,32 +199,104 @@ function Blog() {
           <div className="signee-details">
           <div className="highlight-item">
     <div className="highlight-img">
-    <img src={data[20].imag} alt="" />
+    {/* <img src={data[20].imag} alt="" /> */}
+    <video
+      src={trainingone} type="video/mp4"
+      ref={highlightVideoRef}
+        
+        loop
+        style={{width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        borderRadius: '10px'
+        
+       }}
+      />
    
-   <p className='highlight-time'>{data[0].duration}</p>
+   <p className='highlight-time'>40s</p>
 
     </div>
    
  
-    <BsFillPlayFill className='stop1'/>
+    {/* <BsFillPlayFill className='stop1' style={{cursor: 'pointer'}} />
+    <BsFillPauseFill className='stop1' style={{cursor: 'pointer'}} /> */}
+    {isHighlightVideoPlaying? (
+        <BsFillPauseFill
+          className='stop1'
+          style={{ cursor: 'pointer' }}
+          onClick={handleHighlightVideo}
+        />
+      ) : (
+        <BsFillPlayFill
+          className='stop1'
+          style={{ cursor: 'pointer' }}
+          onClick={handleHighlightVideo}
+        />
+      )}
   </div>
   <div className="highlight-item">
   <div className="highlight-img">
-    <img src={data[21].imag} alt="" />
+    {/* <img src={data[21].imag} alt="" /> */}
+    <video
+      src={trainingtwo} type="video/mp4"
+       ref={highlightVideoOneRef}
+        
+        loop
+        style={{width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+         borderRadius: '10px'
+       }}
+      />
    
-   <p className='highlight-time'>{data[0].duration}</p>
+   <p className='highlight-time'>30s</p>
 
     </div>
-    <BsFillPlayFill className='stop1'/>
+   {isHighlightVideoOnePlaying? (
+        <BsFillPauseFill
+          className='stop1'
+          style={{ cursor: 'pointer' }}
+          onClick={handleHighlightVideoOne}
+        />
+      ) : (
+        <BsFillPlayFill
+          className='stop1'
+          style={{ cursor: 'pointer' }}
+          onClick={handleHighlightVideoOne}
+        />
+      )}
   </div>
   <div className="highlight-item">
   <div className="highlight-img">
-    <img src={data[22].imag} alt="" />
+    {/* <img src={data[22].imag} alt="" /> */}
+    <video
+      src={trainingthree} type="video/mp4"
+       ref={highlightVideoTwoRef}
+        
+        loop
+        style={{width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+         borderRadius: '10px'
+       }}
+      />
    
-   <p className='highlight-time'>{data[0].duration}</p>
+   <p className='highlight-time'>50s</p>
 
     </div>
-    <BsFillPlayFill className='stop1'/>
+      {isHighlightVideoTwoPlaying? (
+        <BsFillPauseFill
+          className='stop1'
+          style={{ cursor: 'pointer' }}
+          onClick={handleHighlightVideoTwo}
+        />
+      ) : (
+        <BsFillPlayFill
+          className='stop1'
+          style={{ cursor: 'pointer' }}
+          onClick={handleHighlightVideoTwo}
+        />
+      )}
   </div>
 
           </div>
@@ -159,15 +320,15 @@ function Blog() {
         <div className="highlight-details" ref={scrollRef}>
           <div className="signing-details">
           <div className="highlight-item">
+    <img src={data[20].imag} alt="" />
+   
+  </div>
+  <div className="highlight-item">
     <img src={data[23].imag} alt="" />
    
   </div>
   <div className="highlight-item">
-    <img src={data[24].imag} alt="" />
-   
-  </div>
-  <div className="highlight-item">
-    <img src={data[26].imag} alt="" />
+    <img src={data[21].imag} alt="" />
    
   </div>
           </div>
@@ -199,31 +360,101 @@ function Blog() {
         <div className="interviews-media">
           <div className='interviews-title'>
             <div className="interviews-img">
-            <img src={data[25].imag} alt="" />
+            {/* <img src={data[25].imag} alt="" /> */}
+            <video
+      src={interviewone} type="video/mp4"
+         ref={interviewVideoRef}
+        
+        loop
+        style={{width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+         borderRadius: '10px'
+       }}
+      />
+
             <span className="time-span">10m</span>
             </div>
          
             
-            <BsFillPlayFill className='stop'/>
+            {isInterviewVideoPlaying? (
+        <BsFillPauseFill
+          className='stop'
+          style={{ cursor: 'pointer' }}
+          onClick={handleInterviewVideo}
+        />
+      ) : (
+        <BsFillPlayFill
+          className='stop'
+          style={{ cursor: 'pointer' }}
+          onClick={handleInterviewVideo}
+        />
+      )}
             <p>Electrifying interview with one outstanding young footballer at trials</p>
           </div>
           <div className='interviews-title'>
           <div className="interviews-img">
-            <img src={data[27].imag} alt="" />
+            {/* <img src={data[27].imag} alt="" /> */}
+            <video
+      src={interviewtwo} type="video/mp4"
+         ref={interviewVideoOneRef}
+        loop
+        style={{width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+         borderRadius: '10px',
+         
+       }}
+      />
             <span className="time-span">10m</span>
             </div>
            
-            <BsFillPlayFill className='stop'/>
+            {isInterviewVideoOnePlaying? (
+        <BsFillPauseFill
+          className='stop'
+          style={{ cursor: 'pointer' }}
+          onClick={handleInterviewVideoOne}
+        />
+      ) : (
+        <BsFillPlayFill
+          className='stop'
+          style={{ cursor: 'pointer' }}
+          onClick={handleInterviewVideoOne}
+        />
+      )}
             <p>Insightful interview with one of the top scouts.</p>
           </div>
           <div className='interviews-title'>
           <div className="interviews-img">
-            <img src={data[28].imag} alt="" />
+            {/* <img src={data[28].imag} alt="" /> */}
+            <video
+      src={interviewthree} type="video/mp4"
+         ref={interviewVideoTwoRef}
+        
+        loop
+        style={{width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+         borderRadius: '11px'
+       }}
+      />
             <span className="time-span">10m</span>
             </div>
            
-            <BsFillPlayFill className='stop'/>
-            <p>Spot light on new signee after medicals.</p>
+             {isInterviewVideoTwoPlaying? (
+        <BsFillPauseFill
+          className='stop'
+          style={{ cursor: 'pointer' }}
+          onClick={handleInterviewVideoTwo}
+        />
+      ) : (
+        <BsFillPlayFill
+          className='stop'
+          style={{ cursor: 'pointer' }}
+          onClick={handleInterviewVideoTwo}
+        />
+      )}
+            <p>Spot light on new signee after medicals</p>
           </div>
 
         </div>
@@ -248,32 +479,32 @@ function Blog() {
         <div className="toprated-details">
         <div className="toprated1">
           <div className="toprated1-img">
-          <img src={data[32].imag} alt="" />
+          <img src={data[29].imag} alt="" />
           </div>
        
         <div className="toprated-icon">
           <BsFillPauseFill className='pause'/>
-          <img src={data[29].imag} alt="" />
+          <img src={data[26].imag} alt="" />
         </div>
         <p>Top scout bear their thoughts <br /> about the young talents</p>
       </div>
       <div className="toprated1">
       <div className="toprated1-img">
-          <img src={data[34].imag} alt="" />
+          <img src={data[31].imag} alt="" />
           </div>
         <div className="toprated-icon">
           <BsFillPauseFill className='pause'/>
-          <img src={data[29].imag} alt="" />
+          <img src={data[26].imag} alt="" />
         </div>
         <p>A talk on how to connect with <br /> football scout.</p>
       </div>
       <div className="toprated1">
       <div className="toprated1-img">
-          <img src={data[33].imag} alt="" />
+          <img src={data[30].imag} alt="" />
           </div>
         <div className="toprated-icon">
           <BsFillPauseFill className='pause'/>
-          <img src={data[29].imag} alt="" />
+          <img src={data[26].imag} alt="" />
         </div>
         <p>Time out with the successful  <br /> players at the just concluded trials</p>
       </div>
@@ -300,7 +531,8 @@ function Blog() {
     {/* Footer */}
      <Footer/>
     
-
+     
+    
 
 
 

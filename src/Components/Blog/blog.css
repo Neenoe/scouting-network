@@ -171,6 +171,7 @@ margin-bottom: 1rem;
     width: 375px;
     height: 309px;
     border-radius: 20px;
+    filter: brightness(80%)
 }
 .highlight-details p {
     position: absolute;
@@ -251,10 +252,6 @@ cursor: pointer;
     margin-bottom: 1rem;
 }
 
-.signee-details img{
-    width: 375px;
-    height: 309px;
-}
 
 
 
@@ -378,11 +375,11 @@ line-height: normal;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    text-align: flex-start;
+    text-align: left;
     display: flex;
     margin-left: 1rem;
     margin-bottom: 2rem;
-    margin-top: -15%;
+    margin-top: -10%;
     height: 70px;
     
 }
@@ -639,6 +636,7 @@ border-radius: 50%;
     height: 303px;
     position: relative;
     display: inline-block;
+    border-radius: 10px;
 }
 .highlight-img img {
     width: 100%;
