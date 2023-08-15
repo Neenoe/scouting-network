@@ -186,129 +186,129 @@ function Blog() {
             </div>
       
           </div>
-   
+   {/* hgihlight-one */}
+   <div className="interviews-wrapper">
+    <div className="interviews-intro">
+      <div className='training-details'>
+
+      <h3>  Training Highlight</h3>
+        <div className="training-btns">
+        
+        <button>Watch More</button>
+  
+        </div>
+        </div>
+        
+
+        <div className="interviews-media">
+          <div className='interviews-title'>
+            <div className="interviews-img">
+            {/* <img src={data[25].imag} alt="" /> */}
+            <video
+      src={trainingone} type="video/mp4"
+         ref={highlightVideoRef}
+        
+        loop
+        style={{width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+         borderRadius: '10px'
+       }}
+      />
+
+            <span className="time-span">10m</span>
+            </div>
+         
+            
+            {isHighlightVideoPlaying? (
+        <BsFillPauseFill
+          className='stop'
+          style={{ cursor: 'pointer' }}
+          onClick={handleHighlightVideo}
+        />
+      ) : (
+        <BsFillPlayFill
+          className='stop'
+          style={{ cursor: 'pointer' }}
+          onClick={handleHighlightVideo}
+        />
+      )}
+            {/* <p>Electrifying interview with one outstanding young footballer at trials</p> */}
+          </div>
+          <div className='interviews-title'>
+          <div className="interviews-img">
+            {/* <img src={data[27].imag} alt="" /> */}
+            <video
+      src={trainingtwo} type="video/mp4"
+         ref={highlightVideoOneRef}
+        loop
+        style={{width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+         borderRadius: '10px',
+         
+       }}
+      />
+            <span className="time-span">10m</span>
+            </div>
+           
+            {isHighlightVideoOnePlaying? (
+        <BsFillPauseFill
+          className='stop'
+          style={{ cursor: 'pointer' }}
+          onClick={handleHighlightVideoOne}
+        />
+      ) : (
+        <BsFillPlayFill
+          className='stop'
+          style={{ cursor: 'pointer' }}
+          onClick={handleHighlightVideoOne}
+        />
+      )}
+            {/* <p>Insightful interview with one of the top scouts.</p> */}
+          </div>
+          <div className='interviews-title'>
+          <div className="interviews-img">
+            {/* <img src={data[28].imag} alt="" /> */}
+            <video
+      src={trainingthree} type="video/mp4"
+         ref={highlightVideoTwoRef}
+        
+        loop
+        style={{width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+         borderRadius: '11px'
+       }}
+      />
+            <span className="time-span">10m</span>
+            </div>
+           
+             {isHighlightVideoTwoPlaying? (
+        <BsFillPauseFill
+          className='stop'
+          style={{ cursor: 'pointer' }}
+          onClick={handleHighlightVideoTwo}
+        />
+      ) : (
+        <BsFillPlayFill
+          className='stop'
+          style={{ cursor: 'pointer' }}
+          onClick={handleHighlightVideoTwo}
+        />
+      )}
+            {/* <p>Spot light on new signee after medicals</p> */}
+          </div>
+
+        </div>
+        </div>
+     
+
+    </div>
 
     {/* highlight */}
 
-    <div className="highlight-wrapper">
-      <div className="highlight-container">
-      <div className="highlight-intro">
-        <h2>  Training highlight</h2>
-        <button>Watch More</button>
-        </div>
-        <div className="highlight-details" ref={scrollRef}>
-          <div className="signee-details">
-          <div className="highlight-item">
-    <div className="highlight-img">
-    {/* <img src={data[20].imag} alt="" /> */}
-    <video
-      src={trainingone} type="video/mp4"
-      ref={highlightVideoRef}
-        
-        loop
-        style={{width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-        borderRadius: '10px'
-        
-       }}
-      />
-   
-   <p className='highlight-time'>40s</p>
-
-    </div>
-   
- 
-    {/* <BsFillPlayFill className='stop1' style={{cursor: 'pointer'}} />
-    <BsFillPauseFill className='stop1' style={{cursor: 'pointer'}} /> */}
-    {isHighlightVideoPlaying? (
-        <BsFillPauseFill
-          className='stop1'
-          style={{ cursor: 'pointer' }}
-          onClick={handleHighlightVideo}
-        />
-      ) : (
-        <BsFillPlayFill
-          className='stop1'
-          style={{ cursor: 'pointer' }}
-          onClick={handleHighlightVideo}
-        />
-      )}
-  </div>
-  <div className="highlight-item">
-  <div className="highlight-img">
-    {/* <img src={data[21].imag} alt="" /> */}
-    <video
-      src={trainingtwo} type="video/mp4"
-       ref={highlightVideoOneRef}
-        
-        loop
-        style={{width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-         borderRadius: '10px'
-       }}
-      />
-   
-   <p className='highlight-time'>30s</p>
-
-    </div>
-   {isHighlightVideoOnePlaying? (
-        <BsFillPauseFill
-          className='stop1'
-          height={20}
-          style={{ cursor: 'pointer' }}
-          onClick={handleHighlightVideoOne}
-        />
-      ) : (
-        <BsFillPlayFill
-          className='stop1'
-          style={{ cursor: 'pointer' }}
-          onClick={handleHighlightVideoOne}
-        />
-      )}
-  </div>
-  <div className="highlight-item">
-  <div className="highlight-img">
-    {/* <img src={data[22].imag} alt="" /> */}
-    <video
-      src={trainingthree} type="video/mp4"
-       ref={highlightVideoTwoRef}
-        
-        loop
-        style={{width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-         borderRadius: '10px'
-       }}
-      />
-   
-   <p className='highlight-time'>50s</p>
-
-    </div>
-      {isHighlightVideoTwoPlaying? (
-        <BsFillPauseFill
-          className='stop1'
-          style={{ cursor: 'pointer' }}
-          onClick={handleHighlightVideoTwo}
-        />
-      ) : (
-        <BsFillPlayFill
-          className='stop1'
-          style={{ cursor: 'pointer' }}
-          onClick={handleHighlightVideoTwo}
-        />
-      )}
-  </div>
-
-          </div>
- 
   
- 
-</div>
-
-      </div>
-      </div>
 
     {/* signing */}
    
@@ -468,6 +468,8 @@ function Blog() {
   
 
     {/* weekly podcast */}
+
+
    
 
     {/* top-rated */}

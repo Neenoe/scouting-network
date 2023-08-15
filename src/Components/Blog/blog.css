@@ -208,6 +208,15 @@ line-height: normal;
     scrollbar-width: none;
 }
 
+.signee-details {
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.signee-details::-webkit-scrollbar {
+    display: none;
+}
+
 .highlight-details::-webkit-scrollbar {
     display: none;
 }
@@ -445,19 +454,7 @@ font-weight: 400;
 line-height: normal;
 }
 
-.toprated {
-   
-    width: 100%;
 
-}
-
-.toprated-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1236px;
-    margin: auto;
-    padding: 1rem;
-}
 .mostviewed-intro h2,
 .toprated-intro h2{
     color: #161037;
@@ -467,19 +464,37 @@ font-weight: 700;
 line-height: normal;
 text-transform: capitalize;
 }
-.podcast-details,
+
+.toprated {
+    width: 100%;
+    margin: auto;
+}
+
+.toprated-container {
+    max-width: 1236px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #F4F7FF;
+   
+}
+
 .toprated-details {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: #F4F7FF;
-    height: 574px;
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-  
+    margin-bottom: 3rem;
+
 }
 
+.toprated1 {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+}
 /* .toprated1-img {
     width: 395px;
     height: 325px;
@@ -537,6 +552,7 @@ line-height: 29px;
 margin-top: 1.5rem;
 padding-bottom: 1rem;
 text-align: left;
+padding: 1rem;
 }
 
 /*  */
@@ -576,11 +592,11 @@ text-align: left;
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    width: 100%;
 }
 .toprated-container::-webkit-scrollbar {
 display: none;
 }
-
 
 
 
@@ -659,33 +675,31 @@ border-radius: 50%;
 
 /*  */
 
-.toprated1 {
+
+
+
+.training-details {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px 10px 0px 0px;
-background: #FFF;
-margin: 0 auto;
-width: 373px;
-height: 457px;
-  margin-bottom: 20px;
-  background-color: #fff;
-}
-.toprated1-img {
-    width: 373px;
-    height: 301px;
-    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.toprated1-img img {
-    width: 100%;
-    height: 100%;
-    margin: auto;
+.training-btns button {
+    width: 123px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: #223E88;
+    color: #FFF;
+    font-size: 14px;
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1rem;
+
 }
-
-
-
 
     @media screen and (max-width: 808px) {
         .blogging {
@@ -779,8 +793,7 @@ margin-top: 4rem;
       .highlight-item {
         /* Add necessary styles to each item */
         position: relative;
-        margin-right: 1px;
-        margin-left: -1rem;
+       
        
       }
       
@@ -855,12 +868,24 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
       }
+
+      .training-details h3 {
+        color: #424242;
+        font-family: Satoshi;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding: 1rem;
+      }
  
 
- .highlight-intro button {
+ .highlight-intro button,
+ .training-btns button {
     width: 76px;
 height: 22px;
 font-size: 10px;
+margin-top: 0.5rem;
  }
 
  .signee-intro button {
@@ -870,11 +895,13 @@ font-size: 10px;
  }
 .toprated-intro button {
     width: 90px;
-height: 32px;
+height: 22px;
 font-size: 10px;
 }
 
-
+.toprated-intro {
+    padding: 1rem;
+}
 
 
 
@@ -1054,7 +1081,7 @@ line-height: normal;
 
 .toprated-details {
    
-height: 246px;
+height: 256px;
 }
 
 .toprated1 img {
@@ -1067,13 +1094,14 @@ height: 162px;
 height: 18.625px;
 
 }
+
 .toprated-icon img {
     width: 72.244px;
 height: 16.143px;
 }
 
 .toprated1 p {
-width: 150px;
+width: 170px;
 height: 23px;
 flex-shrink: 0;
 color: #817F7F;
@@ -1087,6 +1115,10 @@ flex-direction: row;
 text-align: left;
 justify-content: start;
 align-items: left;
+margin-bottom: 2.5rem;
+margin-top: -0.001%;
+
+
 }
 
 .toprated1 {
@@ -1097,7 +1129,9 @@ align-items: left;
     flex-direction: column;
     justify-content: start;
     align-items: left;
-    height: 246px;
+    height: 256px;
+    box-shadow: none;
+    background: #fff;
 
 
 }

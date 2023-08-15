@@ -507,7 +507,7 @@ line-height: normal;
   /*media right  */
   .media-right-container {
     position: absolute;
-    top: 35%;
+    top: 59%;
     right: 0;
     width: 100%;
     display: flex;
@@ -535,6 +535,7 @@ line-height: normal;
     flex-direction: row;
     background-color: #D7AE37;
     padding: 2.1rem;
+    margin-right: -0.25rem;
    
   }
   
