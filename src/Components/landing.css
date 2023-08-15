@@ -84,13 +84,13 @@ line-height: normal;
 
 }
 
-.media-right {
+/* .media-right {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     height: 200px;
     border: 0px solid #D7AE37;
-    width: 100%;
+    
 
     text-align: flex-end;
    
@@ -98,22 +98,18 @@ line-height: normal;
     align-items: center;
     align-content: flex-end;
    
-    width: 461px;
+   
 height: 176px;
 z-index: 1;
 background: #D7AE37;
 position: absolute;
 right: 0;
-margin-right: 1.5rem;
-margin-top: -5rem;
 
 
-}
 
-.media-rightt {
-position: absolute;
-right: 0;
-}
+} */
+
+
 
 
 
@@ -507,7 +503,42 @@ line-height: normal;
     color:  #D9D9D9;
  }
 
-
+ 
+  /*media right  */
+  .media-right-container {
+    position: absolute;
+    top: 35%;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  
+  .media-right {
+    max-width: 1263px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  .media-details {
+    width: 405px;
+    text-align: right;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    background-color: #D7AE37;
+    padding: 2.1rem;
+   
+  }
+  
+ 
 @media screen and (max-width: 1310px) {
   
 
@@ -570,6 +601,9 @@ margin-top: -11rem;
 .navigation {
     display: none;
 }
+.media-right-container {
+    display: none;
+}
 
 .media-right-container {
   padding: 1rem;
@@ -612,6 +646,7 @@ font-size: 18px;
 padding: 1rem;
 width: 319px;
 margin-top: -1rem;
+text-align: left;
 }
 
 .categories-box p {
@@ -683,6 +718,8 @@ height: 448px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 4%;
+    margin-right: 0.4rem;
 }
 
 
@@ -741,11 +778,12 @@ height: 448px;
     justify-content: center;
     padding: 10px;
     height: 1182px;
+    margin-bottom: -1.3rem;
 
 }
 
 .testimonial-wrapper h3 {
-    margin-top: 3rem;
+    margin-top: 6rem;
     font-size: 18px;
 }
 .testimonial-box {

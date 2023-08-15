@@ -94,9 +94,9 @@ function Landing () {
 
      
     </div>
-    {/* <div className='media-right-container'>
-    <div className="media-right innerWidth paddings">
-      
+    <div className='media-right-container'>
+    <div className="media-right ">
+      <div className="media-details"> 
       <div className='media-right-content'>
       <p>4000+ </p>
       <span>Footballers</span>
@@ -109,10 +109,13 @@ function Landing () {
       <p>2500+ </p>
       <span>Scouts</span>
       </div>
+      </div>
+      
+     
      
   </div>
 
-    </div> */}
+    </div>
     <br /> <br />
     {/* categories */}
 
@@ -254,7 +257,7 @@ function Landing () {
         <div className="testimonial-box">
           <div className="testimonial-details">
             <div className="testimonial-image">
-            <img src={data[14].imag} alt="" />
+            <img src={data[16].imag} alt="" />
             </div>
             <div className="testimonial-name">
               <p>Kemi Abiola</p>

@@ -156,7 +156,8 @@ function Blog() {
           zIndex: 1,
           width: '100%',
           height: '100%',
-          background: 'rgba(48, 45, 45, 0.37)', 
+          background: 'rgba(48, 45, 45, 0.37)',
+          borderRadius: '10px' 
         }}
       >
             <div className='blog-media innerWidth paddings'>
@@ -255,6 +256,7 @@ function Blog() {
    {isHighlightVideoOnePlaying? (
         <BsFillPauseFill
           className='stop1'
+          height={20}
           style={{ cursor: 'pointer' }}
           onClick={handleHighlightVideoOne}
         />
