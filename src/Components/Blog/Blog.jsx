@@ -85,7 +85,7 @@ function Blog() {
 ) : <BsFillPlayFill color='#fff' fontSize={76} className='icon'/>}
 
 </div>
-  <button>Watch Now</button>
+  <button>Watch Now.</button>
 
 </div>
 
