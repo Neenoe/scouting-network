@@ -793,6 +793,9 @@ height: 448px;
     width: 368px;
 height: 339px;
 }
+.testimonial-rate {
+    margin-top: 4rem;
+}
 .star {
     width: 30px;
     height: 30px;
