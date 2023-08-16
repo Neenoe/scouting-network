@@ -95,7 +95,7 @@ function Footer() {
        <SocialIcon url="https://youtube.com"  network="youtube" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 30, height: 30}} />
        <SocialIcon url="https://instagram.com"  network="instagram" className='hi-con' bgColor="#fff" fgColor='#FF0000' style={{width: 30, height: 30}} />
             </div>
-            <div className="footer-logo" style={{width: '50px', height: '80px', marginBottom: '3rem'}}>
+            <div className="footer-logo" style={{width: '50px', height: '80px'}}>
             <FooterLogoMobile style={{height: '50%', width: '50%'}}/>
             </div>
            

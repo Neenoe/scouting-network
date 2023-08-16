@@ -6,6 +6,7 @@
     margin: 0 auto;
     max-width: 1263px;
     background: #223E88;
+
     
 }
 
@@ -412,7 +413,7 @@ line-height: normal;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-       margin-top: -1rem;
+       margin-top: -3rem;
        margin-bottom: 3rem;
         padding-bottom: 1rem;
     }
@@ -434,6 +435,9 @@ line-height: normal;
         height: 50px;
     }
     .footer-container {
-        height: 550px;
+        height: 511px;
+    } 
+    #root > div > div > div.footer-container.innerWidth > div.footer-mobile > div.footer-4 > div.footer-logo {
+        margin-bottom: 0;
     }
 }

@@ -187,8 +187,8 @@ function Blog() {
       
           </div>
    {/* hgihlight-one */}
-   <div className="interviews-wrapper">
-    <div className="interviews-intro">
+   <div className="training-wrapper">
+    <div className="training-intro">
       <div className='training-details'>
 
       <h3>  Training Highlight</h3>
@@ -200,7 +200,7 @@ function Blog() {
         </div>
         
 
-        <div className="interviews-media">
+        <div className="training-media">
           <div className='interviews-title'>
             <div className="interviews-img">
             {/* <img src={data[25].imag} alt="" /> */}
