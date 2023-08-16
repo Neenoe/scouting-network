@@ -309,7 +309,7 @@ border-radius: 10px;
         justify-content: flex-start;
         align-items: start;
         padding: 1rem;
-        margin-top: 2rem;
+        margin-top: 1rem;
         height: 300px;
         
        
@@ -420,7 +420,6 @@ line-height: normal;
     .mobile-icon {
         display: flex;
         flex-direction: row;
-        margin-bottom: 1.5rem;
         align-items: flex-start;
         justify-content: flex-start;
     }
@@ -435,7 +434,7 @@ line-height: normal;
         height: 50px;
     }
     .footer-container {
-        height: 511px;
+        height: 487px;
     } 
     #root > div > div > div.footer-container.innerWidth > div.footer-mobile > div.footer-4 > div.footer-logo {
         margin-bottom: 0;
