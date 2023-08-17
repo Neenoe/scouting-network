@@ -184,7 +184,6 @@ margin-top: 1.5rem;
 margin-left: 1.5rem;
 color: #FFF;
 font-size: 18px;
-font-family: Satoshi;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
@@ -250,7 +249,6 @@ border: 1px solid #FFF;
 background: #223E88;
 color: #FFF;
 font-size: 14px;
-font-family: Satoshi;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -311,7 +309,6 @@ cursor: pointer;
 background: #F4F4F4;
 color: #817F7F;
 font-size: 15px;
-font-family: Satoshi;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -892,7 +889,6 @@ height: 28px;
 
       .signee-intro h2 {
         color: #424242;
-font-family: Satoshi;
 font-size: 10px;
 font-style: normal;
 font-weight: 700;
@@ -901,7 +897,7 @@ line-height: normal;
 
       .training-details h3 {
         color: #424242;
-        font-family: Satoshi;
+      
         font-size: 10px;
         font-style: normal;
         font-weight: 700;
@@ -1095,7 +1091,7 @@ line-height: normal;
     margin-left: -2rem;
 }
 .highlight-item img {
-    width: 173px;
+    width: 179px;
     height: 119px;
 
 }

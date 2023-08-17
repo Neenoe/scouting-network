@@ -231,7 +231,7 @@ width: 100%;
 }
 .categories-box h4 {
     color: #161037;
-    font-family: Satoshi;
+
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -252,7 +252,6 @@ margin-top: 1rem;
 
 .categories-box p {
     color: #223E88;
-font-family: Satoshi;
 font-size: 20px;
 font-style: normal;
 font-weight: 700;
@@ -374,7 +373,6 @@ margin-left: 0.4rem;
 .scout-down-text span {
     color: #817F7F;
 font-size: 18px;
-font-family: Satoshi;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -411,7 +409,6 @@ margin-right: 1.9rem;
 
   .testimonial-wrapper h3 {
     color: #FFF;
-font-family: Satoshi;
 font-size: 32px;
 font-style: normal;
 font-weight: 700;
@@ -464,7 +461,6 @@ margin-top: 2rem;
 
  .testimonial-name :nth-child(1) {
     color: #161037;
-font-family: Satoshi;
 font-size: 16px;
 font-style: normal;
 font-weight: 700;
@@ -473,11 +469,11 @@ line-height: normal;
 
  .testimonial-name :nth-child(2) {
     color: #817F7F;
-font-family: Satoshi;
 font-size: 15px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+
  }
 
 
@@ -485,7 +481,6 @@ line-height: normal;
     text-align: left;
     margin-top: 1rem;
     color: #817F7F;
-font-family: Satoshi;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
