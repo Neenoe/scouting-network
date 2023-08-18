@@ -175,7 +175,7 @@ function Blog() {
 ) : <BsFillPlayFill color='#fff' fontSize={76} className='icon'/>}
 
 </div>
-  <button>Watch Now</button>
+  
 
 </div>
 
@@ -216,7 +216,7 @@ function Blog() {
        }}
       />
 
-            <span className="time-span">10m</span>
+           
             </div>
          
             
@@ -249,7 +249,7 @@ function Blog() {
          
        }}
       />
-            <span className="time-span">10m</span>
+           
             </div>
            
             {isHighlightVideoOnePlaying? (
@@ -281,7 +281,7 @@ function Blog() {
          borderRadius: '11px'
        }}
       />
-            <span className="time-span">10m</span>
+            
             </div>
            
              {isHighlightVideoTwoPlaying? (
@@ -375,7 +375,7 @@ function Blog() {
        }}
       />
 
-            <span className="time-span">10m</span>
+          
             </div>
          
             
@@ -408,7 +408,7 @@ function Blog() {
          
        }}
       />
-            <span className="time-span">10m</span>
+           
             </div>
            
             {isInterviewVideoOnePlaying? (
@@ -440,7 +440,7 @@ function Blog() {
          borderRadius: '11px'
        }}
       />
-            <span className="time-span">10m</span>
+          
             </div>
            
              {isInterviewVideoTwoPlaying? (

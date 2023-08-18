@@ -130,6 +130,9 @@ margin-top: 3rem;
 
 }
 
+.toprated-intro {
+    margin-top: 1rem;
+}
 
 .highlight-intro h4,
 .mostviewed-intro h6 {
@@ -488,7 +491,7 @@ text-transform: capitalize;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #F4F7FF;
+   
    
 }
 
@@ -499,13 +502,14 @@ text-transform: capitalize;
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background: #F4F7FF;
     margin-bottom: 3rem;
 
 }
 
 .toprated1 {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: #ffffff;
+  
+    background: #F4F7FF;
 }
 /* .toprated1-img {
     width: 395px;
@@ -1154,7 +1158,7 @@ margin-top: -0.001%;
     flex-direction: column;
     justify-content: start;
     align-items: left;
-    height: 256px;
+    height: 237px;
     box-shadow: none;
     background: #fff;
 
@@ -1300,6 +1304,10 @@ height: 28px;
 
   .toprated-container {
     padding: 1rem;
+  }
+
+  .toprated {
+    height: 325px;
   }
   
 
