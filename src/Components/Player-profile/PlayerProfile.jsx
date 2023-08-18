@@ -19,7 +19,7 @@ function PlayerProfile() {
       <div className="scoutprofile innerWidth paddings">
         <div className="top"></div>
         <div className="scout-img">
-          <img src={data[36].imag} alt="" />
+          <img src={data[34].imag} alt="" />
         </div>
 
         <div className="input-details">

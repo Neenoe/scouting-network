@@ -163,3 +163,8 @@ justify-content: start;
 text-align: start;
 padding: 1rem;
 }
+
+.textarea {
+    width: 100%;
+    margin: 0 auto;
+}

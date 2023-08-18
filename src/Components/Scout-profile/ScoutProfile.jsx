@@ -19,7 +19,7 @@ function ScoutProfile() {
       <div className="scoutprofile innerWidth paddings">
         <div className="top"></div>
         <div className="scout-img">
-          <img src={data[35].imag} alt="" />
+          <img src={data[33].imag} alt="" />
         </div>
 
         <div className="input-details">
@@ -90,7 +90,11 @@ function ScoutProfile() {
         <h4>Your Bio</h4>
         <label for="w3review"></label>
 
-        <textarea id="w3review" name="w3review" rows="14" cols="150"></textarea>
+        <div className="textarea">
+        <textarea id="w3review" name="w3review" rows="14" cols="120"></textarea>
+        </div>
+
+        
 
         <div className="scout-button">
           <button>SAVE</button>
