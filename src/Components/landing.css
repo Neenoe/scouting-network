@@ -13,6 +13,7 @@ body {
 .media-container {
     width: 100%;
     margin: auto;
+    position: relative;
 }
 .media-wrapper {
     max-width: 1263px;
@@ -508,7 +509,7 @@ line-height: normal;
   /*media right  */
   .media-right-container {
     position: absolute;
-    top: 59%;
+    top: 65%;
     right: 0;
     width: 100%;
     display: flex;
@@ -555,6 +556,12 @@ line-height: normal;
 
   
     
+}
+
+@media screen and (max-width: 973px) { 
+    .media-right-container {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 808px) {

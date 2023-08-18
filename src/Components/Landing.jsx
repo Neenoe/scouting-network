@@ -76,25 +76,7 @@ function Landing () {
           }}
         />
       </div>
-      <div className='navigation'>
-            <div
-              className={currentSlide === 0 ? 'active' : ''}
-              onClick={() => setCurrentSlide(0)}
-            />
-            <div
-              className={currentSlide === 1 ? 'active' : ''}
-              onClick={() => setCurrentSlide(1)}
-            />
-            <div
-              className={currentSlide === 2 ? 'active' : ''}
-              onClick={() => setCurrentSlide(2)}
-            />
-          </div>
-          </div>
-
-     
-    </div>
-    <div className='media-right-container'>
+      <div className='media-right-container'>
     <div className="media-right ">
       <div className="media-details"> 
       <div className='media-right-content'>
@@ -116,6 +98,25 @@ function Landing () {
   </div>
 
     </div>
+      <div className='navigation'>
+            <div
+              className={currentSlide === 0 ? 'active' : ''}
+              onClick={() => setCurrentSlide(0)}
+            />
+            <div
+              className={currentSlide === 1 ? 'active' : ''}
+              onClick={() => setCurrentSlide(1)}
+            />
+            <div
+              className={currentSlide === 2 ? 'active' : ''}
+              onClick={() => setCurrentSlide(2)}
+            />
+          </div>
+          </div>
+
+     
+    </div>
+   
     <br /> <br />
     {/* categories */}
 
