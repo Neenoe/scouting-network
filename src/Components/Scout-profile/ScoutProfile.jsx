@@ -17,13 +17,15 @@ function ScoutProfile() {
     <div>
       <Nav />
       <div className="scoutprofile innerWidth paddings">
-        <div className="top"></div>
-        <div className="scout-img">
-          <img src={data[33].imag} alt="" />
+        <div className="top">
+        <div className="scout-imgg">
+          <img src={data[32].imag} alt="" />
         </div>
+        </div>
+       
 
         <div className="input-details">
-          <label for="username" placeholder="Your Name"></label>
+          
           <input
             type="text"
             id="username"
@@ -31,7 +33,7 @@ function ScoutProfile() {
             placeholder="FIRST NAME"
             className="info-input"
           ></input>
-          <label for="username" placeholder="Your Name"></label>
+          
           <input
             type="text"
             id="username"
@@ -41,14 +43,15 @@ function ScoutProfile() {
           ></input>
         </div>
         {/*  */}
-        <label for="email" placeholder="EMAIL"></label>
-        <input
+        <div className="email">
+      <input
           type="text"
           id="email"
           name="email"
           placeholder="EMAIL"
           className="info-input1"
         ></input>
+      </div>
 
         <div className="dropdown">
           <Dropdown
@@ -59,14 +62,15 @@ function ScoutProfile() {
             className="drop"
           />
         </div>
-        <label for="username" placeholder="Your Name"></label>
-        <input
+        <div className="scoutt">
+       <input
           type="text"
           id="username"
           name="username"
           placeholder="SCOUT"
           className="info-input1"
         ></input>
+       </div>
         <div className="dropdown">
           <Dropdown
             options={options}
@@ -76,16 +80,22 @@ function ScoutProfile() {
             className="drop"
           />
         </div>
-        <label for="username" placeholder="Your Name"></label>
-        <input
+        <div className="organisation">
+       <input
           type="text"
           id="username"
           name="username"
           placeholder="ORGANISATION"
           className="info-input1"
         ></input>
+       </div>
 
-        <div className="checkbox" />
+      <div className="check">
+      <input type="checkbox" className="checking" name="vehicle1" value="Bike"></input>
+      
+     <p>By accessing and using this website, you agree to abide by these terms and conditions.</p>
+      </div>
+       
 
         <h4>Your Bio</h4>
         <label for="w3review"></label>

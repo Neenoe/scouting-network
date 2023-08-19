@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.playerprofile {
+    max-width: 1226px;
+    margin: 0 auto;
+    padding: 1rem;
+}
 .top {
    
 height: 254px;
@@ -11,9 +15,12 @@ flex-shrink: 0;
 border-radius: 10px;
 background: #D7AE37;
 margin: 0 auto;
+max-width: 1236px;
+padding: 1rem;
+position: relative;
 }
 
-.scout-img {
+.scout-imgg {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -21,18 +28,21 @@ margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: start;
+  
+    position: absolute;
+    top: 37%;
 
 }
 
-.scout-img img {
+.scout-imgg img {
     width: 251px;
 height: 251px;
 /* position: absolute;
 left: 45px; */
 border-radius: 251px;
 /* bottom: 290px; */
-margin-top: -8rem;
-margin-left: 2.5rem;
+
+
 }
 
 .input-details {
@@ -41,6 +51,8 @@ margin-left: 2.5rem;
  flex-direction: row;
  justify-content: start;
  margin-top: 1rem;
+ max-width: 1236px;
+ margin: auto;
 
 }
 
@@ -50,7 +62,8 @@ height: 73px;
 flex-shrink: 0;
 border-radius: 10px;
 border: 1px solid #D9D9D9;
-margin-left: 1.5rem;
+margin-top: 8rem;
+
 
 }
 
@@ -64,16 +77,21 @@ margin-left: 1.5rem;
  flex-shrink: 0;
  border-radius: 10px;
  border: 1px solid #D9D9D9;
- margin-left: 1.5rem;
- padding: 1rem;
  margin-top: 1.4rem;
 }
-
+.email {
+    max-width: 1236px;
+    margin: auto;
+}
+.dropdown {
+    max-width: 1236px;
+    margin: auto;
+}
 .drop {
     color: red;
    
-    padding: 1rem;
-    margin-left: 0.7rem;
+   
+   
     border-radius: 10px;
    text-align: start;
     width: 735px;
@@ -81,6 +99,30 @@ max-height: 300px;
 flex-shrink: 0;
 border-radius: 10px;
 
+}
+.Dropdown-control {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #333;
+    cursor: default;
+    outline: none;
+    padding: 30px 52px 27px 10px;
+    transition: all 200ms ease;
+    margin-top: 1rem;
+    font-family: Satoshi;
+}
+.scoutt {
+    max-width: 1236px;
+    margin: auto;
+}
+
+.organisation {
+    max-width: 1236px;
+    margin: auto;
 }
 :placeholder {
     color: #817F7F;
@@ -106,18 +148,7 @@ option {
     height: 200px;
 }
 
-.checkbox {
-    width: 53px;
-height: 45px;
-flex-shrink: 0;
-background: #223E88;
-display: flex;
-flex-direction: row;
-justify-content: start;
-align-items: start;
-margin-left: 2rem;
-margin-top: 1.4rem;
-}
+
 
 .info-input2 {
     height: 399px;
@@ -160,5 +191,83 @@ flex-direction: row;
 align-items: start;
 justify-content: start;
 text-align: start;
-padding: 1.5rem;
+max-width: 1236px;
+margin: 0 auto;
+}
+
+.textarea {
+    width: 100%;
+    margin: 0 auto;
+   
+}
+
+
+.check {
+    display: flex;
+    flex-direction: row;
+ 
+   margin-top: 1rem;
+   max-width: 1236px;
+   margin: 0 auto;
+ 
+}
+.checking {
+    width: 22px;
+    height: 22px;
+    color: #0000;
+    background-color: black;
+   
+}
+
+.check p {
+    
+    color: #817F7F;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+text-align: center;
+margin-top: 0.5rem;
+}
+
+.input-details :nth-child(2) {
+    margin-left: 1rem;
+}
+
+@media screen and (max-width: 808px) {
+    .input-details {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .info-input1 {
+        width: 350px;
+    }
+    .drop {
+        width: 350px;
+    }
+    .scout-imgg img  {
+        width: 197px;
+        height: 197px;
+    }
+    .info-input {
+        margin-top: 1rem;
+    }
+    textarea {
+        width: 350px;
+    }
+    .scout-button button {
+        width: 130px;
+        height: 50px;
+    }
+
+    .checking  {
+        width: 29px;
+height: 29px;
+    }
+
+    .check p {
+        margin-right: 20%;
+        font-size: 10px;
+    }
 }
