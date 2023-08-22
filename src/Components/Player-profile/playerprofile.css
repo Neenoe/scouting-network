@@ -247,8 +247,17 @@ margin-top: 0.5rem;
         width: 350px;
     }
     .scout-imgg img  {
-        width: 197px;
-        height: 197px;
+        width: 107px;
+        height: 107px;
+        top: 30%;
+    }
+
+    .top {
+        position: relative;
+    }
+    .scout-imgg {
+        top: 66%;
+        position: absolute;
     }
     .info-input {
         margin-top: 1rem;

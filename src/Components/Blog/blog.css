@@ -548,8 +548,8 @@ text-transform: capitalize;
 
 .pause {
     background-color: #544F4F;
-    width: 44.625px;
-    height: 44.625px;
+    width: 64.625px;
+    height: 64.625px;
     color: #FFF;
     border-radius: 50%;
 }
@@ -569,6 +569,7 @@ margin-top: 1.5rem;
 padding-bottom: 1rem;
 text-align: left;
 padding: 1rem;
+margin-left: 0.5rem;
 }
 
 /*  */

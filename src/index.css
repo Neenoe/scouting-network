@@ -12,7 +12,7 @@ code {
 }
 
 :root {
-  --font-main: 
+  --font-main: 'Satoshi', sans-serif;
 }
 
 * {

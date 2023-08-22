@@ -239,7 +239,7 @@ function Landing () {
             </div>
             <div className="testimonial-name">
               <p>Timilehin Oruan</p>
-              <p>Footballer</p>
+              <span>Footballer</span>
             </div>
             </div>
             <div className="testimonial-note">
@@ -262,7 +262,7 @@ function Landing () {
             </div>
             <div className="testimonial-name">
               <p>Kemi Abiola</p>
-              <p>HR Arrow</p>
+             <span>Scout</span>
             </div>
             </div>
             <div className="testimonial-note">
@@ -284,8 +284,8 @@ function Landing () {
             <img src={data[15].imag} alt="" />
             </div>
             <div className="testimonial-name">
-              <p>Suarez Boaz</p>
-              <p>HR Arrow</p>
+              <p>Mike Ramson</p>
+             <span>Scout</span>
             </div>
             </div>
             <div className="testimonial-note">

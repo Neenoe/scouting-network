@@ -208,6 +208,9 @@ margin-top: 0.5rem;
 .input-details :nth-child(2) {
     margin-left: 1rem;
 }
+.Dropdown-arrow {
+    top: 34px;
+}
 @media screen and (max-width: 808px) {
     .input-details {
         flex-direction: column;
@@ -223,8 +226,44 @@ margin-top: 0.5rem;
         width: 350px;
     }
     .scout-imgg img  {
-        width: 197px;
-        height: 197px;
+        width: 107px;
+        height: 107px;
+        top: 30%;
+    }
+    .top {
+        position: relative;
+    }
+    .scout-imgg {
+        top: 66%;
+        position: absolute;
+    }
+    .Dropdown-control {
+        position: relative;
+        overflow: hidden;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
+        color: #333;
+        cursor: default;
+        outline: none;
+        padding: 30px 52px 27px 10px;
+        transition: all 200ms ease;
+        margin-top: 1rem;
+        font-family: var(--font-main);
+    }
+    .Dropdown-arrow {
+        border-color: #999 transparent transparent;
+        border-style: solid;
+        border-width: 5px 5px 0;
+        content: ' ';
+        display: block;
+        height: 0;
+        margin-top: -ceil(2.5);
+        position: absolute;
+        right: 10px;
+        top: 34px;
+        width: 0;
     }
     .info-input {
         margin-top: 1rem;

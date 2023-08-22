@@ -461,7 +461,11 @@ margin-top: 2rem;
 
  .testimonial-name {
     margin-left: 1rem;
+    align-items: left;
+    text-align: start;
  }
+
+
 
  .testimonial-name :nth-child(1) {
     color: #161037;
@@ -610,9 +614,7 @@ margin-top: -11rem;
 .navigation {
     display: none;
 }
-.media-right-container {
-    display: none;
-}
+
 
 .media-right-container {
   padding: 1rem;

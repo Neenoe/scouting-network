@@ -7,7 +7,7 @@ import Footer from "../Footer/Footer";
 import Nav from "../Nav/Nav";
 
 function ScoutProfile() {
-  const options = ["one", "two", "three"];
+  const options = ["One", "Two", "Three"];
   const defaultOption = options[""];
   const _onSelect = (selectedOption) => {
     console.log(selectedOption); // Do something with the selected option
