@@ -15,6 +15,7 @@ import { ReactComponent as GoogleIcon } from "../assets/Svg/googleLogo.svg";
 import { theme } from "./Discover/theme";
 import { auth, provider } from "../firebase";
 import toast, { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const Login = ({setLocalValue, setOpen}) => {
     const mdQuery = useMediaQuery('(min-width:900px)');
@@ -24,6 +25,7 @@ const Login = ({setLocalValue, setOpen}) => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); 
 
   const handleInputChange = (setState) => (event) => {
     setState(event.target.value);
@@ -36,6 +38,7 @@ const Login = ({setLocalValue, setOpen}) => {
         setLocalValue(userCredential.user.email)
         setOpen(false);
         toast.success(`Login Succesful!`);
+        navigate("/playerBio/1");
       })
       .catch((error) => {
         toast.error(`${error.code}. Please check login details`);

@@ -21,6 +21,7 @@ import { third, sixth, fifth } from "../../Constants";
 import ReactPlayer from "react-player";
 import { useParams } from "react-router";
 import { playerData } from "../../data/playerData";
+import PlayerNav from './../playerBioNav/PlayerBioNav'
 
 const PlayerBio = () => {
   const { id } = useParams();
@@ -56,7 +57,7 @@ const PlayerBio = () => {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <Nav />
+       <PlayerNav/>
         <main>
           <Box
             maxWidth="xl"
