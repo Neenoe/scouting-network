@@ -33,6 +33,8 @@ function Nav() {
   const [open, setOpen] = useState(false);
   const [authType, setAuthType] = useState();
   const  [localValue, setLocalValue] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
 
   const handleOpen = (e) => {
     setOpen(true);
@@ -54,6 +56,10 @@ function Nav() {
   const handleLinkClick = (path) => {
   setActiveLink(path);
 };
+const handleLoginStatusChange = (isLoggedIn) => {
+  setIsLoggedIn(isLoggedIn);
+};
+
   
 
 
@@ -79,7 +85,7 @@ function Nav() {
           {" "}
           <div className={activeLink === "/blog" ? "active" : ""}>Blog</div>{" "}
         </Link>
-          <div
+          {/* <div
             id="login"
             onClick={(e) => handleOpen(e)}
             style={{ cursor: "pointer" }}
@@ -90,7 +96,23 @@ function Nav() {
             <button id="signup" onClick={(e) => handleOpen(e)}>
               REGISTER
             </button>
-          </div>
+          </div> */}
+          {isLoggedIn ? null : (
+    <>
+      <div
+        id="login"
+        onClick={(e) => handleOpen(e)}
+        style={{ cursor: "pointer" }}
+      >
+        Login
+      </div>
+      <div className="header-btn">
+        <button id="signup" onClick={(e) => handleOpen(e)}>
+          REGISTER
+        </button>
+      </div>
+    </>
+  )}
           </div>
 
         {/*  */}
@@ -150,7 +172,7 @@ function Nav() {
 
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>{authType === "login" ? 
-        <Login setOpen={setOpen} setLocalValue={setLocalValue} localValue={localValue}/>
+        <Login setOpen={setOpen} setLocalValue={setLocalValue} localValue={localValue} handleLoginStatusChange={handleLoginStatusChange}/>
          : 
          <Signup setOpen={setOpen}  setLocalValue={setLocalValue} localValue={localValue} />
          }

@@ -27,7 +27,10 @@ const PlayerBioNav = () => {
          <div className="header" style={{paddingLeft: 35}}>
        
        <div className="header-logo">
-       <ScoutLogo/>
+        <Link to="/" onClick={() => handleLinkClick("/")}>
+        <ScoutLogo/>
+        </Link>
+      
        </div> 
        <div className="header-list flexStart" style={{marginRight: 80}}>
     

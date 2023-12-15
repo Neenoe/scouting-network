@@ -55,6 +55,7 @@ function Landing () {
                 <div className='media-left'>
                     <h3>LIFE IS <span>GREAT</span> <br /> <span>FOOTBALL</span> IS BETTER </h3>
                     <p>Football is played with the head <br /> Your foot is the tool</p>
+                    <button>DISCOVER TALENTS</button>
 
                 </div>
 
@@ -174,7 +175,7 @@ function Landing () {
               <span>Asistant Coach at AOA</span>
             </div>
           </div>
-          <div className='scout-top-details'>
+          <div className='scout-top-details-two'>
             <div className='stout'>
             <img  src={data[11].imag} alt="" />
             </div>
@@ -192,8 +193,30 @@ function Landing () {
             </div>
            
             <div className="scout-middle-text">
+              <p>Paul Ince</p>
+              <span>Scout</span>
+            </div>
+          </div>
+          {/* second middle scout */}
+          <div className='scout-middle-details-two'>
+            <div className='stout'>
+            <img  src={data[12].imag} alt="" />
+            </div>
+           
+            <div className="scout-middle-text">
               <p>Alabi Kazeem</p>
               <span>Head coach at AOA</span>
+            </div>
+          </div>
+          {/* third middle scout */}
+          <div className='scout-middle-details-three'>
+            <div className='stout'>
+            <img  src={data[12].imag} alt="" />
+            </div>
+           
+            <div className="scout-middle-text">
+              <p>Chris Ramsey</p>
+              <span>Scout</span>
             </div>
           </div>
         </div>
@@ -208,7 +231,7 @@ function Landing () {
               <span>Scout</span>
             </div>
           </div>
-          <div className='scout-down-details'>
+          <div className='scout-down-details-two'>
             <div className='stout'>
             <img  src={data[13].imag} alt="" />
             </div>

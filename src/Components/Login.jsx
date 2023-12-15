@@ -17,7 +17,7 @@ import { auth, provider } from "../firebase";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({setLocalValue, setOpen}) => {
+const Login = ({setLocalValue, setOpen, handleLoginStatusChange}) => {
     const mdQuery = useMediaQuery('(min-width:900px)');
     // const xsQuery = useMediaQuery('(min-width:0px)');
 
@@ -38,6 +38,7 @@ const Login = ({setLocalValue, setOpen}) => {
         setLocalValue(userCredential.user.email)
         setOpen(false);
         toast.success(`Login Succesful!`);
+        handleLoginStatusChange(true);
         navigate("/playerBio/1");
       })
       .catch((error) => {
@@ -45,18 +46,7 @@ const Login = ({setLocalValue, setOpen}) => {
       });
   };
 
-  // useEffect(()=> {
-  //   const listen = onAuthStateChanged(auth, (user)=> {
-  //     if (user) {
-  //       navigate('/')
-  //     }else {
-  //       return user
-  //     }
-  //   })
-  //   return () => {
-  //     listen();
-  //   }
-  // }, [navigate])
+
 
 
 const handleGoogleAuth = ()=> {
@@ -67,10 +57,7 @@ const handleGoogleAuth = ()=> {
   })
 }
 
-// useEffect(()=>{
-//   setLocalValue(localStorage.getItem('email'))
-//   navigate('/Discover')
-// },[navigate, setLocalValue])
+
 
   const handleCheckButton = (e) => {
     if (checkStatus === e.target.id) {
